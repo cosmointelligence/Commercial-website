@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COSMO — Décision, assurance & comptabilité</title>
+<meta name="description" content="COSMO réunit comptabilité, maîtrise des risques (GRC) et attestation en une seule plateforme. Le grand livre fait foi, l'IA tient et contrôle, l'assurance reste honnête.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1020; --paper:#F7F8FB; --violet:#4F22F2; --indigo:#6D5EF6; --cyan:#22D3EE;
+    --slate:#5B6478; --line:#E4E7EF; --verified:#0E9F6E; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif; font-weight:450;
+    line-height:1.6; -webkit-font-smoothing:antialiased; letter-spacing:-0.005em;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--violet);
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; letter-spacing:-0.02em; line-height:1.04; margin:0}
+  a{color:inherit}
+  /* total-rule: the accountant's double underline = the signature device */
+  .rule2{height:0;border:0;border-top:2px solid var(--ink);position:relative;margin:0}
+  .rule2::after{content:"";position:absolute;left:0;right:0;top:3px;border-top:1px solid var(--ink)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(247,248,251,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;flex-direction:column;gap:3px;text-decoration:none}
+  .brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-0.01em}
+  .brand .name b{color:var(--violet);font-weight:600}
+  .brand .bar{width:34px;height:0;border-top:2px solid var(--ink);position:relative}
+  .brand .bar::after{content:"";position:absolute;left:0;width:34px;top:2px;border-top:1px solid var(--ink)}
+  .navlinks{display:flex;align-items:center;gap:28px}
+  .navlinks a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;border-radius:10px;padding:10px 16px;transition:transform .12s ease, box-shadow .2s ease}
+  .btn-primary{background:var(--violet);color:#fff;box-shadow:0 6px 18px rgba(79,34,242,.24)}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(79,34,242,.30)}
+  .btn-ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+
+  /* hero */
+  .hero{padding:78px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.4vw,62px)}
+  .hero h1 em{font-style:normal;color:var(--violet)}
+  .hero .lede{margin-top:22px;font-size:18px;color:var(--slate);max-width:30em}
+  .hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .reveal.d1{animation-delay:.05s}.reveal.d2{animation-delay:.14s}.reveal.d3{animation-delay:.23s}.reveal.d4{animation-delay:.32s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* balance-proof signature card */
+  .proof{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 24px 60px -28px rgba(11,16,32,.28)}
+  .proof .head{display:flex;align-items:center;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+  .proof .dot{width:8px;height:8px;border-radius:99px;background:var(--verified);box-shadow:0 0 0 4px rgba(14,159,110,.14)}
+  .ledger{margin:18px 0 0;font-family:'IBM Plex Mono',monospace;font-size:15px}
+  .ledger .row{display:flex;justify-content:space-between;padding:9px 0;color:var(--ink)}
+  .ledger .row span:first-child{color:var(--slate)}
+  .ledger .tot{padding-top:14px;margin-top:6px}
+  .balanced{display:flex;align-items:center;gap:9px;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--verified)}
+  .balanced .tick{width:20px;height:20px;border-radius:6px;background:rgba(14,159,110,.12);display:flex;align-items:center;justify-content:center;font-size:12px}
+  .proof .note{margin-top:18px;font-family:'Inter',sans-serif;font-size:12px;color:var(--slate);line-height:1.5}
+
+  /* sections */
+  section{padding:64px 0}
+  .sechead{max-width:42em}
+  .sechead h2{font-size:clamp(26px,3.4vw,38px)}
+  .sechead p{color:var(--slate);font-size:17px;margin-top:14px}
+  .kicker{margin-bottom:14px}
+
+  /* modules */
+  .mods{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  .mod{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .15s ease,border-color .2s ease}
+  .mod:hover{transform:translateY(-3px);border-color:#cdd2e0}
+  .mod .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet)}
+  .mod h3{font-size:21px;margin:12px 0 0}
+  .mod p{color:var(--slate);font-size:14.5px;margin:10px 0 0}
+  .mod ul{margin:14px 0 0;padding:0;list-style:none}
+  .mod li{font-size:13.5px;color:var(--ink);padding:6px 0;border-top:1px solid var(--line);display:flex;gap:9px}
+  .mod li::before{content:"—";color:var(--cyan);font-weight:700}
+
+  /* how it works (a real sequence -> numbering earns its place) */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
+  .steps::after{}
+  .step{padding:22px 22px 22px 0;border-right:1px solid var(--line)}
+  .step:last-child{border-right:0}
+  .step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--violet);font-weight:600}
+  .step h3{font-size:17px;margin:10px 0 0}
+  .step p{font-size:13.5px;color:var(--slate);margin:8px 0 0}
+
+  /* trust */
+  .trust{background:var(--ink);color:#E7EAF3;border-radius:22px;padding:46px;margin-top:8px}
+  .trust h2{color:#fff;font-size:clamp(24px,3vw,32px)}
+  .trust .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px;margin-top:30px}
+  .trust .item .t{font-weight:600;font-size:15px;color:#fff;display:flex;align-items:center;gap:10px}
+  .trust .item .t .mk{color:var(--cyan);font-family:'IBM Plex Mono',monospace}
+  .trust .item p{color:#A7AEC4;font-size:13.5px;margin:8px 0 0;padding-left:24px}
+
+  /* pricing teaser */
+  .price{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px;margin-top:40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  .price h3{font-size:26px}
+  .price p{color:var(--slate);margin-top:12px;font-size:15.5px}
+  .price .pts{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink);margin-top:18px}
+  .price .pts div{padding:6px 0;display:flex;gap:9px}
+  .price .pts div::before{content:"✓";color:var(--verified)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:48px 0 60px}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot .col h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin:0 0 12px;font-weight:500}
+  .foot a{display:block;text-decoration:none;color:var(--ink);font-size:14px;padding:5px 0}
+  .foot a:hover{color:var(--violet)}
+  .foot .legal{color:var(--slate);font-size:12.5px;max-width:24em;line-height:1.6}
+  .copy{margin-top:32px;border-top:1px solid var(--line);padding-top:18px;color:var(--slate);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;gap:36px;padding:52px 0 44px}
+    .mods{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr;border-top:0}
+    .step{border-right:0;border-top:1px solid var(--line);padding:20px 0}
+    .trust{padding:32px;border-radius:18px}
+    .trust .grid{grid-template-columns:1fr}
+    .price{grid-template-columns:1fr;padding:28px}
+    .navlinks .hidesm{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="home.html" aria-label="COSMO accueil">
+      <span class="name">COSMO<b>.i</b></span>
+      <span class="bar" aria-hidden="true"></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#plateforme" class="hidesm">Plateforme</a>
+      <a href="securite.html">Sécurité</a>
+      <a href="#tarifs" class="hidesm">Tarifs</a>
+      <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow reveal d1">GRC · Comptabilité · Assurance</div>
+      <h1 class="reveal d2" style="margin-top:18px">Des comptes que vous pouvez <em>prouver</em>.</h1>
+      <p class="lede reveal d3">COSMO réunit votre comptabilité, votre maîtrise des risques et l'attestation en une seule plateforme. Le grand livre fait foi&nbsp;; l'IA tient, contrôle et rapproche&nbsp;; l'assurance reste honnête — jamais surévaluée.</p>
+      <div class="cta reveal d4">
+        <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+        <a class="btn btn-ghost" href="securite.html">Voir la sécurité →</a>
+      </div>
+    </div>
+
+    <!-- signature: balance proof -->
+    <div class="proof reveal d3" role="img" aria-label="Balance comptable équilibrée : débit égal crédit">
+      <div class="head"><span>Grand livre — Balance</span><span class="dot" aria-hidden="true"></span></div>
+      <div class="ledger">
+        <div class="row"><span>Total débit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <div class="row"><span>Total crédit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <hr class="rule2 tot" aria-hidden="true">
+        <div class="row tot"><span>Écart</span><span>0,00</span></div>
+      </div>
+      <div class="balanced"><span class="tick" aria-hidden="true">✓</span> Équilibré · contrôle d'intégrité validé</div>
+      <p class="note">Σ débit = Σ crédit. Chaque écriture est classée, contrôlée et rapprochée — avec un niveau de confiance affiché, pas un vernis de certitude.</p>
+    </div>
+  </div>
+
+  <!-- MODULES -->
+  <section id="plateforme">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow kicker">Une seule plateforme</div>
+        <h2>Trois métiers, un même grand livre.</h2>
+        <p>La plupart des outils font l'un ou l'autre. COSMO les fond : les écritures sont la source de vérité, le contrôle interne et l'attestation s'y rattachent.</p>
+      </div>
+      <div class="mods">
+        <div class="mod">
+          <div class="tag">Comptabilité</div>
+          <h3>Le système de référence</h3>
+          <p>Tenue multi-pays sur un seul livre, avec l'IA Lumi qui classe chaque ligne au bon compte.</p>
+          <ul>
+            <li>France (PCG), Italie, Espagne, États-Unis</li>
+            <li>TVA, balance, bilan & compte de résultat</li>
+            <li>Export FEC et rapprochement bancaire</li>
+          </ul>
+        </div>
+        <div class="mod">
+          <div class="tag">GRC & contrôle interne</div>
+          <h3>Risques sous contrôle</h3>
+          <p>Objectifs, risques, contrôles et politiques reliés — dans le vocabulaire de l'audit, pas du jargon.</p>
+          <ul>
+            <li>Cartographie risques & contrôles</li>
+            <li>Modèle des Trois Lignes (IIA 2020)</li>
+            <li>Politiques et preuves rattachées</li>
+          </ul>
+        </div>
+        <div class="mod">
+          <div class="tag">Assurance & attestation</div>
+          <h3>Une confiance honnête</h3>
+          <p>Le différenciateur : une assurance qui ne ment jamais sur sa couverture, et un dossier prêt à signer.</p>
+          <ul>
+            <li>Niveaux de confiance explicites</li>
+            <li>Dossier prêt pour l'audit (FEC + justificatifs)</li>
+            <li>Attestation par un commissaire aux comptes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="padding-top:8px">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow kicker">Comment ça marche</div>
+        <h2>De la transaction à l'attestation.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3>Connectez ou importez</h3><p>Banque en lecture seule (DSP2), ou relevé / photo. Toute banque, tout pays.</p></div>
+        <div class="step"><div class="n">02</div><h3>Lumi tient & contrôle</h3><p>Écriture classée au bon compte, TVA et justificatif vérifiés — avec un niveau de confiance.</p></div>
+        <div class="step"><div class="n">03</div><h3>Rapprochez</h3><p>Les opérations se rapprochent de vos écritures ; les écarts sont signalés, pas masqués.</p></div>
+        <div class="step"><div class="n">04</div><h3>Attestez & exportez</h3><p>Balance, états financiers et dossier FEC — prêts pour l'administration ou l'audit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section>
+    <div class="wrap">
+      <div class="trust">
+        <div class="eyebrow kicker" style="color:var(--cyan)">La confiance est le produit</div>
+        <h2>Conçu par un commissaire aux comptes, pas par hasard.</h2>
+        <div class="grid">
+          <div class="item"><div class="t"><span class="mk">01</span> 45 ans d'audit</div><p>La plateforme est dirigée par un commissaire aux comptes. L'exigence d'assurance est dans son ADN, pas un argument marketing.</p></div>
+          <div class="item"><div class="t"><span class="mk">02</span> Banque en lecture seule</div><p>Vous vous identifiez sur le site de votre banque via un agrégateur agréé (DSP2). COSMO ne voit jamais vos identifiants et ne peut effectuer aucun paiement.</p></div>
+          <div class="item"><div class="t"><span class="mk">03</span> Hébergement & données dans l'UE</div><p>Vos livres sont hébergés dans l'Union européenne, chiffrés, isolés par locataire. Le RGPD est respecté par conception.</p></div>
+          <div class="item"><div class="t"><span class="mk">04</span> Assurance structurellement honnête</div><p>La confiance affichée reflète l'incertitude réelle. Nous ne gonflons jamais une couverture ni ne confondons conception et efficacité d'un contrôle.</p></div>
+        </div>
+        <div style="margin-top:30px"><a class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)" href="securite.html">Sécurité & conformité en détail →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TEASER -->
+  <section id="tarifs">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow kicker">Tarifs</div>
+        <h2>Simple, et sans surcoût caché.</h2>
+        <p>Comptabilité, GRC et assurance dans le même abonnement. La tarification de lancement est en cours de finalisation.</p>
+      </div>
+      <div class="price">
+        <div>
+          <h3>Accès anticipé</h3>
+          <p>Vous êtes indépendant, TPE/PME ou expert-comptable&nbsp;? Écrivez-nous pour rejoindre le lancement et obtenir un accompagnement de mise en route.</p>
+          <div class="pts">
+            <div>Import de relevé universel — toute banque, sans connexion</div>
+            <div>Connexion bancaire automatique (lecture seule)</div>
+            <div>Dossier prêt pour l'audit en un geste</div>
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;padding:14px" href="mailto:contact@cosmointelligence.io?subject=Acc%C3%A8s%20anticip%C3%A9%20COSMO">Demander un accès anticipé</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;padding:14px;margin-top:10px" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="col" style="max-width:26em">
+        <a class="brand" href="home.html" style="margin-bottom:14px"><span class="name">COSMO<b>.i</b></span><span class="bar" aria-hidden="true"></span></a>
+        <p class="legal">Cosmo Intelligence — plateforme de décision, d'assurance et de comptabilité pour les indépendants, les TPE/PME et les experts-comptables.</p>
+      </div>
+      <div class="col">
+        <h4>Produit</h4>
+        <a href="#plateforme">Plateforme</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+      </div>
+      <div class="col">
+        <h4>Confiance</h4>
+        <a href="securite.html">Sécurité & conformité</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Cosmo Intelligence. Tous droits réservés.</span>
+      <span class="mono">cosmointelligence.io</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

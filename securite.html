@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sécurité & conformité — COSMO</title>
+<meta name="description" content="Connexion bancaire en lecture seule (DSP2), hébergement UE, RGPD, sous-traitants et IA honnête. La confiance est le produit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0B1020;--paper:#F7F8FB;--violet:#4F22F2;--indigo:#6D5EF6;--cyan:#22D3EE;--slate:#5B6478;--line:#E4E7EF;--verified:#0E9F6E;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:450;line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-0.005em}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.02em;line-height:1.08;margin:0}
+  a{color:var(--violet)}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--violet)}
+  header{position:sticky;top:0;z-index:50;background:rgba(247,248,251,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;flex-direction:column;gap:3px;text-decoration:none}
+  .brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:20px}
+  .brand .name b{color:var(--violet)}
+  .brand .bar{width:34px;border-top:2px solid var(--ink);position:relative}
+  .brand .bar::after{content:"";position:absolute;left:0;width:34px;top:2px;border-top:1px solid var(--ink)}
+  .navlinks{display:flex;align-items:center;gap:26px}
+  .navlinks a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;border-radius:10px;padding:10px 16px;background:var(--violet);color:#fff;box-shadow:0 6px 18px rgba(79,34,242,.24)}
+  .hero{padding:64px 0 18px}
+  .hero h1{font-size:clamp(32px,4.6vw,48px)}
+  .hero p{color:var(--slate);font-size:18px;margin-top:18px;max-width:34em}
+  main{padding-bottom:40px}
+  .block{padding:30px 0;border-top:1px solid var(--line)}
+  .block h2{font-size:24px}
+  .block h2 .n{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--violet);margin-right:12px;vertical-align:2px}
+  .block p{color:#283044;margin:14px 0 0}
+  .block .sub{color:var(--slate);font-size:14.5px}
+  ul.clean{list-style:none;padding:0;margin:14px 0 0}
+  ul.clean li{padding:9px 0;border-top:1px solid var(--line);display:flex;gap:11px;font-size:15px}
+  ul.clean li::before{content:"✓";color:var(--verified);font-weight:700}
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:13.5px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:500}
+  td .who{font-weight:600}
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:12px;padding:18px 20px;margin-top:18px;font-size:14.5px;color:#283044}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:40px 0 56px;color:var(--slate);font-size:13px}
+  .foot{max-width:880px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .foot a{color:var(--ink);text-decoration:none;margin-right:18px;font-size:13.5px}
+  .foot a:hover{color:var(--violet)}
+  a:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+  @media(max-width:700px){.navlinks .hidesm{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="home.html"><span class="name">COSMO<b>.i</b></span><span class="bar"></span></a>
+    <nav class="navlinks">
+      <a href="home.html#plateforme" class="hidesm">Plateforme</a>
+      <a href="home.html#tarifs" class="hidesm">Tarifs</a>
+      <a class="btn" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="eyebrow">Sécurité & conformité</div>
+    <h1 style="margin-top:16px">La confiance est le produit.</h1>
+    <p>Vous nous confiez vos comptes et, si vous le choisissez, l'accès en lecture à votre banque. Voici exactement ce que nous faisons — et ne faisons pas — de ces données.</p>
+  </div>
+
+  <div class="wrap">
+    <section class="block">
+      <h2><span class="n">01</span>Connexion bancaire</h2>
+      <p>La connexion bancaire est <strong>facultative</strong> et strictement en <strong>lecture seule</strong>. Elle passe par un agrégateur agréé (AISP) sous la directive européenne DSP2 — aujourd'hui GoCardless, établissement autorisé.</p>
+      <ul class="clean">
+        <li>Vous vous identifiez <strong>directement sur le site sécurisé de votre banque</strong> — COSMO ne voit jamais vos identifiants.</li>
+        <li>Accès en lecture seule : aucun paiement, aucun virement ne peut être initié.</li>
+        <li>Le jeton d'accès est conservé chez l'agrégateur, pas dans l'application COSMO.</li>
+        <li>Autorisation révocable à tout moment, et expirant automatiquement (~90 jours).</li>
+        <li>Pas de banque connectée&nbsp;? L'import de relevé (PDF, CSV ou photo) fonctionne partout, sans aucune liaison.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2><span class="n">02</span>Données & hébergement</h2>
+      <p>Vos livres et vos données sont hébergés dans l'<strong>Union européenne</strong> (Irlande). Nous appliquons le principe de minimisation : nous ne collectons que ce qui est nécessaire à la tenue et au rapprochement de votre comptabilité.</p>
+      <ul class="clean">
+        <li>Chiffrement en transit (HTTPS) et au repos.</li>
+        <li>Isolation stricte par locataire (row-level security) — vos données ne sont visibles que par vous et les personnes que vous habilitez.</li>
+        <li>Accès au moindre privilège ; secrets serveur jamais exposés dans l'application.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2><span class="n">03</span>Sous-traitants</h2>
+      <p class="sub">Nous nous appuyons sur un nombre réduit de prestataires, chacun lié par un accord de traitement (DPA).</p>
+      <table>
+        <thead><tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th><th>Garanties</th></tr></thead>
+        <tbody>
+          <tr><td class="who">GoCardless</td><td>Agrégateur de comptes (AISP agréé DSP2)</td><td>EEE / UK</td><td>Établissement de paiement agréé · SOC 2 / ISO 27001</td></tr>
+          <tr><td class="who">Supabase</td><td>Base de données & authentification</td><td>UE (Irlande)</td><td>ISO 27001 · chiffrement au repos</td></tr>
+          <tr><td class="who">Cloudflare</td><td>Réseau & traitement en périphérie</td><td>Périphérie UE</td><td>ISO 27001 · DPA</td></tr>
+          <tr><td class="who">Anthropic</td><td>Assistance IA (lecture de documents, classement)</td><td>États-Unis</td><td>Clauses contractuelles types (UE) · DPA</td></tr>
+          <tr><td class="who">Resend</td><td>E-mails transactionnels</td><td>UE</td><td>DPA</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="block">
+      <h2><span class="n">04</span>Une IA honnête</h2>
+      <p>L'assistant Lumi propose un compte, vérifie la TVA et le justificatif, repère les écarts — mais affiche toujours un <strong>niveau de confiance</strong>. Il décide plutôt que d'hésiter, sans jamais surévaluer sa certitude.</p>
+      <div class="callout">Principe fondateur : une assurance structurellement honnête. Nous ne simulons jamais une couverture, ne gonflons jamais une confiance, et ne confondons jamais l'existence d'un contrôle avec la preuve de son efficacité. Lumi assiste votre jugement professionnel ; il ne le remplace pas.</div>
+    </section>
+
+    <section class="block">
+      <h2><span class="n">05</span>Conformité & vos droits</h2>
+      <p>Le traitement est conforme au <strong>RGPD</strong>. Vous pouvez à tout moment accéder à vos données, les corriger, les effacer, en demander la portabilité, et retirer votre consentement à la connexion bancaire (bouton «&nbsp;Déconnecter&nbsp;» dans l'application, ou directement auprès de votre banque).</p>
+      <ul class="clean">
+        <li>Exercer vos droits : <a href="mailto:privacy@cosmointelligence.io">privacy@cosmointelligence.io</a> — réponse sous un mois.</li>
+        <li>Réclamation possible auprès de la CNIL (www.cnil.fr).</li>
+        <li>Facturation électronique : conformité assurée, à l'échéance de la réforme, via une plateforme agréée partenaire.</li>
+      </ul>
+      <p class="sub" style="margin-top:18px">Pour le détail du traitement, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <a href="securite.html">Sécurité</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="mailto:contact@cosmointelligence.io">Contact</a>
+    </div>
+    <span class="mono">© 2026 Cosmo Intelligence</span>
+  </div>
+</footer>
+</body>
+</html>
