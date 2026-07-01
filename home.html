@@ -28,7 +28,6 @@
   }
   h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; letter-spacing:-0.02em; line-height:1.04; margin:0}
   a{color:inherit}
-  /* total-rule: the accountant's double underline = the signature device */
   .rule2{height:0;border:0;border-top:2px solid var(--ink);position:relative;margin:0}
   .rule2::after{content:"";position:absolute;left:0;right:0;top:3px;border-top:1px solid var(--ink)}
 
@@ -40,7 +39,7 @@
   .brand .name b{color:var(--violet);font-weight:600}
   .brand .bar{width:34px;height:0;border-top:2px solid var(--ink);position:relative}
   .brand .bar::after{content:"";position:absolute;left:0;width:34px;top:2px;border-top:1px solid var(--ink)}
-  .navlinks{display:flex;align-items:center;gap:28px}
+  .navlinks{display:flex;align-items:center;gap:22px}
   .navlinks a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500}
   .navlinks a:hover{color:var(--ink)}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;border-radius:10px;padding:10px 16px;transition:transform .12s ease, box-shadow .2s ease}
@@ -48,6 +47,12 @@
   .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(79,34,242,.30)}
   .btn-ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}
   .btn-ghost:hover{border-color:var(--ink)}
+  /* language select */
+  .langsel{appearance:none;-webkit-appearance:none;border:1px solid var(--line);background:#fff;color:var(--slate);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;border-radius:9px;padding:8px 26px 8px 10px;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235B6478' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 9px center}
+  .langsel:hover{border-color:var(--ink);color:var(--ink)}
 
   /* hero */
   .hero{padding:78px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
@@ -78,6 +83,15 @@
   .sechead p{color:var(--slate);font-size:17px;margin-top:14px}
   .kicker{margin-bottom:14px}
 
+  /* video */
+  .video{margin-top:30px;position:relative;width:100%;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px -34px rgba(11,16,32,.42)}
+  .video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .video .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    background:radial-gradient(120% 120% at 28% 18%, #6D5EF6 0%, #4F22F2 46%, #0B1020 100%)}
+  .video .play{width:74px;height:74px;border-radius:99px;background:rgba(255,255,255,.16);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.32);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;padding-left:5px}
+  .video .vlabel{color:rgba(255,255,255,.92);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase}
+
   /* modules */
   .mods{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
   .mod{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .15s ease,border-color .2s ease}
@@ -89,9 +103,8 @@
   .mod li{font-size:13.5px;color:var(--ink);padding:6px 0;border-top:1px solid var(--line);display:flex;gap:9px}
   .mod li::before{content:"—";color:var(--cyan);font-weight:700}
 
-  /* how it works (a real sequence -> numbering earns its place) */
+  /* how it works */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
-  .steps::after{}
   .step{padding:22px 22px 22px 0;border-right:1px solid var(--line)}
   .step:last-child{border-right:0}
   .step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--violet);font-weight:600}
@@ -131,10 +144,11 @@
     .trust{padding:32px;border-radius:18px}
     .trust .grid{grid-template-columns:1fr}
     .price{grid-template-columns:1fr;padding:28px}
+    .navlinks{gap:14px}
     .navlinks .hidesm{display:none}
   }
   @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
-  a:focus-visible,.btn:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:8px}
+  a:focus-visible,.btn:focus-visible,.langsel:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:8px}
 </style>
 </head>
 <body>
@@ -146,10 +160,13 @@
       <span class="bar" aria-hidden="true"></span>
     </a>
     <nav class="navlinks">
-      <a href="#plateforme" class="hidesm">Plateforme</a>
-      <a href="securite.html">Sécurité</a>
-      <a href="#tarifs" class="hidesm">Tarifs</a>
-      <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+      <a href="#plateforme" class="hidesm" data-i18n="nav.plateforme">Plateforme</a>
+      <a href="securite.html" data-i18n="nav.securite">Sécurité</a>
+      <a href="#tarifs" class="hidesm" data-i18n="nav.tarifs">Tarifs</a>
+      <select class="langsel" id="langsel" aria-label="Langue / Language" onchange="applyLang(this.value)">
+        <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="it">IT</option>
+      </select>
+      <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/" data-i18n="cta.connect">Se connecter</a>
     </nav>
   </div>
 </header>
@@ -158,66 +175,101 @@
   <!-- HERO -->
   <div class="wrap hero">
     <div>
-      <div class="eyebrow reveal d1">GRC · Comptabilité · Assurance</div>
-      <h1 class="reveal d2" style="margin-top:18px">Des comptes que vous pouvez <em>prouver</em>.</h1>
-      <p class="lede reveal d3">COSMO réunit votre comptabilité, votre maîtrise des risques et l'attestation en une seule plateforme. Le grand livre fait foi&nbsp;; l'IA tient, contrôle et rapproche&nbsp;; l'assurance reste honnête — jamais surévaluée.</p>
+      <div class="eyebrow reveal d1" data-i18n="hero.eyebrow">GRC · Comptabilité · Assurance</div>
+      <h1 class="reveal d2" style="margin-top:18px" data-i18n="hero.h1" data-i18n-html>Des comptes que vous pouvez <em>prouver</em>.</h1>
+      <p class="lede reveal d3" data-i18n="hero.lede">COSMO réunit votre comptabilité, votre maîtrise des risques et l'attestation en une seule plateforme. Le grand livre fait foi&nbsp;; l'IA tient, contrôle et rapproche&nbsp;; l'assurance reste honnête — jamais surévaluée.</p>
       <div class="cta reveal d4">
-        <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
-        <a class="btn btn-ghost" href="securite.html">Voir la sécurité →</a>
+        <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/" data-i18n="cta.connect">Se connecter</a>
+        <a class="btn btn-ghost" href="securite.html" data-i18n="cta.security">Voir la sécurité →</a>
       </div>
     </div>
 
     <!-- signature: balance proof -->
     <div class="proof reveal d3" role="img" aria-label="Balance comptable équilibrée : débit égal crédit">
-      <div class="head"><span>Grand livre — Balance</span><span class="dot" aria-hidden="true"></span></div>
+      <div class="head"><span data-i18n="proof.head">Grand livre — Balance</span><span class="dot" aria-hidden="true"></span></div>
       <div class="ledger">
-        <div class="row"><span>Total débit</span><span>1&nbsp;248&nbsp;920,00</span></div>
-        <div class="row"><span>Total crédit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <div class="row"><span data-i18n="proof.debit">Total débit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <div class="row"><span data-i18n="proof.credit">Total crédit</span><span>1&nbsp;248&nbsp;920,00</span></div>
         <hr class="rule2 tot" aria-hidden="true">
-        <div class="row tot"><span>Écart</span><span>0,00</span></div>
+        <div class="row tot"><span data-i18n="proof.ecart">Écart</span><span>0,00</span></div>
       </div>
-      <div class="balanced"><span class="tick" aria-hidden="true">✓</span> Équilibré · contrôle d'intégrité validé</div>
-      <p class="note">Σ débit = Σ crédit. Chaque écriture est classée, contrôlée et rapprochée — avec un niveau de confiance affiché, pas un vernis de certitude.</p>
+      <div class="balanced"><span class="tick" aria-hidden="true">✓</span> <span data-i18n="proof.balanced">Équilibré · contrôle d'intégrité validé</span></div>
+      <p class="note" data-i18n="proof.note">Σ débit = Σ crédit. Chaque écriture est classée, contrôlée et rapprochée — avec un niveau de confiance affiché, pas un vernis de certitude.</p>
     </div>
   </div>
+
+  <!-- VIDEO -->
+  <section id="demo" style="padding-top:8px">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow kicker" data-i18n="video.eyebrow">Voir la plateforme</div>
+        <h2 data-i18n="video.h2">La plateforme, en 90 secondes.</h2>
+        <p data-i18n="video.p">Une démonstration accélérée : connecter, laisser Lumi tenir et contrôler, rapprocher, puis sortir un dossier prêt pour l'audit.</p>
+      </div>
+      <div class="video">
+        <!-- ============================================================
+             PASTE THE DEMO VIDEO HERE when it is recorded.
+             Replace the whole <div class="placeholder">…</div> below with ONE of:
+
+             1) YouTube / Vimeo embed:
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="COSMO — démo" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+             2) Self-hosted MP4 (upload cosmo-demo.mp4 + poster.jpg to the repo):
+                <video controls preload="metadata" poster="poster.jpg">
+                  <source src="cosmo-demo.mp4" type="video/mp4">
+                </video>
+
+             The 16:9 frame, rounded corners and shadow are already styled — the
+             embed will fill it automatically.
+        ============================================================ -->
+        <div class="placeholder" role="img" aria-label="Démo vidéo à venir">
+          <div class="play" aria-hidden="true">▶</div>
+          <div class="vlabel mono" data-i18n="video.coming">Démo vidéo à venir</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- MODULES -->
   <section id="plateforme">
     <div class="wrap">
       <div class="sechead">
-        <div class="eyebrow kicker">Une seule plateforme</div>
-        <h2>Trois métiers, un même grand livre.</h2>
-        <p>La plupart des outils font l'un ou l'autre. COSMO les fond : les écritures sont la source de vérité, le contrôle interne et l'attestation s'y rattachent.</p>
+        <div class="eyebrow kicker" data-i18n="mods.eyebrow">Une seule plateforme</div>
+        <h2 data-i18n="mods.h2">Trois métiers, un même grand livre.</h2>
+        <p data-i18n="mods.p">La plupart des outils font l'un ou l'autre. COSMO les fond : les écritures sont la source de vérité, le contrôle interne et l'attestation s'y rattachent.</p>
       </div>
       <div class="mods">
         <div class="mod">
-          <div class="tag">Comptabilité</div>
-          <h3>Le système de référence</h3>
-          <p>Tenue multi-pays sur un seul livre, avec l'IA Lumi qui classe chaque ligne au bon compte.</p>
+          <div class="tag" data-i18n="mod1.tag">Comptabilité</div>
+          <h3 data-i18n="mod1.h3">Le système de référence</h3>
+          <p data-i18n="mod1.p">Tenue multi-pays sur un seul livre, avec l'IA Lumi qui classe chaque ligne au bon compte.</p>
           <ul>
-            <li>France (PCG), Italie, Espagne, États-Unis</li>
-            <li>TVA, balance, bilan & compte de résultat</li>
-            <li>Export FEC et rapprochement bancaire</li>
+            <li data-i18n="mod1.li1">France (PCG), Italie, Espagne, États-Unis</li>
+            <li data-i18n="mod1.li2">TVA, balance, bilan & compte de résultat</li>
+            <li data-i18n="mod1.li3">Export FEC et rapprochement bancaire</li>
           </ul>
         </div>
         <div class="mod">
-          <div class="tag">GRC & contrôle interne</div>
-          <h3>Risques sous contrôle</h3>
-          <p>Objectifs, risques, contrôles et politiques reliés — dans le vocabulaire de l'audit, pas du jargon.</p>
+          <div class="tag" data-i18n="mod2.tag">GRC & contrôle interne</div>
+          <h3 data-i18n="mod2.h3">Risques sous contrôle</h3>
+          <p data-i18n="mod2.p">Objectifs, risques, contrôles et politiques reliés — dans le vocabulaire de l'audit, pas du jargon.</p>
           <ul>
-            <li>Cartographie risques & contrôles</li>
-            <li>Modèle des Trois Lignes (IIA 2020)</li>
-            <li>Politiques et preuves rattachées</li>
+            <li data-i18n="mod2.li1">Cartographie risques & contrôles</li>
+            <li data-i18n="mod2.li2">Modèle des Trois Lignes (IIA 2020)</li>
+            <li data-i18n="mod2.li3">Politiques et preuves rattachées</li>
           </ul>
         </div>
         <div class="mod">
-          <div class="tag">Assurance & attestation</div>
-          <h3>Une confiance honnête</h3>
-          <p>Le différenciateur : une assurance qui ne ment jamais sur sa couverture, et un dossier prêt à signer.</p>
+          <div class="tag" data-i18n="mod3.tag">Assurance & attestation</div>
+          <h3 data-i18n="mod3.h3">Une confiance honnête</h3>
+          <p data-i18n="mod3.p">Le différenciateur : une assurance qui ne ment jamais sur sa couverture, et un dossier prêt à signer.</p>
           <ul>
-            <li>Niveaux de confiance explicites</li>
-            <li>Dossier prêt pour l'audit (FEC + justificatifs)</li>
-            <li>Attestation par un commissaire aux comptes</li>
+            <li data-i18n="mod3.li1">Niveaux de confiance explicites</li>
+            <li data-i18n="mod3.li2">Dossier prêt pour l'audit (FEC + justificatifs)</li>
+            <li data-i18n="mod3.li3">Dossier d'attestation prêt à signer</li>
           </ul>
         </div>
       </div>
@@ -228,14 +280,14 @@
   <section style="padding-top:8px">
     <div class="wrap">
       <div class="sechead">
-        <div class="eyebrow kicker">Comment ça marche</div>
-        <h2>De la transaction à l'attestation.</h2>
+        <div class="eyebrow kicker" data-i18n="how.eyebrow">Comment ça marche</div>
+        <h2 data-i18n="how.h2">De la transaction à l'attestation.</h2>
       </div>
       <div class="steps">
-        <div class="step"><div class="n">01</div><h3>Connectez ou importez</h3><p>Banque en lecture seule (DSP2), ou relevé / photo. Toute banque, tout pays.</p></div>
-        <div class="step"><div class="n">02</div><h3>Lumi tient & contrôle</h3><p>Écriture classée au bon compte, TVA et justificatif vérifiés — avec un niveau de confiance.</p></div>
-        <div class="step"><div class="n">03</div><h3>Rapprochez</h3><p>Les opérations se rapprochent de vos écritures ; les écarts sont signalés, pas masqués.</p></div>
-        <div class="step"><div class="n">04</div><h3>Attestez & exportez</h3><p>Balance, états financiers et dossier FEC — prêts pour l'administration ou l'audit.</p></div>
+        <div class="step"><div class="n">01</div><h3 data-i18n="step1.h3">Connectez ou importez</h3><p data-i18n="step1.p">Banque en lecture seule (DSP2), ou relevé / photo. Toute banque, tout pays.</p></div>
+        <div class="step"><div class="n">02</div><h3 data-i18n="step2.h3">Lumi tient & contrôle</h3><p data-i18n="step2.p">Écriture classée au bon compte, TVA et justificatif vérifiés — avec un niveau de confiance.</p></div>
+        <div class="step"><div class="n">03</div><h3 data-i18n="step3.h3">Rapprochez</h3><p data-i18n="step3.p">Les opérations se rapprochent de vos écritures ; les écarts sont signalés, pas masqués.</p></div>
+        <div class="step"><div class="n">04</div><h3 data-i18n="step4.h3">Attestez & exportez</h3><p data-i18n="step4.p">Balance, états financiers et dossier FEC — prêts pour l'administration ou l'audit.</p></div>
       </div>
     </div>
   </section>
@@ -244,15 +296,15 @@
   <section>
     <div class="wrap">
       <div class="trust">
-        <div class="eyebrow kicker" style="color:var(--cyan)">La confiance est le produit</div>
-        <h2>Conçu par un commissaire aux comptes, pas par hasard.</h2>
+        <div class="eyebrow kicker" style="color:var(--cyan)" data-i18n="trust.eyebrow">La confiance est le produit</div>
+        <h2 data-i18n="trust.h2">La confiance, par conception.</h2>
         <div class="grid">
-          <div class="item"><div class="t"><span class="mk">01</span> 45 ans d'audit</div><p>La plateforme est dirigée par un commissaire aux comptes. L'exigence d'assurance est dans son ADN, pas un argument marketing.</p></div>
-          <div class="item"><div class="t"><span class="mk">02</span> Banque en lecture seule</div><p>Vous vous identifiez sur le site de votre banque via un agrégateur agréé (DSP2). COSMO ne voit jamais vos identifiants et ne peut effectuer aucun paiement.</p></div>
-          <div class="item"><div class="t"><span class="mk">03</span> Hébergement & données dans l'UE</div><p>Vos livres sont hébergés dans l'Union européenne, chiffrés, isolés par locataire. Le RGPD est respecté par conception.</p></div>
-          <div class="item"><div class="t"><span class="mk">04</span> Assurance structurellement honnête</div><p>La confiance affichée reflète l'incertitude réelle. Nous ne gonflons jamais une couverture ni ne confondons conception et efficacité d'un contrôle.</p></div>
+          <div class="item"><div class="t" data-i18n="trust1.t" data-i18n-html><span class="mk">01</span> Pensée pour l'audit</div><p data-i18n="trust1.p">La plateforme est conçue autour des exigences de l'assurance et du contrôle interne — pas l'inverse.</p></div>
+          <div class="item"><div class="t" data-i18n="trust2.t" data-i18n-html><span class="mk">02</span> Banque en lecture seule</div><p data-i18n="trust2.p">Vous vous identifiez sur le site de votre banque via un agrégateur agréé (DSP2). COSMO ne voit jamais vos identifiants et ne peut effectuer aucun paiement.</p></div>
+          <div class="item"><div class="t" data-i18n="trust3.t" data-i18n-html><span class="mk">03</span> Hébergement & données dans l'UE</div><p data-i18n="trust3.p">Vos livres sont hébergés dans l'Union européenne, chiffrés, isolés par locataire. Le RGPD est respecté par conception.</p></div>
+          <div class="item"><div class="t" data-i18n="trust4.t" data-i18n-html><span class="mk">04</span> Assurance structurellement honnête</div><p data-i18n="trust4.p">La confiance affichée reflète l'incertitude réelle. Nous ne gonflons jamais une couverture ni ne confondons conception et efficacité d'un contrôle.</p></div>
         </div>
-        <div style="margin-top:30px"><a class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)" href="securite.html">Sécurité & conformité en détail →</a></div>
+        <div style="margin-top:30px"><a class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)" href="securite.html" data-i18n="trust.cta">Sécurité & conformité en détail →</a></div>
       </div>
     </div>
   </section>
@@ -261,23 +313,23 @@
   <section id="tarifs">
     <div class="wrap">
       <div class="sechead">
-        <div class="eyebrow kicker">Tarifs</div>
-        <h2>Simple, et sans surcoût caché.</h2>
-        <p>Comptabilité, GRC et assurance dans le même abonnement. La tarification de lancement est en cours de finalisation.</p>
+        <div class="eyebrow kicker" data-i18n="nav.tarifs">Tarifs</div>
+        <h2 data-i18n="price.h2">Simple, et sans surcoût caché.</h2>
+        <p data-i18n="price.p">Comptabilité, GRC et assurance dans le même abonnement. La tarification de lancement est en cours de finalisation.</p>
       </div>
       <div class="price">
         <div>
-          <h3>Accès anticipé</h3>
-          <p>Vous êtes indépendant, TPE/PME ou expert-comptable&nbsp;? Écrivez-nous pour rejoindre le lancement et obtenir un accompagnement de mise en route.</p>
+          <h3 data-i18n="price.card.h3">Accès anticipé</h3>
+          <p data-i18n="price.card.p">Vous êtes indépendant, TPE/PME ou expert-comptable&nbsp;? Écrivez-nous pour rejoindre le lancement et obtenir un accompagnement de mise en route.</p>
           <div class="pts">
-            <div>Import de relevé universel — toute banque, sans connexion</div>
-            <div>Connexion bancaire automatique (lecture seule)</div>
-            <div>Dossier prêt pour l'audit en un geste</div>
+            <div data-i18n="price.pt1">Import de relevé universel — toute banque, sans connexion</div>
+            <div data-i18n="price.pt2">Connexion bancaire automatique (lecture seule)</div>
+            <div data-i18n="price.pt3">Dossier prêt pour l'audit en un geste</div>
           </div>
         </div>
         <div>
-          <a class="btn btn-primary" style="width:100%;justify-content:center;padding:14px" href="mailto:contact@cosmointelligence.io?subject=Acc%C3%A8s%20anticip%C3%A9%20COSMO">Demander un accès anticipé</a>
-          <a class="btn btn-ghost" style="width:100%;justify-content:center;padding:14px;margin-top:10px" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;padding:14px" href="mailto:contact@cosmointelligence.io?subject=Acc%C3%A8s%20anticip%C3%A9%20COSMO" data-i18n="price.cta1">Demander un accès anticipé</a>
+          <a class="btn btn-ghost" style="width:100%;justify-content:center;padding:14px;margin-top:10px" href="https://cosmointelligence.github.io/cosmoi/" data-i18n="cta.connect">Se connecter</a>
         </div>
       </div>
     </div>
@@ -289,31 +341,137 @@
     <div class="foot">
       <div class="col" style="max-width:26em">
         <a class="brand" href="home.html" style="margin-bottom:14px"><span class="name">COSMO<b>.i</b></span><span class="bar" aria-hidden="true"></span></a>
-        <p class="legal">Cosmo Intelligence — plateforme de décision, d'assurance et de comptabilité pour les indépendants, les TPE/PME et les experts-comptables.</p>
+        <p class="legal" data-i18n="footer.tagline">Cosmo Intelligence — plateforme de décision, d'assurance et de comptabilité pour les indépendants, les TPE/PME et les experts-comptables.</p>
       </div>
       <div class="col">
-        <h4>Produit</h4>
-        <a href="#plateforme">Plateforme</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+        <h4 data-i18n="footer.col.product">Produit</h4>
+        <a href="#plateforme" data-i18n="nav.plateforme">Plateforme</a>
+        <a href="#tarifs" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="https://cosmointelligence.github.io/cosmoi/" data-i18n="cta.connect">Se connecter</a>
       </div>
       <div class="col">
-        <h4>Confiance</h4>
-        <a href="securite.html">Sécurité & conformité</a>
-        <a href="confidentialite.html">Confidentialité</a>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <h4 data-i18n="footer.col.trust">Confiance</h4>
+        <a href="securite.html" data-i18n="footer.link.security">Sécurité & conformité</a>
+        <a href="confidentialite.html" data-i18n="footer.link.privacy">Confidentialité</a>
+        <a href="mentions-legales.html" data-i18n="footer.link.legal">Mentions légales</a>
       </div>
       <div class="col">
-        <h4>Contact</h4>
+        <h4 data-i18n="footer.col.contact">Contact</h4>
         <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a>
       </div>
     </div>
     <div class="copy">
-      <span>© 2026 Cosmo Intelligence. Tous droits réservés.</span>
+      <span data-i18n="footer.copy">© 2026 Cosmo Intelligence. Tous droits réservés.</span>
       <span class="mono">cosmointelligence.io</span>
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  /* FR is the baseline captured from the DOM; dictionary carries EN/ES/IT only. */
+  var I18N = {
+    "nav.plateforme":{en:"Platform",es:"Plataforma",it:"Piattaforma"},
+    "nav.securite":{en:"Security",es:"Seguridad",it:"Sicurezza"},
+    "nav.tarifs":{en:"Pricing",es:"Precios",it:"Prezzi"},
+    "cta.connect":{en:"Sign in",es:"Iniciar sesión",it:"Accedi"},
+    "cta.security":{en:"See security →",es:"Ver la seguridad →",it:"Vedi la sicurezza →"},
+    "hero.eyebrow":{en:"GRC · Accounting · Assurance",es:"GRC · Contabilidad · Aseguramiento",it:"GRC · Contabilità · Assurance"},
+    "hero.h1":{en:"Books you can <em>prove</em>.",es:"Cuentas que puede <em>probar</em>.",it:"Conti che puoi <em>dimostrare</em>."},
+    "hero.lede":{en:"COSMO brings your accounting, your risk management (GRC) and attestation into a single platform. The ledger is the source of truth; AI keeps, checks and reconciles; assurance stays honest — never overstated.",es:"COSMO reúne su contabilidad, su gestión de riesgos (GRC) y la atestación en una sola plataforma. El libro mayor es la fuente de verdad; la IA registra, controla y concilia; el aseguramiento es honesto, nunca sobrevalorado.",it:"COSMO riunisce la tua contabilità, la gestione dei rischi (GRC) e l'attestazione in un'unica piattaforma. Il libro mastro è la fonte di verità; l'IA registra, controlla e riconcilia; l'assurance resta onesta, mai sopravvalutata."},
+    "proof.head":{en:"Ledger — Trial balance",es:"Libro mayor — Balance",it:"Libro mastro — Bilancio di verifica"},
+    "proof.debit":{en:"Total debit",es:"Total débito",it:"Totale dare"},
+    "proof.credit":{en:"Total credit",es:"Total crédito",it:"Totale avere"},
+    "proof.ecart":{en:"Difference",es:"Diferencia",it:"Differenza"},
+    "proof.balanced":{en:"Balanced · integrity check passed",es:"Equilibrado · control de integridad validado",it:"In pareggio · controllo di integrità superato"},
+    "proof.note":{en:"Σ debit = Σ credit. Every entry is classified, checked and reconciled — with a stated confidence level, not a veneer of certainty.",es:"Σ débito = Σ crédito. Cada asiento se clasifica, controla y concilia, con un nivel de confianza explícito, no un barniz de certeza.",it:"Σ dare = Σ avere. Ogni scrittura è classificata, controllata e riconciliata — con un livello di confidenza dichiarato, non una patina di certezza."},
+    "video.eyebrow":{en:"See the platform",es:"Ver la plataforma",it:"Guarda la piattaforma"},
+    "video.h2":{en:"The platform, in 90 seconds.",es:"La plataforma, en 90 segundos.",it:"La piattaforma, in 90 secondi."},
+    "video.p":{en:"A sped-up walkthrough: connect, let Lumi keep and check the books, reconcile, then export an audit-ready file.",es:"Una demostración acelerada: conectar, dejar que Lumi registre y controle, conciliar y exportar un expediente listo para auditoría.",it:"Una demo accelerata: collega, lascia che Lumi registri e controlli, riconcilia, poi esporta un dossier pronto per l'audit."},
+    "video.coming":{en:"Demo video coming soon",es:"Vídeo de demostración próximamente",it:"Video demo in arrivo"},
+    "mods.eyebrow":{en:"One platform",es:"Una sola plataforma",it:"Un'unica piattaforma"},
+    "mods.h2":{en:"Three disciplines, one ledger.",es:"Tres oficios, un mismo libro mayor.",it:"Tre mestieri, un unico libro mastro."},
+    "mods.p":{en:"Most tools do one or the other. COSMO fuses them: entries are the source of truth, internal control and attestation build on top.",es:"La mayoría de las herramientas hacen una cosa u otra. COSMO las fusiona: los asientos son la fuente de verdad, el control interno y la atestación se apoyan en ellos.",it:"La maggior parte degli strumenti fa l'uno o l'altro. COSMO li fonde: le scritture sono la fonte di verità, il controllo interno e l'attestazione vi si appoggiano."},
+    "mod1.tag":{en:"Accounting",es:"Contabilidad",it:"Contabilità"},
+    "mod1.h3":{en:"The system of record",es:"El sistema de referencia",it:"Il sistema di riferimento"},
+    "mod1.p":{en:"Multi-country bookkeeping on a single ledger, with Lumi AI classifying every line to the right account.",es:"Contabilidad multipaís en un solo libro, con la IA Lumi que clasifica cada línea en la cuenta correcta.",it:"Contabilità multi-paese su un unico libro, con l'IA Lumi che classifica ogni riga nel conto giusto."},
+    "mod1.li1":{en:"France (PCG), Italy, Spain, United States",es:"Francia (PCG), Italia, España, Estados Unidos",it:"Francia (PCG), Italia, Spagna, Stati Uniti"},
+    "mod1.li2":{en:"VAT, trial balance, balance sheet & income statement",es:"IVA, balance, balance general y cuenta de resultados",it:"IVA, bilancio di verifica, stato patrimoniale e conto economico"},
+    "mod1.li3":{en:"FEC export and bank reconciliation",es:"Exportación FEC y conciliación bancaria",it:"Esportazione FEC e riconciliazione bancaria"},
+    "mod2.tag":{en:"GRC & internal control",es:"GRC y control interno",it:"GRC e controllo interno"},
+    "mod2.h3":{en:"Risk under control",es:"Riesgos bajo control",it:"Rischi sotto controllo"},
+    "mod2.p":{en:"Objectives, risks, controls and policies linked — in audit language, not jargon.",es:"Objetivos, riesgos, controles y políticas conectados, en el lenguaje de la auditoría, no en jerga.",it:"Obiettivi, rischi, controlli e politiche collegati — nel linguaggio dell'audit, non in gergo."},
+    "mod2.li1":{en:"Risk & control mapping",es:"Mapa de riesgos y controles",it:"Mappatura rischi e controlli"},
+    "mod2.li2":{en:"Three Lines Model (IIA 2020)",es:"Modelo de las Tres Líneas (IIA 2020)",it:"Modello delle Tre Linee (IIA 2020)"},
+    "mod2.li3":{en:"Policies and evidence attached",es:"Políticas y evidencias vinculadas",it:"Politiche e prove allegate"},
+    "mod3.tag":{en:"Assurance & attestation",es:"Aseguramiento y atestación",it:"Assurance e attestazione"},
+    "mod3.h3":{en:"Honest confidence",es:"Una confianza honesta",it:"Una fiducia onesta"},
+    "mod3.p":{en:"The differentiator: assurance that never lies about its coverage, and a file ready to sign.",es:"El diferenciador: un aseguramiento que nunca miente sobre su cobertura, y un expediente listo para firmar.",it:"Il fattore distintivo: un'assurance che non mente mai sulla propria copertura, e un dossier pronto da firmare."},
+    "mod3.li1":{en:"Explicit confidence levels",es:"Niveles de confianza explícitos",it:"Livelli di confidenza espliciti"},
+    "mod3.li2":{en:"Audit-ready file (FEC + supporting documents)",es:"Expediente listo para auditoría (FEC + justificantes)",it:"Dossier pronto per l'audit (FEC + giustificativi)"},
+    "mod3.li3":{en:"Attestation file ready to sign",es:"Expediente de atestación listo para firmar",it:"Dossier di attestazione pronto da firmare"},
+    "how.eyebrow":{en:"How it works",es:"Cómo funciona",it:"Come funziona"},
+    "how.h2":{en:"From transaction to attestation.",es:"De la transacción a la atestación.",it:"Dalla transazione all'attestazione."},
+    "step1.h3":{en:"Connect or import",es:"Conecte o importe",it:"Collega o importa"},
+    "step1.p":{en:"Read-only bank (PSD2), or statement / photo. Any bank, any country.",es:"Banco en solo lectura (DSP2), o extracto / foto. Cualquier banco, cualquier país.",it:"Banca in sola lettura (PSD2), o estratto / foto. Qualsiasi banca, qualsiasi paese."},
+    "step2.h3":{en:"Lumi keeps & checks",es:"Lumi registra y controla",it:"Lumi registra e controlla"},
+    "step2.p":{en:"Entry classified to the right account, VAT and supporting document checked — with a confidence level.",es:"Asiento clasificado en la cuenta correcta, IVA y justificante verificados, con un nivel de confianza.",it:"Scrittura classificata nel conto giusto, IVA e giustificativo verificati — con un livello di confidenza."},
+    "step3.h3":{en:"Reconcile",es:"Concilie",it:"Riconcilia"},
+    "step3.p":{en:"Transactions reconcile against your entries; gaps are flagged, not hidden.",es:"Las operaciones se concilian con sus asientos; las diferencias se señalan, no se ocultan.",it:"Le operazioni si riconciliano con le tue scritture; gli scarti sono segnalati, non nascosti."},
+    "step4.h3":{en:"Attest & export",es:"Ateste y exporte",it:"Attesta ed esporta"},
+    "step4.p":{en:"Trial balance, financial statements and FEC file — ready for the authorities or audit.",es:"Balance, estados financieros y expediente FEC, listos para la administración o la auditoría.",it:"Bilancio, prospetti finanziari e dossier FEC — pronti per l'amministrazione o l'audit."},
+    "trust.eyebrow":{en:"Trust is the product",es:"La confianza es el producto",it:"La fiducia è il prodotto"},
+    "trust.h2":{en:"Trust, by design.",es:"Confianza, por diseño.",it:"Fiducia, per progettazione."},
+    "trust1.t":{en:"<span class=\"mk\">01</span> Built for audit",es:"<span class=\"mk\">01</span> Diseñada para la auditoría",it:"<span class=\"mk\">01</span> Pensata per l'audit"},
+    "trust1.p":{en:"The platform is built around the demands of assurance and internal control — not the other way around.",es:"La plataforma se diseña en torno a las exigencias del aseguramiento y el control interno, no al revés.",it:"La piattaforma è costruita attorno alle esigenze dell'assurance e del controllo interno, non il contrario."},
+    "trust2.t":{en:"<span class=\"mk\">02</span> Read-only banking",es:"<span class=\"mk\">02</span> Banca en solo lectura",it:"<span class=\"mk\">02</span> Banca in sola lettura"},
+    "trust2.p":{en:"You sign in on your bank's own site via a licensed aggregator (PSD2). COSMO never sees your credentials and cannot make any payment.",es:"Usted se identifica en el sitio de su banco mediante un agregador autorizado (DSP2). COSMO nunca ve sus credenciales y no puede efectuar ningún pago.",it:"Ti identifichi sul sito della tua banca tramite un aggregatore autorizzato (PSD2). COSMO non vede mai le tue credenziali e non può effettuare alcun pagamento."},
+    "trust3.t":{en:"<span class=\"mk\">03</span> EU hosting & data",es:"<span class=\"mk\">03</span> Alojamiento y datos en la UE",it:"<span class=\"mk\">03</span> Hosting e dati nell'UE"},
+    "trust3.p":{en:"Your books are hosted in the European Union, encrypted, tenant-isolated. GDPR is respected by design.",es:"Sus libros se alojan en la Unión Europea, cifrados, aislados por inquilino. El RGPD se respeta por diseño.",it:"I tuoi libri sono ospitati nell'Unione Europea, cifrati, isolati per tenant. Il GDPR è rispettato per progettazione."},
+    "trust4.t":{en:"<span class=\"mk\">04</span> Structurally honest assurance",es:"<span class=\"mk\">04</span> Aseguramiento estructuralmente honesto",it:"<span class=\"mk\">04</span> Assurance strutturalmente onesta"},
+    "trust4.p":{en:"The confidence shown reflects real uncertainty. We never inflate coverage or confuse a control's design with its effectiveness.",es:"La confianza mostrada refleja la incertidumbre real. Nunca inflamos una cobertura ni confundimos el diseño de un control con su eficacia.",it:"La confidenza mostrata riflette l'incertezza reale. Non gonfiamo mai una copertura né confondiamo la progettazione di un controllo con la sua efficacia."},
+    "trust.cta":{en:"Security & compliance in detail →",es:"Seguridad y conformidad en detalle →",it:"Sicurezza e conformità in dettaglio →"},
+    "price.h2":{en:"Simple, with no hidden costs.",es:"Simple, y sin sobrecostes ocultos.",it:"Semplice, senza costi nascosti."},
+    "price.p":{en:"Accounting, GRC and assurance in the same subscription. Launch pricing is being finalized.",es:"Contabilidad, GRC y aseguramiento en la misma suscripción. Los precios de lanzamiento se están finalizando.",it:"Contabilità, GRC e assurance nello stesso abbonamento. I prezzi di lancio sono in via di definizione."},
+    "price.card.h3":{en:"Early access",es:"Acceso anticipado",it:"Accesso anticipato"},
+    "price.card.p":{en:"Freelancer, small business or accountant? Write to us to join the launch and get onboarding support.",es:"¿Autónomo, pyme o asesor contable? Escríbanos para unirse al lanzamiento y recibir acompañamiento inicial.",it:"Sei un libero professionista, una PMI o un commercialista? Scrivici per partecipare al lancio e ricevere supporto all'avvio."},
+    "price.pt1":{en:"Universal statement import — any bank, no connection",es:"Importación universal de extractos — cualquier banco, sin conexión",it:"Importazione universale di estratti — qualsiasi banca, senza connessione"},
+    "price.pt2":{en:"Automatic bank connection (read-only)",es:"Conexión bancaria automática (solo lectura)",it:"Connessione bancaria automatica (sola lettura)"},
+    "price.pt3":{en:"Audit-ready file in one tap",es:"Expediente listo para auditoría en un gesto",it:"Dossier pronto per l'audit con un gesto"},
+    "price.cta1":{en:"Request early access",es:"Solicitar acceso anticipado",it:"Richiedi accesso anticipato"},
+    "footer.tagline":{en:"Cosmo Intelligence — a decision, assurance and accounting platform for freelancers, small businesses and accountants.",es:"Cosmo Intelligence — plataforma de decisión, aseguramiento y contabilidad para autónomos, pymes y asesores contables.",it:"Cosmo Intelligence — piattaforma di decisione, assurance e contabilità per liberi professionisti, PMI e commercialisti."},
+    "footer.col.product":{en:"Product",es:"Producto",it:"Prodotto"},
+    "footer.col.trust":{en:"Trust",es:"Confianza",it:"Fiducia"},
+    "footer.col.contact":{en:"Contact",es:"Contacto",it:"Contatto"},
+    "footer.link.security":{en:"Security & compliance",es:"Seguridad y conformidad",it:"Sicurezza e conformità"},
+    "footer.link.privacy":{en:"Privacy",es:"Privacidad",it:"Privacy"},
+    "footer.link.legal":{en:"Legal notice",es:"Aviso legal",it:"Note legali"},
+    "footer.copy":{en:"© 2026 Cosmo Intelligence. All rights reserved.",es:"© 2026 Cosmo Intelligence. Todos los derechos reservados.",it:"© 2026 Cosmo Intelligence. Tutti i diritti riservati."}
+  };
+  var LANGS=["fr","en","es","it"];
+  var nodes=document.querySelectorAll("[data-i18n]");
+  nodes.forEach(function(el){
+    var k=el.getAttribute("data-i18n");
+    if(!I18N[k]) I18N[k]={};
+    if(I18N[k].fr==null) I18N[k].fr = el.hasAttribute("data-i18n-html") ? el.innerHTML : el.textContent;
+  });
+  window.applyLang=function(l){
+    if(LANGS.indexOf(l)<0) l="fr";
+    document.documentElement.lang=l;
+    nodes.forEach(function(el){
+      var k=el.getAttribute("data-i18n");
+      var t=(I18N[k] && I18N[k][l]!=null) ? I18N[k][l] : (I18N[k] && I18N[k].fr);
+      if(t==null) return;
+      if(el.hasAttribute("data-i18n-html")) el.innerHTML=t; else el.textContent=t;
+    });
+    try{localStorage.setItem("cosmo_lang",l);}catch(e){}
+    var sel=document.getElementById("langsel"); if(sel) sel.value=l;
+  };
+  var init="fr";
+  try{ init=localStorage.getItem("cosmo_lang") || (navigator.language||"fr").slice(0,2).toLowerCase(); }catch(e){}
+  applyLang(init);
+})();
+</script>
 
 </body>
 </html>
