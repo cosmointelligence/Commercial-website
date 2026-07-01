@@ -24,10 +24,15 @@
   .brand .name b{color:var(--violet)}
   .brand .bar{width:34px;border-top:2px solid var(--ink);position:relative}
   .brand .bar::after{content:"";position:absolute;left:0;width:34px;top:2px;border-top:1px solid var(--ink)}
-  .navlinks{display:flex;align-items:center;gap:26px}
+  .navlinks{display:flex;align-items:center;gap:18px}
   .navlinks a{text-decoration:none;color:var(--slate);font-size:14px;font-weight:500}
   .navlinks a:hover{color:var(--ink)}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;border-radius:10px;padding:10px 16px;background:var(--violet);color:#fff;box-shadow:0 6px 18px rgba(79,34,242,.24)}
+  .langsel{appearance:none;-webkit-appearance:none;border:1px solid var(--line);background:#fff;color:var(--slate);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;border-radius:9px;padding:8px 26px 8px 10px;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235B6478' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 9px center}
+  .langsel:hover{border-color:var(--ink);color:var(--ink)}
   .hero{padding:64px 0 18px}
   .hero h1{font-size:clamp(32px,4.6vw,48px)}
   .hero p{color:var(--slate);font-size:18px;margin-top:18px;max-width:34em}
@@ -49,8 +54,8 @@
   .foot{max-width:880px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .foot a{color:var(--ink);text-decoration:none;margin-right:18px;font-size:13.5px}
   .foot a:hover{color:var(--violet)}
-  a:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
-  @media(max-width:700px){.navlinks .hidesm{display:none}}
+  a:focus-visible,.langsel:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+  @media(max-width:700px){.navlinks{gap:12px}.navlinks .hidesm{display:none}}
 </style>
 </head>
 <body>
@@ -58,73 +63,81 @@
   <div class="nav">
     <a class="brand" href="home.html"><span class="name">COSMO<b>.i</b></span><span class="bar"></span></a>
     <nav class="navlinks">
-      <a href="home.html#plateforme" class="hidesm">Plateforme</a>
-      <a href="home.html#tarifs" class="hidesm">Tarifs</a>
-      <a class="btn" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+      <a href="home.html#plateforme" class="hidesm" data-i18n="nav.plateforme">Plateforme</a>
+      <a href="home.html#tarifs" class="hidesm" data-i18n="nav.tarifs">Tarifs</a>
+      <select class="langsel" id="langsel" aria-label="Langue / Language" onchange="applyLang(this.value)">
+        <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="it">IT</option>
+      </select>
+      <a class="btn" href="https://cosmointelligence.github.io/cosmoi/" data-i18n="cta.connect">Se connecter</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="wrap hero">
-    <div class="eyebrow">Sécurité & conformité</div>
-    <h1 style="margin-top:16px">La confiance est le produit.</h1>
-    <p>Vous nous confiez vos comptes et, si vous le choisissez, l'accès en lecture à votre banque. Voici exactement ce que nous faisons — et ne faisons pas — de ces données.</p>
+    <div class="eyebrow" data-i18n="s.eyebrow">Sécurité & conformité</div>
+    <h1 style="margin-top:16px" data-i18n="s.h1">La confiance est le produit.</h1>
+    <p data-i18n="s.lede">Vous nous confiez vos comptes et, si vous le choisissez, l'accès en lecture à votre banque. Voici exactement ce que nous faisons — et ne faisons pas — de ces données.</p>
   </div>
 
   <div class="wrap">
     <section class="block">
-      <h2><span class="n">01</span>Connexion bancaire</h2>
-      <p>La connexion bancaire est <strong>facultative</strong> et strictement en <strong>lecture seule</strong>. Elle passe par un agrégateur agréé (AISP) sous la directive européenne DSP2 — aujourd'hui GoCardless, établissement autorisé.</p>
+      <h2><span class="n">01</span><span data-i18n="b1.h2">Connexion bancaire</span></h2>
+      <p data-i18n="b1.p" data-i18n-html>La connexion bancaire est <strong>facultative</strong> et strictement en <strong>lecture seule</strong>. Elle passe par un agrégateur agréé (AISP) sous la directive européenne DSP2 — aujourd'hui GoCardless, établissement autorisé.</p>
       <ul class="clean">
-        <li>Vous vous identifiez <strong>directement sur le site sécurisé de votre banque</strong> — COSMO ne voit jamais vos identifiants.</li>
-        <li>Accès en lecture seule : aucun paiement, aucun virement ne peut être initié.</li>
-        <li>Le jeton d'accès est conservé chez l'agrégateur, pas dans l'application COSMO.</li>
-        <li>Autorisation révocable à tout moment, et expirant automatiquement (~90 jours).</li>
-        <li>Pas de banque connectée&nbsp;? L'import de relevé (PDF, CSV ou photo) fonctionne partout, sans aucune liaison.</li>
+        <li data-i18n="b1.li1" data-i18n-html>Vous vous identifiez <strong>directement sur le site sécurisé de votre banque</strong> — COSMO ne voit jamais vos identifiants.</li>
+        <li data-i18n="b1.li2">Accès en lecture seule : aucun paiement, aucun virement ne peut être initié.</li>
+        <li data-i18n="b1.li3">Le jeton d'accès est conservé chez l'agrégateur, pas dans l'application COSMO.</li>
+        <li data-i18n="b1.li4">Autorisation révocable à tout moment, et expirant automatiquement (~90 jours).</li>
+        <li data-i18n="b1.li5">Pas de banque connectée&nbsp;? L'import de relevé (PDF, CSV ou photo) fonctionne partout, sans aucune liaison.</li>
       </ul>
     </section>
 
     <section class="block">
-      <h2><span class="n">02</span>Données & hébergement</h2>
-      <p>Vos livres et vos données sont hébergés dans l'<strong>Union européenne</strong> (Irlande). Nous appliquons le principe de minimisation : nous ne collectons que ce qui est nécessaire à la tenue et au rapprochement de votre comptabilité.</p>
+      <h2><span class="n">02</span><span data-i18n="b2.h2">Données & hébergement</span></h2>
+      <p data-i18n="b2.p" data-i18n-html>Vos livres et vos données sont hébergés dans l'<strong>Union européenne</strong> (Irlande). Nous appliquons le principe de minimisation : nous ne collectons que ce qui est nécessaire à la tenue et au rapprochement de votre comptabilité.</p>
       <ul class="clean">
-        <li>Chiffrement en transit (HTTPS) et au repos.</li>
-        <li>Isolation stricte par locataire (row-level security) — vos données ne sont visibles que par vous et les personnes que vous habilitez.</li>
-        <li>Accès au moindre privilège ; secrets serveur jamais exposés dans l'application.</li>
+        <li data-i18n="b2.li1">Chiffrement en transit (HTTPS) et au repos.</li>
+        <li data-i18n="b2.li2">Isolation stricte par locataire (row-level security) — vos données ne sont visibles que par vous et les personnes que vous habilitez.</li>
+        <li data-i18n="b2.li3">Accès au moindre privilège ; secrets serveur jamais exposés dans l'application.</li>
       </ul>
     </section>
 
     <section class="block">
-      <h2><span class="n">03</span>Sous-traitants</h2>
-      <p class="sub">Nous nous appuyons sur un nombre réduit de prestataires, chacun lié par un accord de traitement (DPA).</p>
+      <h2><span class="n">03</span><span data-i18n="b3.h2">Sous-traitants</span></h2>
+      <p class="sub" data-i18n="b3.sub">Nous nous appuyons sur un nombre réduit de prestataires, chacun lié par un accord de traitement (DPA).</p>
       <table>
-        <thead><tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th><th>Garanties</th></tr></thead>
+        <thead><tr>
+          <th data-i18n="th.provider">Prestataire</th>
+          <th data-i18n="th.role">Rôle</th>
+          <th data-i18n="th.location">Localisation</th>
+          <th data-i18n="th.guarantees">Garanties</th>
+        </tr></thead>
         <tbody>
-          <tr><td class="who">GoCardless</td><td>Agrégateur de comptes (AISP agréé DSP2)</td><td>EEE / UK</td><td>Établissement de paiement agréé · SOC 2 / ISO 27001</td></tr>
-          <tr><td class="who">Supabase</td><td>Base de données & authentification</td><td>UE (Irlande)</td><td>ISO 27001 · chiffrement au repos</td></tr>
-          <tr><td class="who">Cloudflare</td><td>Réseau & traitement en périphérie</td><td>Périphérie UE</td><td>ISO 27001 · DPA</td></tr>
-          <tr><td class="who">Anthropic</td><td>Assistance IA (lecture de documents, classement)</td><td>États-Unis</td><td>Clauses contractuelles types (UE) · DPA</td></tr>
-          <tr><td class="who">Resend</td><td>E-mails transactionnels</td><td>UE</td><td>DPA</td></tr>
+          <tr><td class="who">GoCardless</td><td data-i18n="gc.role">Agrégateur de comptes (AISP agréé DSP2)</td><td data-i18n="gc.loc">EEE / UK</td><td data-i18n="gc.guar">Établissement de paiement agréé · SOC 2 / ISO 27001</td></tr>
+          <tr><td class="who">Supabase</td><td data-i18n="sb.role">Base de données & authentification</td><td data-i18n="sb.loc">UE (Irlande)</td><td data-i18n="sb.guar">ISO 27001 · chiffrement au repos</td></tr>
+          <tr><td class="who">Cloudflare</td><td data-i18n="cf.role">Réseau & traitement en périphérie</td><td data-i18n="cf.loc">Périphérie UE</td><td data-i18n="cf.guar">ISO 27001 · DPA</td></tr>
+          <tr><td class="who">Anthropic</td><td data-i18n="an.role">Assistance IA (lecture de documents, classement)</td><td data-i18n="an.loc">États-Unis</td><td data-i18n="an.guar">Clauses contractuelles types (UE) · DPA</td></tr>
+          <tr><td class="who">Resend</td><td data-i18n="re.role">E-mails transactionnels</td><td data-i18n="re.loc">UE</td><td data-i18n="re.guar">DPA</td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="block">
-      <h2><span class="n">04</span>Une IA honnête</h2>
-      <p>L'assistant Lumi propose un compte, vérifie la TVA et le justificatif, repère les écarts — mais affiche toujours un <strong>niveau de confiance</strong>. Il décide plutôt que d'hésiter, sans jamais surévaluer sa certitude.</p>
-      <div class="callout">Principe fondateur : une assurance structurellement honnête. Nous ne simulons jamais une couverture, ne gonflons jamais une confiance, et ne confondons jamais l'existence d'un contrôle avec la preuve de son efficacité. Lumi assiste votre jugement professionnel ; il ne le remplace pas.</div>
+      <h2><span class="n">04</span><span data-i18n="b4.h2">Une IA honnête</span></h2>
+      <p data-i18n="b4.p" data-i18n-html>L'assistant Lumi propose un compte, vérifie la TVA et le justificatif, repère les écarts — mais affiche toujours un <strong>niveau de confiance</strong>. Il décide plutôt que d'hésiter, sans jamais surévaluer sa certitude.</p>
+      <div class="callout" data-i18n="b4.callout">Principe fondateur : une assurance structurellement honnête. Nous ne simulons jamais une couverture, ne gonflons jamais une confiance, et ne confondons jamais l'existence d'un contrôle avec la preuve de son efficacité. Lumi assiste votre jugement professionnel ; il ne le remplace pas.</div>
     </section>
 
     <section class="block">
-      <h2><span class="n">05</span>Conformité & vos droits</h2>
-      <p>Le traitement est conforme au <strong>RGPD</strong>. Vous pouvez à tout moment accéder à vos données, les corriger, les effacer, en demander la portabilité, et retirer votre consentement à la connexion bancaire (bouton «&nbsp;Déconnecter&nbsp;» dans l'application, ou directement auprès de votre banque).</p>
+      <h2><span class="n">05</span><span data-i18n="b5.h2">Conformité & vos droits</span></h2>
+      <p data-i18n="b5.p" data-i18n-html>Le traitement est conforme au <strong>RGPD</strong>. Vous pouvez à tout moment accéder à vos données, les corriger, les effacer, en demander la portabilité, et retirer votre consentement à la connexion bancaire (bouton «&nbsp;Déconnecter&nbsp;» dans l'application, ou directement auprès de votre banque).</p>
       <ul class="clean">
-        <li>Exercer vos droits : <a href="mailto:privacy@cosmointelligence.io">privacy@cosmointelligence.io</a> — réponse sous un mois.</li>
-        <li>Réclamation possible auprès de la CNIL (www.cnil.fr).</li>
-        <li>Facturation électronique : conformité assurée, à l'échéance de la réforme, via une plateforme agréée partenaire.</li>
+        <li data-i18n="b5.li1" data-i18n-html>Exercer vos droits : <a href="mailto:privacy@cosmointelligence.io">privacy@cosmointelligence.io</a> — réponse sous un mois.</li>
+        <li data-i18n="b5.li2">Réclamation possible auprès de la CNIL (www.cnil.fr).</li>
+        <li data-i18n="b5.li3">Facturation électronique : conformité assurée, à l'échéance de la réforme, via une plateforme agréée partenaire.</li>
       </ul>
-      <p class="sub" style="margin-top:18px">Pour le détail du traitement, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      <p class="sub" style="margin-top:18px" data-i18n="b5.more" data-i18n-html>Pour le détail du traitement, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
     </section>
   </div>
 </main>
@@ -132,13 +145,94 @@
 <footer>
   <div class="foot">
     <div>
-      <a href="securite.html">Sécurité</a>
-      <a href="confidentialite.html">Confidentialité</a>
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="mailto:contact@cosmointelligence.io">Contact</a>
+      <a href="securite.html" data-i18n="nav.securite">Sécurité</a>
+      <a href="confidentialite.html" data-i18n="footer.link.privacy">Confidentialité</a>
+      <a href="mentions-legales.html" data-i18n="footer.link.legal">Mentions légales</a>
+      <a href="mailto:contact@cosmointelligence.io" data-i18n="footer.col.contact">Contact</a>
     </div>
     <span class="mono">© 2026 Cosmo Intelligence</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var I18N = {
+    "nav.plateforme":{en:"Platform",es:"Plataforma",it:"Piattaforma"},
+    "nav.tarifs":{en:"Pricing",es:"Precios",it:"Prezzi"},
+    "nav.securite":{en:"Security",es:"Seguridad",it:"Sicurezza"},
+    "cta.connect":{en:"Sign in",es:"Iniciar sesión",it:"Accedi"},
+    "footer.link.privacy":{en:"Privacy",es:"Privacidad",it:"Privacy"},
+    "footer.link.legal":{en:"Legal notice",es:"Aviso legal",it:"Note legali"},
+    "footer.col.contact":{en:"Contact",es:"Contacto",it:"Contatto"},
+    "s.eyebrow":{en:"Security & compliance",es:"Seguridad y conformidad",it:"Sicurezza e conformità"},
+    "s.h1":{en:"Trust is the product.",es:"La confianza es el producto.",it:"La fiducia è il prodotto."},
+    "s.lede":{en:"You entrust us with your books and, if you choose, read access to your bank. Here is exactly what we do — and don't do — with that data.",es:"Usted nos confía sus cuentas y, si lo desea, el acceso de lectura a su banco. Esto es exactamente lo que hacemos — y no hacemos — con esos datos.",it:"Ci affidi i tuoi conti e, se lo desideri, l'accesso in lettura alla tua banca. Ecco esattamente cosa facciamo — e non facciamo — con questi dati."},
+    "b1.h2":{en:"Bank connection",es:"Conexión bancaria",it:"Connessione bancaria"},
+    "b1.p":{en:"The bank connection is <strong>optional</strong> and strictly <strong>read-only</strong>. It runs through a licensed aggregator (AISP) under the EU PSD2 directive — currently GoCardless, an authorised institution.",es:"La conexión bancaria es <strong>opcional</strong> y estrictamente de <strong>solo lectura</strong>. Se realiza a través de un agregador autorizado (AISP) bajo la directiva europea DSP2 — actualmente GoCardless, entidad autorizada.",it:"La connessione bancaria è <strong>facoltativa</strong> e strettamente in <strong>sola lettura</strong>. Avviene tramite un aggregatore autorizzato (AISP) ai sensi della direttiva europea PSD2 — attualmente GoCardless, istituto autorizzato."},
+    "b1.li1":{en:"You sign in <strong>directly on your bank's secure site</strong> — COSMO never sees your credentials.",es:"Usted se identifica <strong>directamente en el sitio seguro de su banco</strong> — COSMO nunca ve sus credenciales.",it:"Ti identifichi <strong>direttamente sul sito sicuro della tua banca</strong> — COSMO non vede mai le tue credenziali."},
+    "b1.li2":{en:"Read-only access: no payment or transfer can be initiated.",es:"Acceso de solo lectura: no se puede iniciar ningún pago ni transferencia.",it:"Accesso in sola lettura: nessun pagamento o bonifico può essere avviato."},
+    "b1.li3":{en:"The access token is kept by the aggregator, not in the COSMO app.",es:"El token de acceso se conserva en el agregador, no en la aplicación COSMO.",it:"Il token di accesso è conservato presso l'aggregatore, non nell'app COSMO."},
+    "b1.li4":{en:"Authorisation is revocable at any time and expires automatically (~90 days).",es:"Autorización revocable en cualquier momento y que expira automáticamente (~90 días).",it:"Autorizzazione revocabile in qualsiasi momento e con scadenza automatica (~90 giorni)."},
+    "b1.li5":{en:"No connected bank? Statement import (PDF, CSV or photo) works everywhere, with no link at all.",es:"¿Sin banco conectado? La importación de extractos (PDF, CSV o foto) funciona en todas partes, sin ninguna vinculación.",it:"Nessuna banca collegata? L'importazione dell'estratto (PDF, CSV o foto) funziona ovunque, senza alcun collegamento."},
+    "b2.h2":{en:"Data & hosting",es:"Datos y alojamiento",it:"Dati e hosting"},
+    "b2.p":{en:"Your books and data are hosted in the <strong>European Union</strong> (Ireland). We apply data minimisation: we collect only what is needed to keep and reconcile your accounts.",es:"Sus libros y datos se alojan en la <strong>Unión Europea</strong> (Irlanda). Aplicamos la minimización de datos: solo recopilamos lo necesario para llevar y conciliar su contabilidad.",it:"I tuoi libri e dati sono ospitati nell'<strong>Unione Europea</strong> (Irlanda). Applichiamo la minimizzazione: raccogliamo solo ciò che serve a tenere e riconciliare la tua contabilità."},
+    "b2.li1":{en:"Encryption in transit (HTTPS) and at rest.",es:"Cifrado en tránsito (HTTPS) y en reposo.",it:"Cifratura in transito (HTTPS) e a riposo."},
+    "b2.li2":{en:"Strict tenant isolation (row-level security) — your data is visible only to you and the people you authorise.",es:"Aislamiento estricto por inquilino (row-level security) — sus datos solo son visibles para usted y las personas que autorice.",it:"Isolamento rigoroso per tenant (row-level security) — i tuoi dati sono visibili solo a te e alle persone che autorizzi."},
+    "b2.li3":{en:"Least-privilege access; server secrets never exposed in the app.",es:"Acceso de mínimo privilegio; los secretos del servidor nunca se exponen en la aplicación.",it:"Accesso a privilegio minimo; i segreti del server non sono mai esposti nell'app."},
+    "b3.h2":{en:"Sub-processors",es:"Subencargados",it:"Responsabili esterni"},
+    "b3.sub":{en:"We rely on a small number of providers, each bound by a data processing agreement (DPA).",es:"Nos apoyamos en un número reducido de proveedores, cada uno vinculado por un acuerdo de tratamiento (DPA).",it:"Ci affidiamo a un numero ridotto di fornitori, ciascuno vincolato da un accordo sul trattamento (DPA)."},
+    "th.provider":{en:"Provider",es:"Proveedor",it:"Fornitore"},
+    "th.role":{en:"Role",es:"Función",it:"Ruolo"},
+    "th.location":{en:"Location",es:"Ubicación",it:"Localizzazione"},
+    "th.guarantees":{en:"Guarantees",es:"Garantías",it:"Garanzie"},
+    "gc.role":{en:"Account aggregator (licensed AISP, PSD2)",es:"Agregador de cuentas (AISP autorizado DSP2)",it:"Aggregatore di conti (AISP autorizzato PSD2)"},
+    "gc.loc":{en:"EEA / UK",es:"EEE / RU",it:"SEE / UK"},
+    "gc.guar":{en:"Licensed payment institution · SOC 2 / ISO 27001",es:"Entidad de pago autorizada · SOC 2 / ISO 27001",it:"Istituto di pagamento autorizzato · SOC 2 / ISO 27001"},
+    "sb.role":{en:"Database & authentication",es:"Base de datos y autenticación",it:"Database e autenticazione"},
+    "sb.loc":{en:"EU (Ireland)",es:"UE (Irlanda)",it:"UE (Irlanda)"},
+    "sb.guar":{en:"ISO 27001 · encryption at rest",es:"ISO 27001 · cifrado en reposo",it:"ISO 27001 · cifratura a riposo"},
+    "cf.role":{en:"Network & edge processing",es:"Red y procesamiento en el borde",it:"Rete ed elaborazione edge"},
+    "cf.loc":{en:"EU edge",es:"Borde UE",it:"Edge UE"},
+    "cf.guar":{en:"ISO 27001 · DPA",es:"ISO 27001 · DPA",it:"ISO 27001 · DPA"},
+    "an.role":{en:"AI assistance (document reading, classification)",es:"Asistencia IA (lectura de documentos, clasificación)",it:"Assistenza IA (lettura documenti, classificazione)"},
+    "an.loc":{en:"United States",es:"Estados Unidos",it:"Stati Uniti"},
+    "an.guar":{en:"Standard contractual clauses (EU) · DPA",es:"Cláusulas contractuales tipo (UE) · DPA",it:"Clausole contrattuali standard (UE) · DPA"},
+    "re.role":{en:"Transactional emails",es:"Correos transaccionales",it:"Email transazionali"},
+    "re.loc":{en:"EU",es:"UE",it:"UE"},
+    "re.guar":{en:"DPA",es:"DPA",it:"DPA"},
+    "b4.h2":{en:"Honest AI",es:"Una IA honesta",it:"Un'IA onesta"},
+    "b4.p":{en:"The Lumi assistant proposes an account, checks the VAT and the supporting document, spots discrepancies — but always shows a <strong>confidence level</strong>. It decides rather than dithers, without ever overstating its certainty.",es:"El asistente Lumi propone una cuenta, verifica el IVA y el justificante, detecta las diferencias — pero siempre muestra un <strong>nivel de confianza</strong>. Decide en lugar de dudar, sin sobrevalorar nunca su certeza.",it:"L'assistente Lumi propone un conto, verifica l'IVA e il giustificativo, individua gli scarti — ma mostra sempre un <strong>livello di confidenza</strong>. Decide invece di esitare, senza mai sopravvalutare la propria certezza."},
+    "b4.callout":{en:"Founding principle: structurally honest assurance. We never simulate coverage, never inflate confidence, and never mistake the existence of a control for proof of its effectiveness. Lumi assists your professional judgment; it does not replace it.",es:"Principio fundador: un aseguramiento estructuralmente honesto. Nunca simulamos una cobertura, nunca inflamos una confianza y nunca confundimos la existencia de un control con la prueba de su eficacia. Lumi asiste su juicio profesional; no lo sustituye.",it:"Principio fondante: un'assurance strutturalmente onesta. Non simuliamo mai una copertura, non gonfiamo mai una confidenza e non confondiamo mai l'esistenza di un controllo con la prova della sua efficacia. Lumi assiste il tuo giudizio professionale; non lo sostituisce."},
+    "b5.h2":{en:"Compliance & your rights",es:"Conformidad y sus derechos",it:"Conformità e i tuoi diritti"},
+    "b5.p":{en:"Processing complies with the <strong>GDPR</strong>. At any time you can access your data, correct it, erase it, request portability, and withdraw your consent to the bank connection (the «&nbsp;Disconnect&nbsp;» button in the app, or directly with your bank).",es:"El tratamiento cumple el <strong>RGPD</strong>. En cualquier momento puede acceder a sus datos, corregirlos, borrarlos, solicitar la portabilidad y retirar su consentimiento a la conexión bancaria (botón «&nbsp;Desconectar&nbsp;» en la aplicación, o directamente en su banco).",it:"Il trattamento è conforme al <strong>GDPR</strong>. In qualsiasi momento puoi accedere ai tuoi dati, correggerli, cancellarli, chiederne la portabilità e revocare il consenso alla connessione bancaria (pulsante «&nbsp;Disconnetti&nbsp;» nell'app, o direttamente presso la tua banca)."},
+    "b5.li1":{en:"Exercise your rights: <a href=\"mailto:privacy@cosmointelligence.io\">privacy@cosmointelligence.io</a> — reply within one month.",es:"Ejercer sus derechos: <a href=\"mailto:privacy@cosmointelligence.io\">privacy@cosmointelligence.io</a> — respuesta en un mes.",it:"Esercitare i tuoi diritti: <a href=\"mailto:privacy@cosmointelligence.io\">privacy@cosmointelligence.io</a> — risposta entro un mese."},
+    "b5.li2":{en:"You may lodge a complaint with the CNIL (www.cnil.fr).",es:"Puede presentar una reclamación ante la CNIL (www.cnil.fr).",it:"Puoi presentare un reclamo all'autorità francese CNIL (www.cnil.fr)."},
+    "b5.li3":{en:"E-invoicing: compliance ensured, by the reform's deadline, via a licensed partner platform.",es:"Facturación electrónica: conformidad garantizada, en el plazo de la reforma, mediante una plataforma autorizada asociada.",it:"Fatturazione elettronica: conformità garantita, entro la scadenza della riforma, tramite una piattaforma autorizzata partner."},
+    "b5.more":{en:"For processing details, see our <a href=\"confidentialite.html\">privacy policy</a>.",es:"Para el detalle del tratamiento, consulte nuestra <a href=\"confidentialite.html\">política de privacidad</a>.",it:"Per i dettagli del trattamento, consulta la nostra <a href=\"confidentialite.html\">informativa sulla privacy</a>."}
+  };
+  var LANGS=["fr","en","es","it"];
+  var nodes=document.querySelectorAll("[data-i18n]");
+  nodes.forEach(function(el){
+    var k=el.getAttribute("data-i18n");
+    if(!I18N[k]) I18N[k]={};
+    if(I18N[k].fr==null) I18N[k].fr = el.hasAttribute("data-i18n-html") ? el.innerHTML : el.textContent;
+  });
+  window.applyLang=function(l){
+    if(LANGS.indexOf(l)<0) l="fr";
+    document.documentElement.lang=l;
+    nodes.forEach(function(el){
+      var k=el.getAttribute("data-i18n");
+      var t=(I18N[k] && I18N[k][l]!=null) ? I18N[k][l] : (I18N[k] && I18N[k].fr);
+      if(t==null) return;
+      if(el.hasAttribute("data-i18n-html")) el.innerHTML=t; else el.textContent=t;
+    });
+    try{localStorage.setItem("cosmo_lang",l);}catch(e){}
+    var sel=document.getElementById("langsel"); if(sel) sel.value=l;
+  };
+  var init="fr";
+  try{ init=localStorage.getItem("cosmo_lang") || (navigator.language||"fr").slice(0,2).toLowerCase(); }catch(e){}
+  applyLang(init);
+})();
+</script>
 </body>
 </html>
