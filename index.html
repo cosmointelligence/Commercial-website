@@ -1,13 +1,372 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>COSMO — Décision, assurance & comptabilité</title>
-<link rel="canonical" href="https://cosmointelligence.io/home.html">
-<meta http-equiv="refresh" content="0; url=home.html">
-<script>location.replace("home.html");</script>
-<style>body{font-family:system-ui,sans-serif;background:#F7F8FB;color:#0B1020;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}a{color:#4F22F2}</style>
+<title>COSMO — La comptabilité que vous pouvez prouver</title>
+<meta name="description" content="Comptabilité, facturation et conformité pour associations, sociétés et indépendants. L'IA tient et contrôle vos comptes ; vous gardez la preuve. 9 €/mois.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#6241C3; --violet-d:#4E33A0; --teal:#11A5B8; --green:#00A03A;
+    --ink:#0E1130; --paper:#F6F7FB; --slate:#5B6478; --line:#E6E8F0; --card:#FFFFFF;
+    --grad:linear-gradient(135deg,#6241C3,#11A5B8);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:450;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.02em;line-height:1.05;margin:0}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;border-radius:12px;padding:12px 20px;cursor:pointer;border:1px solid transparent;transition:.15s}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 6px 18px rgba(98,65,195,.28)}
+  .btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+
+  /* Header */
+  .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+  .brand .logo{width:34px;height:34px;flex-shrink:0}
+  .brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-0.01em}
+  .navlinks{display:flex;align-items:center;gap:8px}
+  @media(max-width:640px){.navlinks .hidesm{display:none}}
+
+  /* Hero */
+  .hero{padding:36px 0 10px;text-align:center;position:relative;overflow:hidden}
+  .hero .logo-xl{width:76px;height:76px;margin:0 auto 20px}
+  .hero h1{font-size:clamp(32px,6.5vw,56px);margin-top:8px}
+  .hero h1 em{font-style:italic;color:var(--violet)}
+  .hero .lede{max-width:640px;margin:20px auto 0;color:var(--slate);font-size:17px;line-height:1.6}
+  .hero .cta-row{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+  .hero .micro{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--green);margin-top:14px}
+
+  /* Proof card */
+  .proof{max-width:440px;margin:36px auto 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 18px 50px rgba(14,17,48,.06)}
+  .proof .head{display:flex;align-items:center;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+  .proof .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(0,160,58,.15)}
+  .ledger{margin:16px 0 0;font-family:'IBM Plex Mono',monospace;font-size:14.5px}
+  .ledger .row{display:flex;justify-content:space-between;padding:8px 0;color:var(--ink)}
+  .ledger .row.tot{border-top:2px solid var(--ink);margin-top:6px;padding-top:10px;font-weight:600}
+  .balanced{display:flex;align-items:center;gap:9px;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--green)}
+  .balanced .tick{width:20px;height:20px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px}
+  .proof .note{margin-top:14px;font-size:12px;color:var(--slate);line-height:1.5}
+
+  /* Section shell */
+  section{padding:56px 0}
+  .shead{text-align:center;max-width:640px;margin:0 auto 8px}
+  .shead h2{font-size:clamp(26px,4.5vw,38px);margin-top:14px}
+  .shead p{color:var(--slate);font-size:16px;line-height:1.6;margin-top:14px}
+
+  /* How it works */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr}}
+  .step{padding:22px 18px;border-right:1px solid var(--line)}
+  .step:last-child{border-right:0}
+  .step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--violet);font-weight:600}
+  .step h3{font-size:17px;margin-top:10px}
+  .step p{color:var(--slate);font-size:13.5px;line-height:1.55;margin-top:8px}
+
+  /* Selector */
+  .selq{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin:34px 0 18px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .seg{appearance:none;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;cursor:pointer;transition:.15s;font-family:inherit;color:var(--ink)}
+  .seg:hover{border-color:var(--violet);transform:translateY(-2px);box-shadow:0 10px 30px rgba(98,65,195,.10)}
+  .seg.on{border-color:var(--violet);background:linear-gradient(180deg,#F4F1FE,#fff);box-shadow:0 12px 34px rgba(98,65,195,.14)}
+  .seg .ico{font-size:22px}
+  .seg .t{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin-top:10px}
+  .seg .s{font-size:12.5px;color:var(--slate);margin-top:4px;line-height:1.45}
+
+  /* Result panel */
+  .panel{margin:20px 0 0;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;opacity:0;transform:translateY(10px);transition:.3s;display:none}
+  .panel.show{opacity:1;transform:none;display:block}
+  .phead{background:var(--grad);color:#fff;padding:28px 30px}
+  .phead .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#E7F6F8}
+  .phead h2{color:#fff;font-size:26px;margin-top:10px}
+  .phead p{color:#EDE9FB;font-size:14.5px;margin-top:10px;line-height:1.55;max-width:620px}
+  .pbody{padding:28px 30px}
+  .block{margin-bottom:26px}
+  .block:last-child{margin-bottom:0}
+  .blabel{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
+  .oblig{list-style:none;padding:0;margin:0}
+  .oblig li{font-size:14px;color:var(--ink);padding:9px 0;border-top:1px solid var(--line);display:flex;gap:10px;line-height:1.45}
+  .oblig li:first-child{border-top:0}
+  .oblig li .mk{color:var(--teal);flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:1px;font-weight:600}
+  .feats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:640px){.feats{grid-template-columns:1fr}}
+  .feat{border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:#FBFBFD}
+  .feat .fh{font-weight:600;font-size:14.5px;display:flex;gap:8px;align-items:center}
+  .feat .fp{font-size:12.5px;color:var(--slate);margin-top:6px;line-height:1.5}
+  .versus{font-size:13px;color:var(--slate);line-height:1.6;background:#F4F1FE;border:1px solid #E4DBFB;border-radius:12px;padding:14px 16px}
+  .versus b{color:var(--ink)}
+  .cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:26px;padding-top:24px;border-top:2px solid var(--ink)}
+  .price{display:flex;align-items:baseline;gap:10px}
+  .price .amt{font-family:'Fraunces',serif;font-weight:600;font-size:40px;line-height:1}
+  .price .per{color:var(--slate);font-size:14px}
+  .price .pnote{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--green);margin-top:6px}
+  .cta .go{display:flex;gap:10px;flex-wrap:wrap}
+  .btn-lg{padding:14px 22px;font-size:15px}
+
+  /* Feature strip */
+  .fstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+  @media(max-width:820px){.fstrip{grid-template-columns:1fr}}
+  .fcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+  .fcard .ic{width:42px;height:42px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:20px}
+  .fcard h3{font-size:18px;margin-top:14px}
+  .fcard p{color:var(--slate);font-size:13.5px;line-height:1.6;margin-top:8px}
+
+  /* Trust dark */
+  .trust{background:var(--ink);color:#E7EAF3;border-radius:24px;padding:44px;margin:56px 0}
+  .trust .eyebrow{color:var(--teal)}
+  .trust h2{color:#fff;font-size:clamp(24px,4vw,34px);margin-top:14px;max-width:620px}
+  .titems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+  @media(max-width:760px){.titems{grid-template-columns:1fr}}
+  .titems .mk{color:var(--teal);font-family:'IBM Plex Mono',monospace;font-size:12px}
+  .titems .tt{font-weight:600;margin-top:8px;color:#fff;font-size:16px}
+  .titems .tp{color:#AEB6CC;font-size:13.5px;margin-top:6px;line-height:1.55}
+
+  /* Pricing */
+  .pricing{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px;text-align:center;box-shadow:0 18px 50px rgba(14,17,48,.06)}
+  .pricing .big{font-family:'Fraunces',serif;font-weight:600;font-size:64px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .pricing .sub{color:var(--slate);font-size:15px;margin-top:6px}
+  .pts{text-align:left;max-width:360px;margin:24px auto 0;font-size:14px}
+  .pts div{padding:8px 0;display:flex;gap:11px;align-items:flex-start}
+  .pts div::before{content:"✓";color:var(--green);font-weight:800;flex-shrink:0}
+  .pricing .btn{margin-top:26px;width:100%;justify-content:center}
+
+  /* Final CTA */
+  .final{text-align:center;padding:60px 0}
+  .final h2{font-size:clamp(28px,5vw,44px)}
+  .final p{color:var(--slate);font-size:17px;margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+  /* Foot */
+  .foot{border-top:1px solid var(--line);padding:34px 0 56px;text-align:center;color:var(--slate);font-size:12.5px}
+  .foot .fbrand{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:14px}
+  .foot .fbrand img{width:26px;height:26px}
+  .foot a{color:var(--slate);text-decoration:underline;margin:0 7px}
+  .disc{max-width:660px;margin:16px auto 0;font-size:11px;color:#98A2B8;line-height:1.55}
+</style>
 </head>
-<body><p>Redirection vers COSMO… <a href="home.html">Continuer</a></p></body>
+<body>
+
+<!-- Reusable logo SVG (recreation of the C mark, in logo colors) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cosmo-c" viewBox="0 0 200 200">
+    <path d="M 168 68 A 75 75 0 1 0 168 132" fill="none" stroke="#6241C3" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 146 82 A 50 50 0 1 0 146 118" fill="none" stroke="#11A5B8" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="16" fill="#00A03A"/>
+  </symbol>
+</svg>
+
+<div class="wrap">
+
+  <div class="top">
+    <a class="brand" href="#top">
+      <svg class="logo" aria-hidden="true"><use href="#cosmo-c"/></svg>
+      <span class="name">COSMO</span>
+    </a>
+    <div class="navlinks">
+      <a class="btn btn-ghost hidesm" href="#tarifs">Tarifs</a>
+      <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+    </div>
+  </div>
+
+  <section class="hero" id="top" style="padding-top:20px">
+    <svg class="logo-xl" aria-hidden="true"><use href="#cosmo-c"/></svg>
+    <div class="eyebrow">Comptabilité · Facturation · Conformité</div>
+    <h1 style="margin-top:16px">Des comptes que vous pouvez <em>prouver</em>.</h1>
+    <p class="lede">COSMO tient votre comptabilité, édite vos factures et vérifie votre conformité — sur un grand livre qui fait foi. L'IA classe et contrôle chaque ligne ; vous, vous gardez la preuve. Association, société ou indépendant : à partir de 9 €/mois.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="https://cosmointelligence.github.io/cosmoi/">Créer mon dossier — 9 €/mois</a>
+      <a class="btn btn-ghost btn-lg" href="#vous">Est-ce fait pour moi ?</a>
+    </div>
+    <div class="micro">✓ Essai gratuit · sans engagement · vos données exportables à tout moment</div>
+
+    <div class="proof">
+      <div class="head"><span>Grand livre — Balance</span><span class="dot" aria-hidden="true"></span></div>
+      <div class="ledger">
+        <div class="row"><span>Total débit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <div class="row"><span>Total crédit</span><span>1&nbsp;248&nbsp;920,00</span></div>
+        <div class="row tot"><span>Écart</span><span>0,00</span></div>
+      </div>
+      <div class="balanced"><span class="tick">✓</span> Équilibré · contrôle d'intégrité validé</div>
+      <p class="note">Σ débit = Σ crédit. Chaque écriture est classée, contrôlée et rapprochée — avec un niveau de confiance affiché, pas un vernis de certitude.</p>
+    </div>
+  </section>
+
+  <section id="comment">
+    <div class="shead">
+      <div class="eyebrow">Comment ça marche</div>
+      <h2>De la banque au dossier prêt pour l'audit.</h2>
+      <p>Quatre étapes, un même grand livre. Vous n'êtes jamais enfermé : à chaque instant, vos données s'exportent.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Connectez ou importez</h3><p>Reliez votre banque en lecture seule, ou importez un relevé — PDF, CSV ou photo. Toute banque, tout pays.</p></div>
+      <div class="step"><div class="n">02</div><h3>Lumi tient & contrôle</h3><p>L'IA classe chaque opération au bon compte, vérifie la TVA, et affiche un niveau de confiance honnête.</p></div>
+      <div class="step"><div class="n">03</div><h3>Rapprochez</h3><p>Vos opérations se rapprochent de vos écritures. Les écarts sont signalés, pas masqués.</p></div>
+      <div class="step"><div class="n">04</div><h3>Attestez & exportez</h3><p>Balance, bilan, compte de résultat, dossier FEC — prêts pour l'administration ou l'audit.</p></div>
+    </div>
+  </section>
+
+  <section id="vous" style="padding-top:20px">
+    <div class="shead">
+      <div class="eyebrow">Fait pour votre structure</div>
+      <h2>Vos obligations ne sont pas les mêmes. Votre outil non plus.</h2>
+      <p>Dites-nous qui vous êtes — on vous montre exactement comment COSMO vous tient à jour, en règle et prêt pour l'audit.</p>
+    </div>
+    <div class="selq">Vous êtes… ?</div>
+    <div class="grid" id="grid"></div>
+    <div class="panel" id="panel"></div>
+  </section>
+
+  <section id="fonctions">
+    <div class="shead">
+      <div class="eyebrow">Ce qui nous distingue</div>
+      <h2>La compta, plus l'audit de conformité.</h2>
+      <p>Les autres saisissent. COSMO saisit <em>et</em> vérifie — au regard du CGI, avec une piste d'audit fiable.</p>
+    </div>
+    <div class="fstrip">
+      <div class="fcard"><div class="ic">✨</div><h3>Lumi tient vos comptes</h3><p>Photographiez un reçu : l'IA classe au bon compte, vérifie la TVA, évalue la déductibilité — avec un avis à vérifier, jamais une garantie.</p></div>
+      <div class="fcard"><div class="ic">🛡️</div><h3>Conformité vérifiée</h3><p>Chaque facture est contrôlée au regard du CGI : mentions légales, numérotation continue, TVA. Les ruptures de séquence sont détectées.</p></div>
+      <div class="fcard"><div class="ic">📄</div><h3>Dossier FEC légal</h3><p>Export du fichier des écritures comptables au format réglementaire (A47 A-1 LPF), prêt dès le premier jour d'un contrôle.</p></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="trust">
+      <div class="eyebrow">Pourquoi COSMO</div>
+      <h2>Une comptabilité honnête, à un prix honnête.</h2>
+      <div class="titems">
+        <div><div class="mk">01 · Preuve</div><div class="tt">Le grand livre fait foi</div><div class="tp">Chaque écriture est classée, contrôlée et rapprochée, avec un niveau de confiance affiché — pas un vernis de certitude.</div></div>
+        <div><div class="mk">02 · Autonomie</div><div class="tt">Sans expert-comptable — ou avec</div><div class="tp">Tenez vos comptes vous-même, avec l'IA qui classe et contrôle. Ou invitez votre comptable. Vous choisissez, sans être enfermé.</div></div>
+        <div><div class="mk">03 · Prix</div><div class="tt">9 € par mois</div><div class="tp">Là où les autres facturent 30 à 100 €. La même rigueur — TVA, liasse, FEC — sans le tarif d'un cabinet.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="tarifs" style="padding-top:20px">
+    <div class="shead">
+      <div class="eyebrow">Tarif</div>
+      <h2>Un seul prix. Tout compris.</h2>
+    </div>
+    <div class="pricing">
+      <div class="big">9&nbsp;€</div>
+      <div class="sub">par mois · sans engagement</div>
+      <div class="pts">
+        <div>Comptabilité complète — France (PCG), associations, Italie, Espagne</div>
+        <div>Facturation conforme, devis, factures électroniques (Factur-X)</div>
+        <div>IA Lumi : classement, contrôle TVA, scan de reçus</div>
+        <div>TVA, balance, bilan, compte de résultat, export FEC</div>
+        <div>Contrôle de conformité au regard du CGI</div>
+        <div>Sauvegarde et export de vos données à tout moment</div>
+      </div>
+      <a class="btn btn-primary" href="https://cosmointelligence.github.io/cosmoi/">Créer mon dossier maintenant →</a>
+    </div>
+  </section>
+
+  <section class="final">
+    <svg style="width:56px;height:56px;margin:0 auto 18px;display:block" aria-hidden="true"><use href="#cosmo-c"/></svg>
+    <h2>Des comptes que vous pouvez prouver.</h2>
+    <p>Créez votre dossier en quelques minutes. Essai gratuit, vos données vous appartiennent, et vous partez quand vous voulez.</p>
+    <div style="margin-top:26px"><a class="btn btn-primary btn-lg" href="https://cosmointelligence.github.io/cosmoi/">Commencer — 9 €/mois</a></div>
+  </section>
+
+  <div class="foot">
+    <div class="fbrand">
+      <svg style="width:26px;height:26px" aria-hidden="true"><use href="#cosmo-c"/></svg>
+      <span class="mono" style="font-weight:600;color:var(--ink)">COSMO</span>
+    </div>
+    <div>
+      <a href="mentions-legales.html">Mentions légales</a> ·
+      <a href="confidentialite.html">Confidentialité</a> ·
+      <a href="https://cosmointelligence.github.io/cosmoi/">Se connecter</a>
+    </div>
+    <p class="disc">COSMO est un outil d'assistance à la tenue comptable et à la conformité. Les informations affichées (obligations, échéances, contrôles, déductibilité) sont indicatives et à vérifier ; elles ne constituent pas un conseil juridique, comptable ou fiscal. Édité par Cosmo Intelligence · RCS Paris 106 884 430.</p>
+  </div>
+
+</div>
+
+<script>
+  var SIGNIN = "https://cosmointelligence.github.io/cosmoi/";
+  var SEGMENTS = [
+    { key:"asso", ico:"🤝", name:"Association", sub:"Loi 1901 — cotisations, dons, subventions", tag:"Association loi 1901",
+      title:"Une compta associative que le trésorier peut tenir seul.",
+      intro:"Cotisations, dons, subventions, bénévolat : la vie associative a sa propre comptabilité. COSMO la parle nativement — et vous évite l'usine à gaz d'un outil pensé pour les sociétés.",
+      oblig:[["756 / 754","Cotisations et dons ventilés au bon compte, automatiquement."],["TVA","Franchise si non lucratif — COSMO ne vous en réclame pas à tort."],["Reçus fiscaux","Abandon de frais des bénévoles → don art. 200 CGI, barème kilométrique inclus."],["Compte d'emploi","États adaptés aux associations, prêts pour l'AG ou le contrôleur."]],
+      feats:[["🤝 Import HelloAsso","Vos adhésions et dons HelloAsso importés en un fichier — ventilés cotisations / dons, sans ressaisie."],["🧾 Frais déductibles","Barème kilométrique officiel, frais de création, quote-part de local mixte : calculés et comptabilisés."]],
+      versus:"<b>Face à Pennylane ou Indy&nbsp;:</b> pensés pour les sociétés, l'associatif y est une rustine. COSMO gère l'import HelloAsso, la ventilation dons/cotisations et le barème bénévole nativement — à 9&nbsp;€, pas 30&nbsp;€+.",
+      cta:"Créer le dossier de mon association →" },
+    { key:"sasu", ico:"🚀", name:"SASU", sub:"Président unique — IS, TVA, liasse", tag:"SASU — société par actions simplifiée unipersonnelle",
+      title:"Toute la rigueur d'une société, sans la facture d'un cabinet.",
+      intro:"IS, TVA, liasse fiscale, comptes annuels : une SASU a de vraies obligations. COSMO les tient sur un grand livre qui fait foi, avec l'IA qui classe et contrôle chaque ligne.",
+      oblig:[["IS","Impôt sur les sociétés — 15 % jusqu'à 42 500 €, acomptes suivis."],["TVA","CA3 mensuelle ou trimestrielle, TVA vérifiée sur chaque facture."],["Liasse & comptes annuels","Bilan, compte de résultat, liasse 2065 — générés depuis vos écritures."],["FEC","Export au format légal, prêt dès le premier jour d'un contrôle."]],
+      feats:[["✨ Lumi tient vos comptes","Photographiez un reçu : Lumi classe au bon compte PCG, vérifie la TVA, affiche un niveau de confiance honnête."],["🛡️ Contrôles signés","Chaque écriture IA passe un contrôle détective signé — la piste d'audit fiable exigée au contrôle."]],
+      versus:"<b>Face à Cegid ou Sage&nbsp;:</b> même profondeur (IS, liasse, FEC, immobilisations) sans le tarif cabinet (~100&nbsp;€/mois). <b>Face à Pennylane&nbsp;:</b> vous n'êtes pas obligé d'y adjoindre un expert-comptable pour clôturer.",
+      cta:"Créer le dossier de ma SASU →" },
+    { key:"sarl", ico:"🏢", name:"SARL / EURL", sub:"Gérant(s) — IS ou IR, TVA, associés", tag:"SARL / EURL",
+      title:"Plusieurs associés, un seul grand livre qui fait foi.",
+      intro:"Gérance, parts sociales, IS ou IR sur option : la SARL cumule les obligations. COSMO les tient proprement et sort les états dont votre banque, vos associés et l'administration ont besoin.",
+      oblig:[["IS / IR","Régime selon votre option — COSMO calcule sur la bonne base."],["TVA","Déclarations CA3, TVA contrôlée à la facture."],["Comptes annuels","Bilan et compte de résultat pour l'AG et le greffe."],["FEC","Fichier des écritures comptables au format légal (A47 A-1 LPF)."]],
+      feats:[["📄 États & liasse","Balance, bilan, compte de résultat, liasse fiscale — d'un même livre, sans double saisie."],["🔍 Rapprochement bancaire","Vos opérations se rapprochent de vos écritures ; les écarts sont signalés, pas masqués."]],
+      versus:"<b>Face à EBP ou Sage&nbsp;:</b> une interface moderne pensée mobile, pas un logiciel des années 2000. <b>Le tout à 9&nbsp;€/mois</b>, avec l'audit de conformité que les suites classiques ne proposent pas.",
+      cta:"Créer le dossier de ma SARL →" },
+    { key:"sa", ico:"🏛️", name:"SA", sub:"Conseil, CAC — gouvernance & contrôle", tag:"Société anonyme",
+      title:"La rigueur attendue par votre commissaire aux comptes.",
+      intro:"Une SA vit sous le regard d'un commissaire aux comptes et d'une gouvernance formelle. COSMO tient des comptes horodatés et signés, avec la piste d'audit fiable que le contrôle exige.",
+      oblig:[["IS & liasse","Fiscalité société complète, états consolidables."],["Commissariat aux comptes","Piste d'audit fiable, écritures horodatées et signées."],["Comptes annuels","Bilan, compte de résultat et annexe pour l'AG et le greffe."],["FEC & dossier d'audit","Dossier prêt pour l'administration ou le CAC en un export."]],
+      feats:[["✍️ Écritures signées","Les écritures IA sont contre-vérifiées et signées : une piste d'audit que le contrôleur peut suivre."],["📄 Dossier complet","FEC, balance, grand livre, journaux — assemblés en un dossier prêt pour la révision."]],
+      versus:"<b>À 9&nbsp;€/mois</b>, COSMO apporte à une SA la traçabilité et la piste d'audit d'outils bien plus chers — avec le contrôle de conformité intégré en plus.",
+      cta:"Créer le dossier de ma SA →" },
+    { key:"micro", ico:"⚡", name:"Micro-entreprise", sub:"Auto-entrepreneur — recettes, franchise", tag:"Micro-entrepreneur",
+      title:"Le strict nécessaire, fait vite — et sans piège.",
+      intro:"En micro, pas de bilan : un livre de recettes, la franchise de TVA, la déclaration URSSAF. COSMO fait l'essentiel proprement et vous prévient au bon moment — notamment quand vous approchez des seuils.",
+      oblig:[["Livre de recettes","Tenu automatiquement, conforme, exportable."],["Franchise TVA","Mention « TVA non applicable, art. 293 B du CGI » ajoutée d'office."],["Seuils","COSMO vous alerte avant de dépasser 77 700 € / 188 700 €."],["URSSAF","Chiffre d'affaires prêt à déclarer, sans calcul à la main."]],
+      feats:[["🧾 Factures conformes","Chaque facture porte les mentions légales exactes — numérotation continue, franchise, échéance — vérifiées au CGI."],["✨ Lumi + reçus","Photographiez, Lumi range. Vos recettes et justificatifs au même endroit, prêts si l'URSSAF demande."]],
+      versus:"<b>Face à Indy ou Abby&nbsp;:</b> COSMO grandit avec vous. Le jour où vous passez en société, tout est déjà là — vous ne changez pas d'outil, vous activez un mode. Et l'audit de conformité, eux ne l'ont pas.",
+      cta:"Créer mon dossier micro →" },
+    { key:"liberal", ico:"⚖️", name:"Profession libérale", sub:"BNC — recettes-dépenses, 2035", tag:"Profession libérale (BNC)",
+      title:"La 2035 sans y passer vos soirées.",
+      intro:"En BNC, vous tenez une comptabilité de trésorerie : recettes encaissées, dépenses payées, puis la déclaration 2035. COSMO suit vos flux, ventile vos dépenses et prépare la 2035 — pour vous ou votre AGA.",
+      oblig:[["Recettes-dépenses","Comptabilité de trésorerie tenue au fil de l'eau."],["Déclaration 2035","Préparée depuis vos écritures, prête pour l'AGA ou la télédéclaration."],["TVA","Franchise BNC (37 500 €) gérée, seuils surveillés."],["Frais professionnels","Quote-part, barème kilométrique, déductibilité vérifiée par Lumi."]],
+      feats:[["✨ Lumi juge la déductibilité","Photographiez une dépense : Lumi évalue si elle est déductible, avec le pourcentage et la référence CGI — un avis à vérifier, jamais une garantie."],["📐 Barèmes à jour","Barème kilométrique, plafonds, franchises — la référence fiscale, à jour et sourcée, dans l'outil."]],
+      versus:"<b>Face à Indy&nbsp;:</b> même simplicité, mais avec l'audit de conformité et le scoring de déductibilité en plus. <b>À 9&nbsp;€</b>, vous préparez la 2035 sans déléguer votre bon sens à une boîte noire.",
+      cta:"Créer mon dossier libéral →" }
+  ];
+
+  var grid = document.getElementById("grid");
+  var panel = document.getElementById("panel");
+  SEGMENTS.forEach(function(s){
+    var b = document.createElement("button");
+    b.className = "seg"; b.setAttribute("data-k", s.key);
+    b.innerHTML = '<div class="ico">'+s.ico+'</div><div class="t">'+s.name+'</div><div class="s">'+s.sub+'</div>';
+    b.addEventListener("click", function(){ select(s.key); });
+    grid.appendChild(b);
+  });
+  function select(key){
+    var s = SEGMENTS.filter(function(x){return x.key===key;})[0]; if(!s) return;
+    Array.prototype.forEach.call(grid.children, function(c){ c.classList.toggle("on", c.getAttribute("data-k")===key); });
+    var obligHtml = s.oblig.map(function(o){ return '<li><span class="mk">'+o[0]+'</span><span>'+o[1]+'</span></li>'; }).join("");
+    var featHtml = s.feats.map(function(f){ return '<div class="feat"><div class="fh">'+f[0]+'</div><div class="fp">'+f[1]+'</div></div>'; }).join("");
+    panel.innerHTML =
+      '<div class="phead"><div class="tag">'+s.tag+'</div><h2>'+s.title+'</h2><p>'+s.intro+'</p></div>'+
+      '<div class="pbody">'+
+        '<div class="block"><div class="blabel">Vos obligations, tenues</div><ul class="oblig">'+obligHtml+'</ul></div>'+
+        '<div class="block"><div class="blabel">Ce que COSMO fait pour vous</div><div class="feats">'+featHtml+'</div></div>'+
+        '<div class="block"><div class="versus">'+s.versus+'</div></div>'+
+        '<div class="cta"><div><div class="price"><span class="amt">9&nbsp;€</span><span class="per">/ mois · sans engagement</span></div><div class="pnote">✓ Essai gratuit · vos données exportables à tout moment</div></div>'+
+          '<div class="go"><a class="btn btn-primary btn-lg" href="'+SIGNIN+'">'+s.cta+'</a></div></div>'+
+      '</div>';
+    panel.classList.add("show");
+    setTimeout(function(){ panel.scrollIntoView({behavior:"smooth", block:"nearest"}); }, 60);
+  }
+</script>
+</body>
 </html>
