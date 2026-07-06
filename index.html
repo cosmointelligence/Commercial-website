@@ -426,6 +426,50 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   </div>
 </section>
 
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow" style="text-align:center">Questions fréquentes</p>
+    <h2 style="text-align:center">Ce que vous vous demandez peut-être</h2>
+    <div class="faq">
+      <details>
+        <summary>Est-ce vraiment conforme à la réglementation française ?</summary>
+        <p>Oui. COSMO tient vos comptes selon le Plan comptable général (PCG), calcule la TVA et produit un export FEC au format attendu par la DGFiP. Les factures sont générées au format Factur-X (norme EN 16931). COSMO structure et contrôle vos comptes ; le dépôt des déclarations reste sous votre responsabilité.</p>
+      </details>
+      <details>
+        <summary>Ai-je encore besoin d'un expert-comptable ?</summary>
+        <p>Pour une micro-entreprise, un indépendant ou une petite association, l'expert-comptable n'est pas obligatoire : COSMO vous permet de tenir vos comptes vous-même. Si vous travaillez avec un expert-comptable, vous pouvez lui transmettre votre FEC et votre dossier en un export. COSMO est un outil d'assistance, pas un conseil juridique ou fiscal.</p>
+      </details>
+      <details>
+        <summary>La facturation électronique (Factur-X) est-elle incluse ?</summary>
+        <p>Oui — la génération de factures au format Factur-X conforme EN 16931 est incluse, avec un contrôle des 21 règles. La transmission via une plateforme agréée (réforme e-invoicing) est en cours de déploiement et s'ajoutera sans changer votre façon de travailler.</p>
+      </details>
+      <details>
+        <summary>Mes données sont-elles en sécurité ?</summary>
+        <p>Vos données sont hébergées dans l'Union européenne, chiffrées en transit et isolées par organisation. Vous restez propriétaire de vos données et pouvez les exporter à tout moment. Le détail figure dans notre <a href="/confidentialite.html" style="color:var(--indigo)">politique de confidentialité</a>.</p>
+      </details>
+      <details>
+        <summary>Puis-je résilier facilement ?</summary>
+        <p>Oui. L'abonnement est sans engagement : vous résiliez en un clic, l'effet prend cours à la fin du mois en cours, et vos données restent exportables. Pas de période minimale, pas de frais cachés.</p>
+      </details>
+      <details>
+        <summary>Pour qui est COSMO ?</summary>
+        <p>Pour les micro-entrepreneurs, indépendants (BIC/BNC), associations et petites structures — en France, en Italie et en Espagne, dans un seul outil. Si vous cherchez à tenir vos comptes proprement, prouver votre conformité et facturer sans multiplier les logiciels, c'est fait pour vous.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<style>
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:10px 0;overflow:hidden;transition:border-color .15s}
+.faq details[open]{border-color:var(--indigo)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:600;color:var(--ink);font-size:15.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--indigo);font-size:22px;font-weight:400;line-height:1;flex-shrink:0}
+.faq details[open] summary::after{content:"\2212"}
+.faq details[open] summary{border-bottom:1px solid var(--line)}
+.faq p{margin:0;padding:14px 18px 18px;color:var(--ink-2);font-size:14.5px;line-height:1.62}
+</style>
+
 <!-- ===== FINAL ===== -->
 <section class="final">
   <div class="wrap">
