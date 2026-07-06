@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>COSMO — Des comptes que vous pouvez prouver</title>
-<meta name="description" content="Comptabilité complète, contrôle de conformité au regard du CGI et dossier FEC prêt pour l'audit. 9 €/mois, sans engagement. France, associations, Italie, Espagne.">
+<meta name="description" content="30 jours gratuits, puis 9 €/mois. Comptabilité complète, contrôle de conformité CGI et dossier FEC prêt pour l'audit. France, associations, Italie, Espagne.">
 
 <!-- Canonical + social point to the real domain, never github.io -->
 <link rel="canonical" href="https://cosmointelligence.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cosmointelligence.io/">
 <meta property="og:title" content="COSMO — Des comptes que vous pouvez prouver">
-<meta property="og:description" content="La compta, plus l'audit de conformité. 9 €/mois, sans engagement.">
+<meta property="og:description" content="30 jours gratuits, puis 9 €/mois. La compta, plus l'audit de conformité.">
 <meta name="theme-color" content="#0E1330">
 <meta name="robots" content="index,follow">
 <meta property="og:site_name" content="COSMO">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="COSMO — Des comptes que vous pouvez prouver · 9 €/mois">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="COSMO — Des comptes que vous pouvez prouver">
-<meta name="twitter:description" content="La compta, plus l'audit de conformité. 9 €/mois, sans engagement.">
+<meta name="twitter:description" content="30 jours gratuits, puis 9 €/mois. La compta, plus l'audit de conformité.">
 <meta name="twitter:image" content="https://cosmointelligence.io/og-image.png">
 
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -112,10 +112,15 @@ header{
   background:rgba(238,240,245,.82);backdrop-filter:saturate(180%) blur(14px);
   border-bottom:1px solid var(--line);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.nav .brand{min-width:0;flex-shrink:1}
+.nav-right{flex-shrink:0}
 .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:.02em;text-decoration:none}
 .brand svg{width:26px;height:26px;display:block}
 .brand span{font-family:var(--mono);font-size:15px;letter-spacing:.12em}
+.brand .lockup{display:inline-flex;flex-direction:column;line-height:1.05}
+.brand .lockup b{font-family:var(--mono);font-size:15px;letter-spacing:.12em;font-weight:700;color:var(--ink)}
+.brand .lockup small{font-family:var(--mono);font-size:7.5px;letter-spacing:.16em;color:var(--ink-3);margin-top:3px;font-weight:600}
 .nav-right{display:flex;align-items:center;gap:16px}
 .nav-login{font-size:14px;color:var(--ink-2);text-decoration:none;font-weight:500}
 .btn{
@@ -261,6 +266,9 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 .foot-brand{display:flex;align-items:center;gap:9px;justify-content:center;margin-bottom:18px}
 .foot-brand svg{width:24px;height:24px}
 .foot-brand span{font-family:var(--mono);font-size:14px;letter-spacing:.12em;font-weight:600}
+.foot-brand .lockup{display:inline-flex;flex-direction:column;line-height:1.05;text-align:left}
+.foot-brand .lockup b{font-family:var(--mono);font-size:14px;letter-spacing:.12em;font-weight:700}
+.foot-brand .lockup small{font-family:var(--mono);font-size:7px;letter-spacing:.16em;color:var(--ink-3);margin-top:3px;font-weight:600}
 .foot-links{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:14px;margin-bottom:18px}
 .foot-links a{color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
 .foot-links .sep{color:var(--ink-3)}
@@ -274,6 +282,21 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   .cta-row{flex-direction:row}
   .cta-row .btn{width:auto}
   .cta-row .btn.big{flex:1}
+}
+@media (max-width:760px){
+  .brand .lockup small{display:none}
+}
+@media (max-width:600px){
+  .nav{height:56px}
+  .brand .lockup small{display:none}
+  .brand svg{width:24px;height:24px}
+  .nav-right{gap:10px}
+  .nav-login{font-size:13px}
+  .btn.small{padding:8px 12px;font-size:13px}
+}
+@media (max-width:520px){
+  .nav-login{display:none}
+  .btn.small{padding:9px 14px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -293,11 +316,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
         <path d="M40 26a12 12 0 1 0 0 12" stroke="#16A6C9" stroke-width="6" stroke-linecap="round"/>
         <circle cx="32" cy="32" r="4.5" fill="#16A34A"/>
       </svg>
-      <span>COSMO</span>
+      <span class="lockup"><b>COSMO</b><small>COMPTABILITÉ · CONFORMITÉ</small></span>
     </a>
     <div class="nav-right">
       <a class="nav-login" href="https://app.cosmointelligence.io/">Se connecter</a>
-      <a class="btn small" href="https://app.cosmointelligence.io/">Créer mon dossier</a>
+      <a class="btn small" href="https://app.cosmointelligence.io/?offer=compta">Essai gratuit</a>
     </div>
   </div>
 </header>
@@ -309,10 +332,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
     <h1>Des comptes que&nbsp;vous pouvez prouver.</h1>
     <p class="lead">Comptabilité complète, contrôle de conformité au regard du CGI et dossier FEC prêt pour l'audit. <b>9 €/mois</b>, là où les cabinets et les autres SaaS facturent 30 à 100 €.</p>
     <div class="cta-row">
-      <a class="btn big" href="https://app.cosmointelligence.io/">Créer mon dossier →</a>
+      <a class="btn big" href="https://app.cosmointelligence.io/?offer=compta">Essai gratuit 30 jours →</a>
       <a class="btn big ghost" href="#tarif">Voir le tarif</a>
     </div>
-    <p class="cta-note"><b>Sans engagement</b> · résiliez en un clic · vos données exportables à tout moment</p>
+    <p class="cta-note"><b>30 jours gratuits</b>, puis 9 €/mois · sans engagement · résiliez en un clic</p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -455,7 +478,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
     <div class="price-card reveal">
       <div class="price-tag">
         <div class="n">9 €</div>
-        <div class="per">par mois · sans engagement</div>
+        <div class="per">30 jours gratuits, puis 9 €/mois</div>
       </div>
       <ul class="plist">
         <li><span class="tick">✓</span>Comptabilité complète — France (PCG), associations, Italie, Espagne</li>
@@ -465,8 +488,8 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
         <li><span class="tick">✓</span>Contrôle de conformité au regard du CGI</li>
         <li><span class="tick">✓</span>Sauvegarde et export de vos données à tout moment</li>
       </ul>
-      <a class="btn big" href="https://app.cosmointelligence.io/">Créer mon dossier →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Sans engagement</b> · résiliez en un clic</p>
+      <a class="btn big" href="https://app.cosmointelligence.io/?offer=compta">Essai gratuit 30 jours →</a>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 30 jours · annulable à tout moment</p>
     </div>
   </div>
 </section>
@@ -525,7 +548,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
     </svg>
     <h2>Des comptes que vous pouvez prouver.</h2>
     <p class="lead">Créez votre dossier en quelques minutes. Vos données vous appartiennent, et vous partez quand vous voulez.</p>
-    <a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:340px;margin:0 auto">Commencer — 9 €/mois →</a>
+    <a class="btn big" href="https://app.cosmointelligence.io/?offer=compta" style="max-width:340px;margin:0 auto">Essai gratuit 30 jours →</a>
   </div>
 </section>
 
@@ -534,12 +557,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   <div class="wrap">
     <div class="foot-brand">
       <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M46 20a20 20 0 1 0 0 24" stroke="#5B3FD6" stroke-width="6" stroke-linecap="round"/><path d="M40 26a12 12 0 1 0 0 12" stroke="#16A6C9" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="32" r="4.5" fill="#16A34A"/></svg>
-      <span>COSMO</span>
+      <span class="lockup"><b>COSMO</b><small>COMPTABILITÉ · CONFORMITÉ</small></span>
     </div>
     <div class="foot-links">
       <a href="/mentions-legales.html">Mentions légales</a><span class="sep">·</span>
       <a href="/cgv.html">CGV</a><span class="sep">·</span>
       <a href="/confidentialite.html">Confidentialité</a><span class="sep">·</span>
+      <a href="#" id="cookie-manage">Gérer les cookies</a><span class="sep">·</span>
       <a href="https://app.cosmointelligence.io/">Se connecter</a>
     </div>
     <p class="disclaimer">COSMO est un outil d'assistance à la tenue comptable et à la conformité. Les informations affichées (obligations, échéances, contrôles, déductibilité) sont indicatives et à vérifier ; elles ne constituent pas un conseil juridique, comptable ou fiscal. Édité par Cosmo Intelligence · RCS Paris 106 884 430.</p>
@@ -658,6 +682,92 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
     panel.classList.remove('in'); void panel.offsetWidth; panel.classList.add('in');
     if(!reduce){ panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }
   });
+})();
+</script>
+
+<!-- ===== Bandeau cookies (CNIL) ===== -->
+<style>
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;
+  background:#0E1330;color:#EDEFF7;box-shadow:0 -8px 30px rgba(0,0,0,.25);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif}
+#cookie-banner.show{display:block}
+#cookie-banner .cb-wrap{max-width:960px;margin:0 auto;padding:18px 22px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+#cookie-banner p{margin:0;flex:1 1 300px;font-size:14px;line-height:1.55;color:#C7CBE0}
+#cookie-banner a{color:#9FB4FF;text-decoration:underline;text-underline-offset:2px}
+#cookie-banner .cb-actions{display:flex;gap:10px;flex-wrap:wrap}
+#cookie-banner button{font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;
+  border-radius:10px;padding:11px 18px;border:1px solid transparent;line-height:1}
+.cb-refuse{background:transparent;color:#EDEFF7;border-color:#3A4160}
+.cb-refuse:hover{border-color:#6B7290}
+.cb-accept{background:#16A6C9;color:#04121A}
+.cb-accept:hover{filter:brightness(1.06)}
+.cb-custom{background:transparent;color:#9FB4FF;border-color:transparent;text-decoration:underline;padding:11px 6px}
+#cookie-prefs{max-width:960px;margin:0 auto;padding:0 22px 16px}
+#cookie-prefs.hidden{display:none}
+.cb-row{display:flex;align-items:center;gap:10px;font-size:14px;color:#C7CBE0;
+  border-top:1px solid #23294a;padding:12px 0}
+.cb-row input{width:18px;height:18px;accent-color:#16A6C9}
+.cb-save{margin-top:6px}
+@media(max-width:560px){#cookie-banner .cb-actions{width:100%}#cookie-banner .cb-actions button{flex:1}}
+</style>
+
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Préférences cookies">
+  <div class="cb-wrap">
+    <p>Nous utilisons des cookies strictement nécessaires au fonctionnement du site. Avec votre accord, nous pouvons aussi mesurer l'audience pour améliorer COSMO. Vous restez libre de refuser. En savoir plus : <a href="/confidentialite.html">politique de confidentialité</a>.</p>
+    <div class="cb-actions">
+      <button class="cb-refuse" id="cb-refuse">Tout refuser</button>
+      <button class="cb-custom" id="cb-custom">Personnaliser</button>
+      <button class="cb-accept" id="cb-accept">Tout accepter</button>
+    </div>
+  </div>
+  <div id="cookie-prefs" class="hidden">
+    <label class="cb-row"><input type="checkbox" checked disabled> Cookies nécessaires — indispensables, toujours actifs.</label>
+    <label class="cb-row"><input type="checkbox" id="cb-analytics"> Mesure d'audience — statistiques anonymes d'utilisation.</label>
+    <div class="cb-actions cb-save"><button class="cb-accept" id="cb-savePrefs">Enregistrer mes choix</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='cosmo_consent_v1';
+  var banner=document.getElementById('cookie-banner');
+  var prefs=document.getElementById('cookie-prefs');
+
+  function read(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function save(consent){
+    try{ localStorage.setItem(KEY, JSON.stringify({analytics:!!consent.analytics, ts:Date.now()})); }catch(e){}
+    apply(consent);
+  }
+  function apply(consent){ if(consent && consent.analytics){ loadAnalytics(); } }
+
+  // Non-essential scripts go here — only runs after consent.
+  var _loaded=false;
+  function loadAnalytics(){
+    if(_loaded) return; _loaded=true;
+    /* Quand vous ajouterez Google Ads / GA4, placez la balise ICI :
+       ex. var s=document.createElement('script');
+           s.src='https://www.googletagmanager.com/gtag/js?id=G-XXXX';
+           s.async=true; document.head.appendChild(s); ... */
+  }
+
+  function show(){ banner.classList.add('show'); }
+  function hide(){ banner.classList.remove('show'); prefs.classList.add('hidden'); }
+
+  document.getElementById('cb-accept').addEventListener('click', function(){ save({analytics:true}); hide(); });
+  document.getElementById('cb-refuse').addEventListener('click', function(){ save({analytics:false}); hide(); });
+  document.getElementById('cb-custom').addEventListener('click', function(){ prefs.classList.toggle('hidden'); });
+  document.getElementById('cb-savePrefs').addEventListener('click', function(){
+    save({analytics: document.getElementById('cb-analytics').checked}); hide();
+  });
+  var manage=document.getElementById('cookie-manage');
+  if(manage){ manage.addEventListener('click', function(e){ e.preventDefault();
+    var c=read(); document.getElementById('cb-analytics').checked = !!(c&&c.analytics);
+    prefs.classList.remove('hidden'); show();
+  }); }
+
+  var existing=read();
+  if(existing){ apply(existing); } else { show(); }
 })();
 </script>
 </body>
