@@ -121,8 +121,9 @@ header{
 .brand .lockup{display:inline-flex;flex-direction:column;line-height:1.05}
 .brand .lockup b{font-family:var(--mono);font-size:15px;letter-spacing:.12em;font-weight:700;color:var(--ink)}
 .brand .lockup small{font-family:var(--mono);font-size:7.5px;letter-spacing:.16em;color:var(--ink-3);margin-top:3px;font-weight:600}
-.nav-right{display:flex;align-items:center;gap:16px}
-.nav-login{font-size:14px;color:var(--ink-2);text-decoration:none;font-weight:500}
+.nav-right{display:flex;align-items:center;gap:16px;flex-wrap:nowrap}
+.nav-login{font-size:14px;color:var(--ink);text-decoration:none;font-weight:600;padding:8px 14px;border:1.5px solid var(--ink-3);border-radius:11px;white-space:nowrap}
+.nav-login:hover{border-color:var(--ink)}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;
@@ -295,8 +296,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   .btn.small{padding:8px 12px;font-size:13px}
 }
 @media (max-width:520px){
-  .nav-login{display:none}
-  .btn.small{padding:9px 14px}
+  .nav-login{font-size:12px;padding:7px 11px;border-radius:9px}
+  .nav-right{gap:8px}
+  .btn.small{padding:8px 12px;font-size:12px}
+}
+@media (max-width:360px){
+  .nav-login{padding:6px 9px}
+  .btn.small{padding:8px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -319,7 +325,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <span class="lockup"><b>COSMO</b><small>COMPTABILITÉ · CONFORMITÉ</small></span>
     </a>
     <div class="nav-right">
-      <a class="nav-login" href="https://app.cosmointelligence.io/">Se connecter</a>
+      <a class="nav-login" href="https://app.cosmointelligence.io/?screen=accounting">Se connecter</a>
       <a class="btn small" href="https://app.cosmointelligence.io/?offer=compta">Essai gratuit</a>
     </div>
   </div>
@@ -564,7 +570,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <a href="/cgv.html">CGV</a><span class="sep">·</span>
       <a href="/confidentialite.html">Confidentialité</a><span class="sep">·</span>
       <a href="#" id="cookie-manage">Gérer les cookies</a><span class="sep">·</span>
-      <a href="https://app.cosmointelligence.io/">Se connecter</a>
+      <a href="https://app.cosmointelligence.io/?screen=accounting">Se connecter</a>
     </div>
     <p class="disclaimer">COSMO est un outil d'assistance à la tenue comptable et à la conformité. Les informations affichées (obligations, échéances, contrôles, déductibilité) sont indicatives et à vérifier ; elles ne constituent pas un conseil juridique, comptable ou fiscal. Édité par Cosmo Intelligence · RCS Paris 106 884 430.</p>
   </div>
