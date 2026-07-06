@@ -149,6 +149,9 @@ header{
 /* ---------- Structure selector ---------- */
 .pickers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
 .pick{
+  -webkit-appearance:none;appearance:none;color:var(--ink);
+  -webkit-tap-highlight-color:transparent;
+  display:flex;flex-direction:column;
   background:var(--surface);border:1.5px solid var(--line);border-radius:16px;
   padding:16px 15px;text-align:left;cursor:pointer;font-family:var(--sans);
   transition:border-color .15s ease,transform .12s ease,box-shadow .15s ease;
@@ -156,8 +159,8 @@ header{
 .pick:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .pick.active{border-color:var(--indigo);box-shadow:0 0 0 3px rgba(91,63,214,.14)}
 .pick .emoji{font-size:22px;line-height:1;display:block;margin-bottom:12px}
-.pick .name{font-family:var(--serif);font-weight:600;font-size:19px;margin-bottom:2px}
-.pick .sub{font-size:13px;color:var(--ink-3);line-height:1.35}
+.pick .name{display:block;font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink);margin-bottom:4px}
+.pick .sub{display:block;font-size:13px;color:var(--ink-3);line-height:1.35}
 .panel{
   margin-top:16px;background:var(--ink);color:#fff;border-radius:var(--r);
   padding:24px 22px;box-shadow:var(--shadow-lg);
@@ -264,7 +267,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <a class="btn big" href="https://cosmointelligence.io/">Créer mon dossier →</a>
       <a class="btn big ghost" href="#tarif">Voir le tarif</a>
     </div>
-    <p class="cta-note"><b>Essai gratuit</b> · sans engagement · vos données exportables à tout moment</p>
+    <p class="cta-note"><b>Sans engagement</b> · résiliez en un clic · vos données exportables à tout moment</p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -418,7 +421,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
         <li><span class="tick">✓</span>Sauvegarde et export de vos données à tout moment</li>
       </ul>
       <a class="btn big" href="https://cosmointelligence.io/">Créer mon dossier →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Essai gratuit</b> · sans engagement</p>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Sans engagement</b> · résiliez en un clic</p>
     </div>
   </div>
 </section>
@@ -432,7 +435,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <circle cx="32" cy="32" r="4.5" fill="#16A34A"/>
     </svg>
     <h2>Des comptes que vous pouvez prouver.</h2>
-    <p class="lead">Créez votre dossier en quelques minutes. Essai gratuit, vos données vous appartiennent, et vous partez quand vous voulez.</p>
+    <p class="lead">Créez votre dossier en quelques minutes. Vos données vous appartiennent, et vous partez quand vous voulez.</p>
     <a class="btn big" href="https://cosmointelligence.io/" style="max-width:340px;margin:0 auto">Commencer — 9 €/mois →</a>
   </div>
 </section>
