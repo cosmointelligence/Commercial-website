@@ -8,6 +8,9 @@
 
 <!-- Canonical + social point to the real domain, never github.io -->
 <link rel="canonical" href="https://cosmointelligence.io/">
+<link rel="alternate" hreflang="fr" href="https://cosmointelligence.io/">
+<link rel="alternate" hreflang="en" href="https://cosmointelligence.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://cosmointelligence.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cosmointelligence.io/">
 <meta property="og:title" content="COSMO — Dirigez votre compta comme un patron dirige son équipe.">
@@ -16,6 +19,7 @@
 <meta name="robots" content="index,follow">
 <meta property="og:site_name" content="COSMO">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://cosmointelligence.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -123,6 +127,10 @@ header{
 .brand .lockup small{font-family:var(--mono);font-size:7.5px;letter-spacing:.16em;color:var(--ink-3);margin-top:3px;font-weight:600}
 .nav-right{display:flex;align-items:center;gap:16px;flex-wrap:nowrap}
 .nav-login{font-size:14px;color:var(--ink);text-decoration:none;font-weight:600;padding:8px 14px;border:1.5px solid var(--ink-3);border-radius:11px;white-space:nowrap}
+.lang-switch{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.03em}
+.lang-switch a{color:var(--ink-3);text-decoration:none;padding:2px 3px}
+.lang-switch a.active{color:var(--ink)}
+.lang-switch .lang-sep{color:var(--line)}
 .nav-login:hover{border-color:var(--ink)}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -323,6 +331,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <span class="lockup"><b>COSMO</b><small>COMPTABILITÉ · CONFORMITÉ</small></span>
     </a>
     <div class="nav-right">
+      <div class="lang-switch"><a href="https://cosmointelligence.io/" class="active">FR</a><span class="lang-sep">·</span><a href="https://cosmointelligence.io/en/">EN</a></div>
       <a class="nav-login" href="https://app.cosmointelligence.io/?screen=accounting">Se connecter</a>
       <a class="btn small" href="https://app.cosmointelligence.io/?product=acc">Essai gratuit</a>
     </div>
@@ -483,6 +492,28 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 </section>
 
 <!-- ===== PRICING ===== -->
+<section id="installer">
+<h2>Installez l'application</h2>
+<p style="max-width:640px;margin:0 auto 22px;text-align:center;color:#64748B;font-size:15px;line-height:1.6">COSMO s'installe comme une application — sur votre iPhone, votre Android ou votre ordinateur — sans App Store, toujours à jour automatiquement.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto">
+<div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
+<div style="font-size:26px;margin-bottom:8px">📱</div>
+<div style="font-weight:800;margin-bottom:6px">iPhone / iPad</div>
+<div style="font-size:13px;color:#64748B;line-height:1.6">Ouvrez <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> dans Safari, touchez <b>Partager</b> puis <b>« Sur l'écran d'accueil »</b>.</div>
+</div>
+<div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
+<div style="font-size:26px;margin-bottom:8px">🤖</div>
+<div style="font-weight:800;margin-bottom:6px">Android</div>
+<div style="font-size:13px;color:#64748B;line-height:1.6">Ouvrez <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">l'application</a> dans Chrome et touchez <b>« Installer COSMO »</b> quand le bouton apparaît.</div>
+</div>
+<div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
+<div style="font-size:26px;margin-bottom:8px">💻</div>
+<div style="font-weight:800;margin-bottom:6px">Ordinateur</div>
+<div style="font-size:13px;color:#64748B;line-height:1.6">Dans Chrome ou Edge, ouvrez <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">l'application</a> puis cliquez sur l'icône <b>Installer</b> dans la barre d'adresse. Sur Safari (Mac)&nbsp;: Fichier → <b>Ajouter au Dock</b>.</div>
+</div>
+</div>
+<p style="text-align:center;margin-top:18px"><a href="https://app.cosmointelligence.io" style="display:inline-block;background:linear-gradient(135deg,#7C3AED,#4F46E5);color:#fff;padding:13px 28px;border-radius:12px;font-weight:800;text-decoration:none">Ouvrir l'application →</a></p>
+</section>
 <section id="tarif">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Tarif</p>
