@@ -401,6 +401,7 @@ body[data-view="platform"] .cta-note a{color:#B7A6FF}
 .cmp tr.win td:first-child::after{content:" \2605";color:var(--indigo)}
 .cmp-legend{font-size:12px;color:var(--ink-3);margin:0 0 10px}
 .cmp-note{font-size:12px;color:var(--ink-3);margin:12px 2px 0;line-height:1.5}
+.pf .cmp-legend,.pf .cmp-note{color:#AEB4E0}
 /* ===== plateforme sections + configurator (dark) ===== */
 .pf{background:linear-gradient(178deg,#0B0E24,#0E1330);color:#E8EBFA}
 .pf .eyebrow{color:#8FE9F6}.pf h2{color:#fff}.pf .lead{color:#AEB4E0}
@@ -564,7 +565,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <li><span class="node">🔗</span><div class="step">Processus &amp; risques</div><div class="desc">Les processus concernés et les risques qui les menacent, alignés sur le cube COSO.</div></li>
         <li><span class="node">📡</span><div class="step">Évaluation continue</div><div class="desc">Les risques réévalués en permanence — pas une fois par an.</div></li>
         <li><span class="node">🛡️</span><div class="step">Contrôles</div><div class="desc">Les contrôles qui tiennent chaque risque, structurés et évalués sur 11 facteurs de conception.</div></li>
-        <li><span class="node">🗺️</span><div class="step">RACM &amp; logigrammes</div><div class="desc">Matrice risques/contrôles et flowcharts générés — la vue d'ensemble, toujours à jour.</div></li>
+        <li><span class="node">🗺️</span><div class="step">RACM &amp; logigrammes</div><div class="desc">Matrice risques/contrôles et logigrammes générés — la vue d'ensemble, toujours à jour.</div></li>
         <li><span class="node">📦</span><div class="step">Matérialisation</div><div class="desc">Le risque matérialisé sur vos livrables internes et externes — jusqu'aux biens livrés à vos clients.</div></li>
       </ul>
       <p class="dp-eyebrow" style="margin-top:24px">La méthode classique vs COSMO</p>
@@ -598,7 +599,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <p class="eyebrow">Comparez</p>
     <h2>Ce que COSMO couvre — et ce qui manque souvent ailleurs.</h2><p class="lead" style="margin-bottom:16px">Un comparatif honnête avec les outils de comptabilité du marché, sans citer personne.</p>
     <p class="cmp-legend"><b class="ok">✓</b> inclus · <b class="warn">⚠</b> partiel ou en option · <b class="no">✕</b> généralement absent · ★ exclusivité COSMO</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Autres outils</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 91 € selon l'outil</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois partielle</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr><td>Plateforme Agréée (e-invoicing)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ variable</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr class="win"><td>Reconnaissance du revenu (Incoterms, PCA 487)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Contrôle au niveau des assertions + score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Piste d'audit scellée (SHA-256) + verrou période</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Couche conformité GRC (COSO)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Lit le grand livre → déduit les obligations (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Export FEC</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois via cabinet</td></tr><tr><td>Multi-pays (FR / IT / ES)</td><td class="c-cosmo ok">✓</td><td class="no">✕ souvent FR uniquement</td></tr></tbody></table></div>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Autres outils</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 91 € selon l'outil</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois partielle</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr><td>Facture électronique — prêt pour la loi 2026</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ variable</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr class="win"><td>Revenu reconnu à la bonne période (ventes, acomptes, PCA)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Comptes contrôlés en continu + score de fiabilité</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Historique scellé, prêt en cas de contrôle fiscal</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Politiques, risques &amp; contrôles intégrés (GRC)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Vos obligations déduites de vos comptes, automatiquement (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Export FEC prêt pour l'administration</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois via cabinet</td></tr></tbody></table></div>
     <p class="cmp-note">Comparatif fondé sur les offres standard publiées par les principaux outils de comptabilité du marché — vérifié en juillet 2026. Les fonctionnalités varient selon l'outil et la formule choisie.</p>
   </div>
 </section>
@@ -811,6 +812,18 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
 
 
 <!-- ===== PLATEFORME · ESTIMATEUR ===== -->
+<!-- ===== PLATFORM COMPARISON ===== -->
+<section class="pf only-plateforme">
+  <div class="wrap">
+    <p class="eyebrow">Comparez</p>
+    <h2>Ce que la plateforme couvre — face aux outils GRC classiques.</h2>
+    <p class="lead" style="margin-bottom:16px">Compta et conformité réunies, opérationnelles dès le premier jour.</p>
+    <p class="cmp-legend"><b class="ok">✓</b> inclus · <b class="warn">⚠</b> partiel ou en option · <b class="no">✕</b> généralement absent · ★ exclusivité COSMO</p>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Outils GRC classiques</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">à partir de 109 €</td><td class="mm">sur devis — souvent plusieurs milliers d'€/an</td></tr><tr><td>Déploiement immédiat, sans intégrateur</td><td class="c-cosmo ok">✓</td><td class="no">✕ projet d'implémentation</td></tr><tr><td>Politiques importées, versionnées et vivantes</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent simple stockage</td></tr><tr class="win"><td>Objectifs extraits de chaque politique (IA)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Processus &amp; risques alignés sur le cube COSO</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr class="win"><td>Réévaluation continue des risques</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent annuelle</td></tr><tr class="win"><td>Contrôles évalués sur 11 facteurs de conception</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>RACM &amp; logigrammes générés automatiquement</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent manuels</td></tr><tr class="win"><td>Risques matérialisés jusqu'aux livrables clients</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Relié à votre comptabilité (grand livre → risques)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Multi-entités (jusqu'à 20)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ selon la formule</td></tr><tr><td>Sans engagement</td><td class="c-cosmo ok">✓</td><td class="no">✕ contrat annuel</td></tr></tbody></table></div>
+    <p class="cmp-note">Comparatif fondé sur les offres standard publiées par les principaux outils GRC du marché — vérifié en juillet 2026. Les fonctionnalités varient selon l'outil et la formule choisie.</p>
+  </div>
+</section>
+
 <section class="pf only-plateforme">
   <div class="wrap">
     <p class="eyebrow">Estimez votre plateforme</p>
