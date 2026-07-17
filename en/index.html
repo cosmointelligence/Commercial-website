@@ -502,7 +502,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <a class="btn big" href="https://app.cosmointelligence.io/">Start your free 7-day trial →</a>
       <a class="btn big ghost" href="#cfg">Configure my price</a>
     </div>
-    <p class="cta-note only-plateforme"><b>7 days free</b> · secure payment by Stripe — card, Apple Pay, Google Pay · price by your configuration · beyond 20 entities or 20 users, quote on request — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
+    <p class="cta-note only-plateforme"><b>7 days free</b> — every feature, full accounting · limited to 1 policy and 10 e-invoices · secure payment by Stripe — card, Apple Pay, Google Pay · price by your configuration · beyond 20 entities or 20 users, quote on request — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -763,7 +763,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <li><span class="tick">✓</span>Back up and export your data anytime</li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 7-day trial →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · cancel anytime</p>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · trial limited to 10 e-invoices · cancel anytime</p>
     </div>
     <div class="price-card reveal" style="margin-top:18px">
       <p class="eyebrow" style="text-align:center;margin-bottom:4px">Only need e-invoicing?</p>
@@ -777,7 +777,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <li><span class="tick">✓</span><span class="ptxt">Upgrade to full accounting any time — €14.99/mo, e-invoicing included</span></li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=efact_solo">Start free 7-day trial →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · cancel anytime</p>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · trial limited to 10 e-invoices · cancel anytime</p>
     </div>
   </div>
 </section>
@@ -876,6 +876,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Light</button><button data-ai="std">Standard</button><button data-ai="heavy">Heavy</button></div></div>
       <div class="cfg-total"><span>Total / month</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
       <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Start the 7-day trial</a>
+      <p class="cfg-quote" style="text-align:center;margin-top:10px">7-day trial: every feature, full accounting — limited to 1 policy and 10 e-invoices. Card required, no charge during the trial.</p>
     </div>
   </div>
 </section>
@@ -1202,5 +1203,8 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   var ru=document.getElementById('cfg-usr'); if(ru) ru.addEventListener('input',function(){sel.users=+ru.value;render();});
   render();
 })();</script>
+<!-- Cloudflare Web Analytics — sans cookie. REMPLACER VOTRE_TOKEN par le token du dashboard Cloudflare (Analytics → Web Analytics), puis décommenter :
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "VOTRE_TOKEN"}'></script>
+-->
 </body>
 </html>
