@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>COSMO — Run your books like a founder runs their team.</title>
-<meta name="description" content="30 days free, then €9.99/month for the first year. Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. France, associations, Italy, Spain.">
+<meta name="description" content="7 days free, then €14.99/month. Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. France, associations, Italy, Spain.">
 
 <!-- Canonical + social point to the real domain, never github.io -->
 <link rel="canonical" href="https://cosmointelligence.io/en/">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cosmointelligence.io/en/">
 <meta property="og:title" content="COSMO — Run your books like a founder runs their team.">
-<meta property="og:description" content="30 days free, then €9.99/month for the first year. The rigor of an accounting firm, the decisions of a founder.">
+<meta property="og:description" content="7 days free, then €14.99/month. The rigor of an accounting firm, the decisions of a founder.">
 <meta name="theme-color" content="#0E1330">
 <meta name="robots" content="index,follow">
 <meta property="og:site_name" content="COSMO">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="https://cosmointelligence.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="COSMO — Run your books like a founder runs their team. · €9.99/month">
+<meta property="og:image:alt" content="COSMO — Run your books like a founder runs their team. · €14.99/month">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="COSMO — Run your books like a founder runs their team.">
-<meta name="twitter:description" content="30 days free, then €9.99/month for the first year. The rigor of an accounting firm, the decisions of a founder.">
+<meta name="twitter:description" content="7 days free, then €14.99/month. The rigor of an accounting firm, the decisions of a founder.">
 <meta name="twitter:image" content="https://cosmointelligence.io/og-image.png">
 
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -46,11 +46,11 @@
   "inLanguage": "en",
   "offers": {
     "@type": "Offer",
-    "price": "9.99",
+    "price": "14.99",
     "priceCurrency": "EUR",
     "priceSpecification": {
       "@type": "UnitPriceSpecification",
-      "price": "9.99",
+      "price": "14.99",
       "priceCurrency": "EUR",
       "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "MON" }
     }
@@ -149,7 +149,7 @@ header{
 /* ---------- Hero ---------- */
 .hero{padding-top:44px}
 .hero .lead{margin-bottom:26px}
-.hero .lead b{color:var(--ink);font-weight:600}
+.hero .lead b{color:var(--ink);font-weight:600}.htog{display:inline-flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:20px;box-shadow:var(--shadow)}.htog button{-webkit-appearance:none;appearance:none;border:0;background:transparent;cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:8px 15px;border-radius:9px;font-weight:600;transition:color .15s,background .15s}.htog button:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}.htog button[aria-pressed="true"]{color:#fff;background:var(--grad)}.hero-hidden{display:none}.hero .lead b.green{color:#16A34A}
 .cta-row{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
 .cta-note{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--ink-3);margin:0}
 .cta-note b{color:var(--green);font-weight:600}
@@ -317,9 +317,141 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   .reveal{opacity:1;transform:none}
   .balanced{opacity:1;transform:none}
 }
+
+/* ===== Deux moteurs (Compta / GRC) + vidéo — v1 ===== */
+.duo{background:linear-gradient(168deg,#0B0E24 0%,#12163A 52%,#1B1550 100%);color:#E8EBFA;position:relative;overflow:hidden}
+.duo::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% -10%,rgba(123,97,255,.22),transparent 60%);pointer-events:none}
+.duo .wrap{position:relative}
+.duo .eyebrow{color:#8FE9F6}
+.duo h2{color:#fff}
+.duo .duo-lead{font-size:18px;color:#AEB4E0;margin:0 0 22px}
+.duo-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.duo-tab{-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent;cursor:pointer;font-family:var(--sans);color:#C7CCF0;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 14px;text-align:left;transition:border-color .18s,background .18s,transform .12s}
+.duo-tab:hover{transform:translateY(-2px)}
+.duo-tab:focus-visible{outline:2px solid #8FE9F6;outline-offset:2px}
+.duo-tab .dt-k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A93C8;margin-bottom:5px}
+.duo-tab .dt-n{display:block;font-family:var(--serif);font-size:18px;color:#fff;font-weight:600}
+.duo-tab[aria-selected="true"]{border-color:#16A6C9;background:rgba(22,166,201,.12);box-shadow:0 0 0 3px rgba(22,166,201,.14)}
+.duo-tab[data-tab="grc"][aria-selected="true"]{border-color:#7B61FF;background:rgba(123,97,255,.16);box-shadow:0 0 0 3px rgba(123,97,255,.18)}
+.duo-panel{border-radius:var(--r);padding:22px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+.duo-panel .dp-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#8FE9F6;margin:0 0 14px}
+.duo-panel[data-tab="grc"]{background:linear-gradient(165deg,rgba(123,97,255,.15),rgba(11,14,36,.25));border-color:rgba(123,97,255,.34);box-shadow:inset 0 0 60px rgba(123,97,255,.16)}
+.duo-panel[data-tab="grc"] .dp-eyebrow{color:#B7A6FF}
+.duo-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
+.duo-list li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:#D7DCF0;line-height:1.45}
+.duo-list .tick{color:#16A6C9;flex:0 0 auto;margin-top:1px;font-weight:700}
+.chain{list-style:none;margin:0;padding:0;position:relative}
+.chain li{position:relative;padding:0 0 18px 40px}
+.chain li:last-child{padding-bottom:0}
+.chain li::before{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:linear-gradient(#7B61FF,rgba(123,97,255,.2))}
+.chain li:last-child::before{display:none}
+.chain .node{position:absolute;left:0;top:0;width:28px;height:28px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(123,97,255,.18);border:1px solid rgba(123,97,255,.45)}
+.chain .step{font-family:var(--serif);font-weight:600;font-size:17px;color:#fff;margin:2px 0 3px}
+.chain .desc{font-size:14px;color:#AEB4E0;line-height:1.45}
+.duo-hidden{display:none}
+.vframe{margin-top:12px;position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:linear-gradient(150deg,#141A3F,#241A5E);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.vframe:focus-visible{outline:2px solid #8FE9F6;outline-offset:2px}
+.vframe .play{width:66px;height:66px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(70,60,200,.4)}
+.vframe .play svg{width:26px;height:26px;margin-left:3px}
+.vframe .vnote{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#9AA2CE}
+.das{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A93C8;margin:-6px 0 20px}
+.das em{display:inline-block;margin-top:4px;color:#7CE0A0;font-style:italic;letter-spacing:.05em;text-transform:none}
+.vs{display:flex;flex-direction:column;gap:8px}
+.vs-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vs-old,.vs-new{font-size:13px;line-height:1.4;padding:10px 12px;border-radius:11px}
+.vs-old{color:#9AA2CE;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+.vs-old::before{content:"\2715  ";color:#6B7290}
+.vs-new{color:#DDF6E8;background:rgba(124,224,160,.10);border:1px solid rgba(124,224,160,.28)}
+.vs-new::before{content:"\2713  ";color:#7CE0A0;font-weight:700}
+
+/* ===== dual-mode views ===== */
+body:not([data-view]) .only-plateforme,body[data-view="compta"] .only-plateforme{display:none}
+body[data-view="platform"] .only-compta{display:none}
+body:not([data-view]) .hero-msg[data-hero="platform"],body[data-view="compta"] .hero-msg[data-hero="platform"]{display:none}
+body[data-view="platform"] .hero-msg[data-hero="compta"]{display:none}
+/* plateforme dark theme on shared chrome */
+body[data-view="platform"]{background:#0B0E24}
+body[data-view="platform"] header{background:rgba(11,14,36,.86);border-bottom-color:rgba(255,255,255,.08)}
+body[data-view="platform"] .brand .lockup b,body[data-view="platform"] .brand span{color:#fff}
+body[data-view="platform"] .brand .lockup small,body[data-view="platform"] .lang-switch a{color:#8A93C8}
+body[data-view="platform"] .lang-switch a.active{color:#fff}
+body[data-view="platform"] .nav-login{color:#E8EBFA;border-color:rgba(255,255,255,.3)}
+body[data-view="platform"] .hero-msg .eyebrow{color:#8FE9F6}
+body[data-view="platform"] .hero-msg h1{color:#fff}
+body[data-view="platform"] .hero-msg .lead{color:#AEB4E0}
+body[data-view="platform"] .hero-msg .lead b{color:#fff}
+body[data-view="platform"] .hero-msg .lead b.green{color:#7CE0A0}
+body[data-view="platform"] .cta-note{color:#9AA2CE}
+body[data-view="platform"] .ledger{display:none}
+body[data-view="platform"] .htog{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.16)}
+body[data-view="platform"] .htog button{color:#AEB4E0}
+body[data-view="platform"] .hero{background:#0B0E24}
+body[data-view="platform"] .btn.ghost{color:#E8EBFA;border-color:rgba(255,255,255,.28)}
+body[data-view="platform"] .cta-note a{color:#B7A6FF}
+/* the top view toggle sits centered above the hero copy */
+.htog{margin-top:4px}
+/* ===== competitor table (compta, light) ===== */
+.cmp{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}
+.cmp table{border-collapse:collapse;width:100%;min-width:660px;font-size:12.5px}
+.cmp th,.cmp td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
+.cmp thead th{position:sticky;top:0;background:#fff;font-weight:800;font-size:11.5px}
+.cmp td:first-child,.cmp th:first-child{text-align:left;position:sticky;left:0;background:#fff;font-weight:700;min-width:180px;box-shadow:1px 0 0 var(--line)}
+.cmp .c-cosmo{color:var(--indigo);background:#F5F3FF}.cmp thead th.c-cosmo{background:#EDE9FE}
+.cmp .ok{color:#059669;font-weight:800}.cmp .warn{color:#B45309;font-weight:800}.cmp .no{color:#DC2626;font-weight:800}.cmp .mm{color:var(--ink-3);font-size:11.5px}
+.cmp tr.win td:first-child::after{content:" \2605";color:var(--indigo)}
+.cmp-legend{font-size:12px;color:var(--ink-3);margin:0 0 10px}
+.cmp-note{background:#FFF7ED;border:1px solid #FDBA74;border-radius:10px;padding:10px 12px;font-size:12.5px;color:#7C2D12;margin:14px 0 0;line-height:1.5}
+/* ===== plateforme sections + configurator (dark) ===== */
+.pf{background:linear-gradient(178deg,#0B0E24,#0E1330);color:#E8EBFA}
+.pf .eyebrow{color:#8FE9F6}.pf h2{color:#fff}.pf .lead{color:#AEB4E0}
+.cfg{margin-top:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:20px 18px}
+.cfg-mods{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:6px}
+@media(min-width:520px){.cfg-mods{grid-template-columns:1fr 1fr 1fr}}
+.cfg-mod{-webkit-appearance:none;appearance:none;cursor:pointer;text-align:left;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;color:#C7CCF0;font-family:var(--sans);font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cfg-mod span{font-family:var(--mono);font-size:12px;color:#8FE9F6}
+.cfg-mod.cfg-on{border-color:#7B61FF;background:rgba(123,97,255,.16);box-shadow:0 0 0 3px rgba(123,97,255,.16);color:#fff}
+.cfg-slab{display:flex;justify-content:space-between;font-weight:700;color:#fff;margin:16px 0 6px;font-size:15px}
+.cfg-slab b{color:#7CE0A0;font-family:var(--mono)}
+.cfg-range{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:rgba(255,255,255,.14);outline:none;margin:0}
+.cfg-range::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--grad);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.cfg-range::-moz-range-thumb{width:22px;height:22px;border:0;border-radius:50%;background:#7B61FF;cursor:pointer}
+.cfg-quote{font-size:12.5px;color:#9AA2CE;margin:12px 0 4px}.cfg-quote a{color:#B7A6FF;font-weight:700}
+.cfg-grp{margin-top:16px}
+.cfg-lab{font-weight:700;color:#fff;font-size:15px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cfg-hint{font-family:var(--mono);font-size:11px;color:#7CE0A0;font-weight:600}
+.cfg-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cfg-opts button{-webkit-appearance:none;appearance:none;cursor:pointer;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.12);border-radius:11px;padding:12px;color:#C7CCF0;font-family:var(--sans);font-weight:600;font-size:14px}
+.cfg-opts button.cfg-on{border-color:#7B61FF;background:rgba(123,97,255,.16);color:#fff;box-shadow:0 0 0 3px rgba(123,97,255,.16)}
+.cfg-sub{font-size:12px;color:#9AA2CE;margin:8px 0 0;line-height:1.45}
+.cfg-total{display:flex;justify-content:space-between;align-items:center;margin:22px 0 14px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)}
+.cfg-total>span:first-child{color:#AEB4E0;font-size:14px}
+.cfg-amt{font-family:var(--serif);font-weight:800;font-size:30px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cfg-hidden{display:none}
+
+/* dark shared chrome in platform view */
+body[data-view="platform"] .trust{background:#0B0E24;border-color:rgba(255,255,255,.08)}
+body[data-view="platform"] .trust-item{color:#AEB4E0}
+body[data-view="platform"] .trust-item b{color:#fff}
+body[data-view="platform"] footer{background:#080B1C;border-top-color:rgba(255,255,255,.08)}
+body[data-view="platform"] footer .lockup b{color:#fff}
+body[data-view="platform"] footer .lockup small,body[data-view="platform"] .disclaimer{color:#7A83B0}
+body[data-view="platform"] .foot-links a{color:#AEB4E0}
+/* centered "everything it brings" */
+.pf-center .wrap{text-align:center}
+.pf-center .eyebrow,.pf-center h2,.pf-center .lead{text-align:center}
+.pkg{display:grid;grid-template-columns:1fr;gap:14px;margin-top:22px;text-align:left}
+@media(min-width:640px){.pkg{grid-template-columns:1fr 1fr}}
+.pkg-col{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:18px}
+.pkg-grc{background:linear-gradient(165deg,rgba(123,97,255,.14),rgba(11,14,36,.2));border-color:rgba(123,97,255,.34)}
+.pkg-h{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8FE9F6;margin-bottom:12px}
+.pkg-grc .pkg-h{color:#B7A6FF}
+.pkg-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pkg-list li{position:relative;padding-left:24px;font-size:14.5px;color:#D7DCF0;line-height:1.45}
+.pkg-list li::before{content:"\2713";position:absolute;left:0;top:0;color:#7CE0A0;font-weight:700}
+@media(min-width:560px){.chain li{padding-left:46px}}
 </style>
 </head>
-<body>
+<body data-view="compta">
 
 <!-- ===== HEADER ===== -->
 <header>
@@ -341,14 +473,30 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Books. Compliance. Control.</p>
-    <h1>Run your books like a founder runs their&nbsp;team.</h1>
-    <p class="lead">Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. You sign, you know, you're in control. <b>€9.99/month for the first year</b>.</p>
-    <div class="cta-row">
-      <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 30-day trial →</a>
+    <div class="htog" role="group" aria-label="Choose view">
+      <button data-hero="compta" aria-pressed="true">Accounting</button>
+      <button data-hero="platform" aria-pressed="false">Platform</button>
+    </div>
+    <div class="hero-msg" data-hero="compta">
+      <p class="eyebrow">Books. Compliance. Control.</p>
+      <h1>Run your books like a founder runs their&nbsp;team.</h1>
+      <p class="lead">Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. You sign, you know, you're in control. <b>€14.99/month</b>.</p>
+    </div>
+    <div class="hero-msg" data-hero="platform">
+      <p class="eyebrow">Governance. Risk. Compliance.</p>
+      <h1>The governance of large groups, sized for your company.</h1>
+      <p class="lead">Your objectives, your processes, your risks — mapped, challenged, traced. Every decision goes through a framework, not a hunch. <b class="green">Structure · Challenge · Decide.</b> A price that follows your structure — entities, users, risks, volume. <b>From €109/month.</b></p>
+    </div>
+    <div class="cta-row only-compta">
+      <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 7-day trial →</a>
       <a class="btn big ghost" href="#tarif">See pricing</a>
     </div>
-    <p class="cta-note"><b>30 days free</b>, then €9.99/month for the first year, then €14.99/month · no commitment · cancel in one click</p>
+    <p class="cta-note only-compta"><b>7 days free</b>, then €14.99/month · no commitment · cancel in one click</p>
+    <div class="cta-row only-plateforme">
+      <a class="btn big" href="https://app.cosmointelligence.io/">Start your free 7-day trial →</a>
+      <a class="btn big ghost" href="#cfg">Configure my price</a>
+    </div>
+    <p class="cta-note only-plateforme"><b>7 days free</b> · price by your configuration · beyond 20 entities or 20 users, quote on request — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -379,8 +527,73 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   </div>
 </div>
 
+
+
+<!-- ===== PLATFORM · WHAT IT BRINGS (centered) ===== -->
+<section class="pf pf-center only-plateforme">
+  <div class="wrap">
+    <p class="eyebrow">Everything the platform brings</p>
+    <h2>From A to Z — accounting, plus the assurance layer.</h2>
+    <p class="lead">The full platform unites your books and your compliance in one tool.</p>
+    <div class="pkg">
+      <div class="pkg-col"><div class="pkg-h">Full platform</div><ul class="pkg-list"><li>Complete accounting — bookkeeping, VAT, balance sheet, filing, FEC</li><li>Factur-X e-invoicing (EN 16931)</li><li>Policies + full RACM</li><li>AI analysis across all modules</li><li>COSMO Deliverables & 3D risk mapping</li></ul></div>
+      <div class="pkg-col pkg-grc"><div class="pkg-h">What the GRC layer adds</div><ul class="pkg-list"><li>Your policies imported, versioned and alive</li><li>Objectives, processes and risks — centralized and structured</li><li>Continuous alignment: policies ↔ risks ↔ processes</li><li>Controls generated, with every visual</li><li>Risk & Control Matrix (RACM) always current</li><li>Flowcharts & mapping — monitoring at all times</li><li>Risks re-assessed continuously</li><li>Risks materialized on your key deliverables — company, customers, investors</li><li>The best decision, made on trustworthy data</li><li>Every decision traceable to the source of truth that triggered it</li></ul></div>
+    </div>
+    <a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:340px;margin:22px auto 0">Start the 7-day trial →</a>
+  </div>
+</section>
+
+<!-- ===== TWO ENGINES (Accounting / GRC) + VIDEO ===== -->
+<section class="duo only-plateforme">
+  <div class="wrap">
+    <p class="eyebrow">Two engines · one platform</p>
+    <h2>Accounting and compliance, in one tool.</h2>
+    <!-- REPLACE the line below with your GRC checkout tagline -->
+    <p class="duo-lead">Document your policies, the risks they cover and the controls that keep you compliant — structured, challenged, decided.</p>
+    <p class="das">COSMO · Decision Assurance Platform<br><em>Structure · Challenge · Decide</em></p>
+
+    
+
+    
+
+    <div class="duo-panel" data-tab="grc" id="duo-grc" role="tabpanel" aria-labelledby="tab-grc">
+      <p class="dp-eyebrow">From document to decision — the full cycle</p>
+      <ul class="chain">
+        <li><span class="node">📄</span><div class="step">Policies</div><div class="desc">Create and keep your policies alive — imported or written, versioned, tracked over time.</div></li>
+        <li><span class="node">🎯</span><div class="step">Objectives</div><div class="desc">AI identifies what each policy is meant to guarantee.</div></li>
+        <li><span class="node">🔗</span><div class="step">Processes &amp; risks</div><div class="desc">The processes involved and the risks that threaten them, aligned on the COSO cube.</div></li>
+        <li><span class="node">📡</span><div class="step">Continuous assessment</div><div class="desc">Risks re-assessed continuously — not once a year.</div></li>
+        <li><span class="node">🛡️</span><div class="step">Controls</div><div class="desc">The controls holding each risk, structured and scored on 11 design factors.</div></li>
+        <li><span class="node">🗺️</span><div class="step">RACM &amp; flowcharts</div><div class="desc">Risk &amp; control matrix and flowcharts, generated — the whole picture, always current.</div></li>
+        <li><span class="node">📦</span><div class="step">Materialization</div><div class="desc">Risk materialized on your internal and external deliverables — down to the goods you ship to customers.</div></li>
+      </ul>
+      <p class="dp-eyebrow" style="margin-top:24px">The old way vs COSMO</p>
+      <div class="vs">
+        <div class="vs-row"><span class="vs-old">Policies scattered across Word files</span><span class="vs-new">Living policies, linked to their risks</span></div>
+        <div class="vs-row"><span class="vs-old">Risks assessed once a year</span><span class="vs-new">Continuous re-assessment</span></div>
+        <div class="vs-row"><span class="vs-old">RACM frozen in a spreadsheet</span><span class="vs-new">RACM &amp; flowcharts, generated and current</span></div>
+        <div class="vs-row"><span class="vs-old">A binder pulled out for the audit</span><span class="vs-new">Compliance materialized down to the customer deliverable</span></div>
+        <div class="vs-row"><span class="vs-old">A consultant at €800/day</span><span class="vs-new">Included in COSMO</span></div>
+      </div>
+    
+    </div>
+
+    <!-- ===== VIDEO (placeholder) ===== -->
+    <div style="margin-top:40px">
+      <p class="eyebrow">On video</p>
+      <h2>See COSMO in action.</h2>
+      <p class="duo-lead">A full demo — from import to filing.</p>
+      <!-- REPLACE this block with your <video ...> or <iframe ...> when the video is ready -->
+      <div class="vframe" id="app-demo" role="button" tabindex="0" aria-label="Play the demo (coming soon)">
+        <span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vnote">Demo coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== COMPARISON ===== -->
-<section>
+<section class="only-compta">
   <div class="wrap">
     <p class="eyebrow">Compare</p>
     <h2>The same rigor, without the accounting-firm price tag.</h2>
@@ -391,7 +604,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
           <tr><th class="feat">&nbsp;</th><th class="col-cosmo">COSMO</th><th class="col-other">Elsewhere</th></tr>
         </thead>
         <tbody>
-          <tr><td class="feat">Price per month</td><td class="col-cosmo price-cell">€9.99<span style="display:block;font-size:.62em;font-weight:600;opacity:.75">1st year, then €14.99</span></td><td class="col-other price-cell muted">often 3–10× more</td></tr>
+          <tr><td class="feat">Price per month</td><td class="col-cosmo price-cell">€14.99<span style="display:block;font-size:.62em;font-weight:600;opacity:.75">7-day free trial</span></td><td class="col-other price-cell muted">often 3–10× more</td></tr>
           <tr><td class="feat">Full bookkeeping</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="yes">✓</span></td></tr>
           <tr><td class="feat">You approve every entry — nothing happens without you</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">black box</td></tr>
           <tr><td class="feat">Every entry explained in plain language</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
@@ -402,7 +615,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
           <tr><td class="feat">Tax rules checked continuously</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
           <tr><td class="feat">Complete file ready if the tax authority asks</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">varies</td></tr>
           <tr><td class="feat">E-invoicing (2026–2027 French law) included</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">paid add-on</td></tr>
-          <tr><td class="feat">Stripe sales posted automatically</td><td class="col-cosmo muted">coming soon</td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">Stripe, SumUp &amp; Shopify sales posted automatically</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">Assertion-level checks (existence, accuracy, cut-off)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">Sealed audit trail (SHA-256) · locked periods</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">GRC compliance — policies, risks &amp; controls (COSO)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">Revenue recognition — Incoterms, deferred income</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
+          <tr><td class="feat">VAT — output, input &amp; intra-EU (reverse charge)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">partial</td></tr>
+          <tr><td class="feat">Reads your ledger to derive your obligations</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
           <tr><td class="feat">France, Italy, Spain &amp; associations — one tool</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
           <tr><td class="feat">No commitment</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">often not</td></tr>
           <tr><td class="feat">Your data exportable anytime</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">varies</td></tr>
@@ -412,8 +631,20 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   </div>
 </section>
 
+
+<!-- ===== COMPETITOR TABLE (compta) ===== -->
+<section class="only-compta">
+  <div class="wrap">
+    <p class="eyebrow">Compare</p>
+    <h2>Compared to the rest, without cheating.</h2><p class="lead" style="margin-bottom:16px">Verified competitor facts. COSMO judged just as strictly.</p>
+    <p class="cmp-legend"><b class="ok">✓</b> full · <b class="warn">⚠</b> partial / partner · <b class="no">✕</b> no · ★ unique COSMO strength</p>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Indy</th><th>Tiime</th><th>Pennylane</th><th>SAP B1</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 49 €</td><td class="">0 → ~25 €</td><td class="">14 → 79 €</td><td class="mm">38–91 € /user</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="warn">⚠ pré-compta</td><td class="ok">✓ (avec EC)</td><td class="ok">✓</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">⚠ add-on</td></tr><tr><td>Plateforme Agréée (e-invoicing)</td><td class="c-cosmo warn">⚠ via partenaire</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✕</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">⚠ add-on</td></tr><tr class="win"><td>Reconnaissance du revenu (Incoterms, PCA 487)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ via EC</td><td class="ok">✓</td></tr><tr class="win"><td>Contrôle au niveau des assertions + score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr><tr class="win"><td>Piste d'audit scellée (SHA-256) + verrou période</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ séparé</td></tr><tr class="win"><td>Couche conformité GRC (COSO)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ produit à part</td></tr><tr class="win"><td>Lit le grand livre → déduit les obligations (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr><tr><td>Export FEC</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="warn">⚠ via cabinet</td><td class="ok">✓</td><td class="warn">⚠ localisation</td></tr><tr><td>Multi-pays (FR / IT / ES)</td><td class="c-cosmo ok">✓</td><td class="no">✕ FR</td><td class="no">✕ FR</td><td class="warn">⚠ FR</td><td class="ok">✓ mondial</td></tr></tbody></table></div>
+    <p class="cmp-note"><b>SAP isn't really a competitor.</b> SAP Business One is an enterprise ERP (€38–91/user + rollout) — a different world. Your real competitors: Indy, Tiime, Pennylane.</p>
+  </div>
+</section>
+
 <!-- ===== STRUCTURE SELECTOR ===== -->
-<section>
+<section class="only-compta">
   <div class="wrap">
     <p class="eyebrow">Built for your structure</p>
     <h2>Your obligations aren't the same. Neither is your tool.</h2>
@@ -438,7 +669,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 </section>
 
 <!-- ===== DISTINGUISH / FEATURES ===== -->
-<section>
+<section class="only-compta">
   <div class="wrap">
     <p class="eyebrow">What sets us apart</p>
     <h2>Bookkeeping, plus the compliance audit.</h2>
@@ -463,7 +694,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 </section>
 
 <!-- ===== HOW IT WORKS ===== -->
-<section>
+<section class="only-compta">
   <div class="wrap">
     <p class="eyebrow">How it works</p>
     <h2>From your bank to a file ready for an audit.</h2>
@@ -478,7 +709,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 </section>
 
 <!-- ===== DARK WHY ===== -->
-<section>
+<section class="only-compta">
   <div class="wrap">
     <div class="why reveal">
       <p class="eyebrow teal" style="color:var(--teal)">Why COSMO</p>
@@ -486,14 +717,14 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       <p class="lead">Three reasons to trust us — with your eyes open.</p>
       <div class="why-item"><p class="why-label">01 · Proof</p><h3>The ledger is the record</h3><p>Every entry is categorized, checked and reconciled, with a visible confidence level — not a veneer of certainty.</p></div>
       <div class="why-item"><p class="why-label">02 · Independence</p><h3>Without an accountant — or with one</h3><p>Keep your own books, with AI that categorizes and checks. Or invite your accountant. You choose, never locked in.</p></div>
-      <div class="why-item"><p class="why-label">03 · Price</p><h3>€9.99 a month for the first year</h3><p>Then €14.99/month. The rigor of an accounting firm — VAT, tax return, complete file — without the accounting-firm price.</p></div>
+      <div class="why-item"><p class="why-label">03 · Price</p><h3>€14.99 a month</h3><p>The rigor of an accounting firm — VAT, tax return, complete file — without the accounting-firm price.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ===== PRICING ===== -->
 <!-- ===== E-INVOICING REFORM ===== -->
-<section id="e-invoicing">
+<section id="e-invoicing" class="only-compta">
   <div class="wrap">
     <p class="eyebrow">E-invoicing</p>
     <h2>France's 2026-2027 reform, in plain terms.</h2>
@@ -516,16 +747,16 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
     <ul class="plist" style="max-width:none">
       <li><span class="tick">✓</span><b>Today already:</b> your invoices and quotes are generated in <b>Factur-X, EN 16931-compliant</b> format, with the 21 rules checked — included in your subscription.</li>
       <li><span class="tick">✓</span><b>Receiving:</b> supplier invoices land in COSMO automatically and post to your books, with no re-keying.</li>
-      <li><span class="tick">✓</span><b>Transmission via an approved platform:</b> issuing and receiving through a state-approved platform (PA) is rolling out — you'll be compliant without changing how you work.</li>
+      <li><span class="tick">✓</span><b>Transmission via an approved platform:</b> issuing and receiving run through our approved-platform partner — you're compliant without changing how you work.</li>
       <li><span class="tick">✓</span><b>Nothing to reinstall:</b> an issued invoice feeds your ledger and your filings in a single step.</li>
     </ul>
 
-    <p class="lead" style="margin-top:24px">Factur-X generation is <b>included</b> in your COSMO subscription. Transmission via an approved platform will be offered as an option: <b>€9.99/mo</b> on top of accounting, or <b>€14.99/mo</b> as a standalone module — <b>100 invoices/month included</b>, then €0.20/invoice. Available as soon as our partner platform opens access.</p>
+    <p class="lead" style="margin-top:24px">Factur-X generation (EN 16931) is <b>included</b> in your COSMO subscription. Issuing and receiving via our <b>approved-platform partner</b> make you compliant with the reform — without changing how you work. E-invoicing adds <b>€9.99/mo</b> on top of accounting (i.e. <b>€19.98/mo</b> in year one), or <b>€14.99/mo</b> as a standalone module — <b>100 invoices/month included</b>, then €0.20/invoice.</p>
     <p class="cta-note" style="margin-top:10px">Official timeline and terms: impots.gouv.fr and economie.gouv.fr. Provided for information only.</p>
   </div>
 </section>
 
-<section id="installer">
+<section id="installer" class="only-compta">
 <h2>Install the app</h2>
 <p style="max-width:640px;margin:0 auto 22px;text-align:center;color:#64748B;font-size:15px;line-height:1.6">COSMO installs like an app — on your iPhone, Android or computer — no App Store, always automatically up to date.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto">
@@ -547,14 +778,14 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 </div>
 <p style="text-align:center;margin-top:18px"><a href="https://app.cosmointelligence.io" style="display:inline-block;background:linear-gradient(135deg,#7C3AED,#4F46E5);color:#fff;padding:13px 28px;border-radius:12px;font-weight:800;text-decoration:none">Open the app →</a></p>
 </section>
-<section id="tarif">
+<section id="tarif" class="only-compta">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Pricing</p>
     <h2 style="text-align:center">One price. Everything included.</h2>
     <div class="price-card reveal">
       <div class="price-tag">
-        <div class="n">€9.99</div>
-        <div class="per">per month for the first year · then €14.99/month<br>30 days free to start</div>
+        <div class="n">€14.99</div>
+        <div class="per">per month<br>7 days free to start</div>
       </div>
       <ul class="plist">
         <li><span class="tick">✓</span>Full bookkeeping — France (PCG), associations, Italy, Spain</li>
@@ -564,14 +795,14 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
         <li><span class="tick">✓</span>Compliance checking against French tax law</li>
         <li><span class="tick">✓</span>Back up and export your data anytime</li>
       </ul>
-      <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 30-day trial →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 30 days · cancel anytime</p>
+      <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 7-day trial →</a>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · cancel anytime</p>
     </div>
   </div>
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq">
+<section id="faq" class="only-compta">
   <div class="wrap" style="max-width:760px">
     <p class="eyebrow" style="text-align:center">Frequently asked questions</p>
     <h2 style="text-align:center">What you might be wondering</h2>
@@ -586,7 +817,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       </details>
       <details>
         <summary>Is e-invoicing (Factur-X) included?</summary>
-        <p>Yes — generating EN 16931-compliant Factur-X invoices is included, with a 21-rule check. Transmission via an approved platform (the e-invoicing reform) is being rolled out and will be added without changing how you work.</p>
+        <p>Yes — generating EN 16931-compliant Factur-X invoices is included, with a 21-rule check. Issuing and receiving via our approved-platform partner make you compliant with the e-invoicing reform, without changing how you work.</p>
       </details>
       <details>
         <summary>Is my data secure?</summary>
@@ -594,7 +825,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       </details>
       <details>
         <summary>How much does it actually cost?</summary>
-        <p>30 days free, no charge. Then €9.99/month for your first 12 months, then €14.99/month. Everything is included — no hidden add-ons, no setup fee. No commitment: cancel whenever you want.</p>
+        <p>7 days free, no charge. Then €14.99/month. Everything is included — no hidden add-ons, no setup fee. No commitment: cancel whenever you want.</p>
       </details>
       <details>
         <summary>Can I cancel easily?</summary>
@@ -602,7 +833,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
       </details>
       <details>
         <summary>Who is COSMO for?</summary>
-        <p>For micro-entrepreneurs, freelancers (BIC/BNC), associations and small businesses — in France, Italy and Spain, in one tool. If you want clean books, in good standing with the tax authorities, and invoicing without piling up software, this is for you.</p>
+        <p>For freelancers and micro-entrepreneurs, but also <b>small &amp; mid-sized companies on the standard regime</b> — SAS, SASU, SARL/EURL — and associations, in France, Italy and Spain, in one tool. From VAT-exempt up to corporate tax with the full return: if you want clean books, in good standing with the tax authorities, and invoicing without piling up software, this is for you.</p>
       </details>
     </div>
   </div>
@@ -618,15 +849,48 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 .faq p{margin:0;padding:14px 18px 18px;color:var(--ink-2);font-size:14.5px;line-height:1.62}
 </style>
 
+
+<!-- ===== PLATFORM · ESTIMATOR ===== -->
+<section class="pf only-plateforme">
+  <div class="wrap">
+    <p class="eyebrow">Estimate your platform</p>
+    <h2>A price that follows your factors.</h2>
+    <p class="lead">Entities, users, risk volume, transactions, AI — the total adjusts live.</p>
+    <div class="cfg" id="cfg">
+      <div class="cfg-mods">
+        <button class="cfg-mod" data-mod="pol">Policies<span>€10</span></button>
+        <button class="cfg-mod" data-mod="prr">Policies + RACM<span>€100</span></button>
+        <button class="cfg-mod cfg-on" data-mod="full">Full platform<span>€109</span></button>
+      </div>
+      <label class="cfg-slab" for="cfg-ent">Companies / entities <b id="cfg-ent-n">1</b></label>
+      <input type="range" id="cfg-ent" min="1" max="20" value="1" class="cfg-range" aria-label="Companies / entities">
+      <label class="cfg-slab" for="cfg-usr">Users (licenses) <b id="cfg-usr-n">1</b></label>
+      <input type="range" id="cfg-usr" min="1" max="20" value="1" class="cfg-range" aria-label="Users">
+      <p class="cfg-quote">More than 20 entities or 20 users? <a href="mailto:contact@cosmointelligence.io">Request a quote</a> — contact@cosmointelligence.io</p>
+      <div class="cfg-grp" data-grp="vol"><div class="cfg-lab">Risks / controls</div>
+        <div class="cfg-opts"><button data-vol="b5" class="cfg-on">Up to 5</button><button data-vol="b25">6–25</button><button data-vol="b100">26–100</button><button data-vol="b100p">100+</button></div></div>
+      <div class="cfg-grp" data-grp="tx"><div class="cfg-lab">Transactions / month</div>
+        <div class="cfg-opts"><button data-tx="t0" class="cfg-on">Up to 100</button><button data-tx="t1">101–1000</button><button data-tx="t2">1000+</button></div></div>
+      <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">E-invoicing <span class="cfg-hint" id="cfg-efact-h" data-off="off">off</span></div>
+        <div class="cfg-opts"><button data-efact="0" class="cfg-on">No</button><button data-efact="1">Add it</button></div>
+        <p class="cfg-sub">Send &amp; receive compliant invoices. 100 included/mo, then €0.20 beyond.</p></div>
+      <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">AI analysis <span class="cfg-hint">automatic — by your usage</span></div>
+        <div class="cfg-opts"><button data-ai="light" class="cfg-on">Light</button><button data-ai="std">Standard</button><button data-ai="heavy">Heavy</button></div></div>
+      <div class="cfg-total"><span>Total / month</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
+      <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Start the 7-day trial</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FINAL ===== -->
-<section class="final">
+<section class="final only-compta">
   <div class="wrap">
     <svg class="logo-c" viewBox="0 0 64 64" fill="none" aria-hidden="true">
       <path d="M 53.75 21.86 A 24.00 24.00 0 1 0 53.75 42.14" stroke="#6241C3" stroke-width="5.12"/><path d="M 45.82 25.56 A 15.25 15.25 0 1 0 45.82 38.44" stroke="#11A5B8" stroke-width="3.62"/><circle cx="32" cy="32" r="4.50" fill="#00A03A"/>
     </svg>
     <h2>Take charge of your books.</h2>
     <p class="lead">Set up your file in a few minutes. Your data is yours, and you can leave whenever you want.</p>
-    <a class="btn big" href="https://app.cosmointelligence.io/?product=acc" style="max-width:340px;margin:0 auto">Start your free 30-day trial →</a>
+    <a class="btn big" href="https://app.cosmointelligence.io/?product=acc" style="max-width:340px;margin:0 auto">Start your free 7-day trial →</a>
   </div>
 </section>
 
@@ -763,6 +1027,30 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
 })();
 </script>
 
+<script>
+(function(){
+  "use strict";
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.duo-tab'));
+  if(!tabs.length) return;
+  function sel(key){
+    tabs.forEach(function(t){ t.setAttribute('aria-selected', t.getAttribute('data-tab')===key?'true':'false'); });
+    Array.prototype.forEach.call(document.querySelectorAll('.duo-panel'), function(p){
+      p.classList.toggle('duo-hidden', p.getAttribute('data-tab')!==key);
+    });
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ sel(t.getAttribute('data-tab')); });
+    t.addEventListener('keydown', function(e){
+      if(e.key==='ArrowRight' || e.key==='ArrowLeft'){
+        e.preventDefault();
+        var other = t.getAttribute('data-tab')==='compta' ? 'grc' : 'compta';
+        sel(other); var el = document.getElementById('tab-'+other); if(el) el.focus();
+      }
+    });
+  });
+})();
+</script>
+
 <!-- ===== Bandeau cookies (CNIL) ===== -->
 <style>
 #cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;
@@ -848,5 +1136,61 @@ footer{border-top:1px solid var(--line);padding:34px 0 46px;margin-top:20px}
   if(existing){ apply(existing); } else { show(); }
 })();
 </script>
+
+
+<script>(function(){
+  "use strict";
+  // whole-page toggle
+  var tog=document.querySelector('.htog');
+  if(tog){tog.addEventListener('click',function(e){var b=e.target.closest('button[data-hero]');if(!b)return;
+    var k=b.getAttribute('data-hero');document.body.setAttribute('data-view',k);
+    Array.prototype.forEach.call(tog.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x.getAttribute('data-hero')===k?'true':'false');});
+    window.scrollTo({top:0,behavior:'auto'});});}
+  // configurator
+  var root=document.getElementById('cfg'); if(!root) return;
+  var PR={modules:{pol:10,prr:100,full:109},volBands:{b5:0,b25:25,b100:50,b100p:100},txBands:{t0:0,t1:5,t2:10},aiTiers:{light:0,std:25,heavy:70}};
+  var MODS={pol:{vol:1,ai:1,tx:0,efact:0},prr:{vol:1,ai:1,tx:0,efact:0},full:{vol:1,ai:1,tx:1,efact:1}};
+  var TIERS={entity:[20,15,10],user:[15,10,8]};
+  function tierCost(x,r){var c=Math.min(x,4)*r[0];if(x>4)c+=Math.min(x-4,5)*r[1];if(x>9)c+=Math.min(x-9,10)*r[2];return c;}
+  var sel={module:'full',entities:1,users:1,vol:'b5',tx:'t0',efact:0,ai:'light'},aiTouched=false;
+  function recAI(){var m=MODS[sel.module];if(!m.ai)return 'light';
+    var vs=m.vol?({b5:1,b25:2,b100:4,b100p:8}[sel.vol]||0):0;var ts=m.tx?({t0:0,t1:4,t2:9}[sel.tx]||0):0;
+    var load=vs*3+ts*2+sel.entities*1.5+sel.users*0.5;return load<10?'light':load<18?'std':'heavy';}
+  function monthly(){var m=MODS[sel.module];var t=PR.modules[sel.module]||0;
+    t+=tierCost(Math.max(0,sel.entities-1),TIERS.entity);t+=tierCost(Math.max(0,sel.users-1),TIERS.user);
+    if(m.vol)t+=PR.volBands[sel.vol]||0;if(m.tx)t+=PR.txBands[sel.tx]||0;if(m.ai)t+=PR.aiTiers[sel.ai]||0;
+    if(m.efact&&sel.efact)t+=9.99;return Math.round(t*100)/100;}
+  function eur(n){var s=(Math.round(n*100)/100);if(s%1===0)return '\u20ac'+s;return '\u20ac'+s.toFixed(2).replace('.',',');}
+  function setOn(list,attr,val){Array.prototype.forEach.call(list,function(b){b.classList.toggle('cfg-on',b.getAttribute(attr)===String(val));});}
+  function render(){
+    var m=MODS[sel.module];
+    setOn(root.querySelectorAll('.cfg-mod'),'data-mod',sel.module);
+    // group visibility by module
+    var gTx=root.querySelector('[data-grp="tx"]'); if(gTx) gTx.classList.toggle('cfg-hidden',!m.tx);
+    var gEf=root.querySelector('[data-grp="efact"]'); if(gEf) gEf.classList.toggle('cfg-hidden',!m.efact);
+    if(!aiTouched){sel.ai=recAI();}
+    setOn(root.querySelectorAll('[data-vol]'),'data-vol',sel.vol);
+    setOn(root.querySelectorAll('[data-tx]'),'data-tx',sel.tx);
+    setOn(root.querySelectorAll('[data-efact]'),'data-efact',sel.efact);
+    setOn(root.querySelectorAll('[data-ai]'),'data-ai',sel.ai);
+    var en=document.getElementById('cfg-ent-n'); if(en) en.textContent=sel.entities;
+    var un=document.getElementById('cfg-usr-n'); if(un) un.textContent=sel.users;
+    var eh=document.getElementById('cfg-efact-h'); if(eh) eh.textContent=sel.efact?'+9,99 \u20ac/mois':(eh.getAttribute('data-off')||'d\u00e9sactiv\u00e9');
+    document.getElementById('cfg-amt').textContent=eur(monthly());
+  }
+  root.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    if(b.hasAttribute('data-mod')) sel.module=b.getAttribute('data-mod');
+    else if(b.hasAttribute('data-vol')) sel.vol=b.getAttribute('data-vol');
+    else if(b.hasAttribute('data-tx')) sel.tx=b.getAttribute('data-tx');
+    else if(b.hasAttribute('data-efact')) sel.efact=+b.getAttribute('data-efact');
+    else if(b.hasAttribute('data-ai')){sel.ai=b.getAttribute('data-ai');aiTouched=true;}
+    else return;
+    render();
+  });
+  var re=document.getElementById('cfg-ent'); if(re) re.addEventListener('input',function(){sel.entities=+re.value;render();});
+  var ru=document.getElementById('cfg-usr'); if(ru) ru.addEventListener('input',function(){sel.users=+ru.value;render();});
+  render();
+})();</script>
 </body>
 </html>
