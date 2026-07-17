@@ -392,7 +392,7 @@ body[data-view="platform"] .cta-note a{color:#B7A6FF}
 .htog{margin-top:4px}
 /* ===== competitor table (compta, light) ===== */
 .cmp{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}
-.cmp table{border-collapse:collapse;width:100%;min-width:660px;font-size:12.5px}
+.cmp table{border-collapse:collapse;width:100%;font-size:13px}
 .cmp th,.cmp td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
 .cmp thead th{position:sticky;top:0;background:#fff;font-weight:800;font-size:11.5px}
 .cmp td:first-child,.cmp th:first-child{text-align:left;position:sticky;left:0;background:#fff;font-weight:700;min-width:180px;box-shadow:1px 0 0 var(--line)}
@@ -400,7 +400,7 @@ body[data-view="platform"] .cta-note a{color:#B7A6FF}
 .cmp .ok{color:#059669;font-weight:800}.cmp .warn{color:#B45309;font-weight:800}.cmp .no{color:#DC2626;font-weight:800}.cmp .mm{color:var(--ink-3);font-size:11.5px}
 .cmp tr.win td:first-child::after{content:" \2605";color:var(--indigo)}
 .cmp-legend{font-size:12px;color:var(--ink-3);margin:0 0 10px}
-.cmp-note{background:#FFF7ED;border:1px solid #FDBA74;border-radius:10px;padding:10px 12px;font-size:12.5px;color:#7C2D12;margin:14px 0 0;line-height:1.5}
+.cmp-note{font-size:12px;color:var(--ink-3);margin:12px 2px 0;line-height:1.5}
 /* ===== plateforme sections + configurator (dark) ===== */
 .pf{background:linear-gradient(178deg,#0B0E24,#0E1330);color:#E8EBFA}
 .pf .eyebrow{color:#8FE9F6}.pf h2{color:#fff}.pf .lead{color:#AEB4E0}
@@ -592,54 +592,14 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   </div>
 </section>
 
-<!-- ===== COMPARISON ===== -->
-<section class="only-compta">
-  <div class="wrap">
-    <p class="eyebrow">Comparez</p>
-    <h2>La même rigueur, sans le tarif d'un cabinet.</h2>
-    <p class="lead" style="margin-bottom:24px">Tenue, TVA, liasse, FEC — mais aussi le contrôle de conformité que les autres ne font pas.</p>
-    <div class="compare reveal">
-      <table class="ctable">
-        <thead>
-          <tr><th class="feat">&nbsp;</th><th class="col-cosmo">COSMO</th><th class="col-other">Ailleurs</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="feat">Prix par mois</td><td class="col-cosmo price-cell">14,99 €<span style="display:block;font-size:.62em;font-weight:600;opacity:.75">7 jours d'essai gratuit</span></td><td class="col-other price-cell muted">souvent 3 à 10× plus</td></tr>
-          <tr><td class="feat">Tenue comptable complète</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="yes">✓</span></td></tr>
-          <tr><td class="feat">Vous validez chaque écriture — rien ne passe sans vous</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">boîte noire</td></tr>
-          <tr><td class="feat">Chaque écriture expliquée en clair</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Photo d'un reçu → écriture complète, prête à valider</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">catégorisation simple</td></tr>
-          <tr><td class="feat">Vraie compta visible — journal, grand livre, balance</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">souvent cachée</td></tr>
-          <tr><td class="feat">Immobilisations &amp; amortissements gérés</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">variable</td></tr>
-          <tr><td class="feat">Impôt sur les sociétés calculé (solde + acomptes)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">variable</td></tr>
-          <tr><td class="feat">Règles fiscales vérifiées en continu</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Dossier complet prêt si l'administration demande</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">variable</td></tr>
-          <tr><td class="feat">Facture électronique (loi 2026-2027) incluse</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">option payante</td></tr>
-          <tr><td class="feat">Ventes Stripe, SumUp &amp; Shopify comptabilisées automatiquement</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Contrôle au niveau des assertions (existence, exactitude, cut-off)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Piste d'audit scellée (SHA-256) · période verrouillée</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Conformité GRC — politiques, risques &amp; contrôles (COSO)</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Reconnaissance du revenu — Incoterms, produits constatés d'avance</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">TVA — collectée, déductible &amp; intracommunautaire</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">partielle</td></tr>
-          <tr><td class="feat">Lit votre grand livre pour en déduire vos obligations</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">France, Italie, Espagne &amp; associations — un seul outil</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other"><span class="no">✕</span></td></tr>
-          <tr><td class="feat">Sans engagement</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">souvent non</td></tr>
-          <tr><td class="feat">Vos données exportables à tout moment</td><td class="col-cosmo"><span class="yes">✓</span></td><td class="col-other muted">variable</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-
 <!-- ===== COMPETITOR TABLE (compta) ===== -->
 <section class="only-compta">
   <div class="wrap">
     <p class="eyebrow">Comparez</p>
-    <h2>Comparé aux autres, sans tricher.</h2><p class="lead" style="margin-bottom:16px">Faits concurrents vérifiés. COSMO jugé avec la même sévérité.</p>
-    <p class="cmp-legend"><b class="ok">✓</b> complet · <b class="warn">⚠</b> partiel / partenaire · <b class="no">✕</b> non · ★ point fort unique COSMO</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Indy</th><th>Tiime</th><th>Pennylane</th><th>SAP B1</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 49 €</td><td class="">0 → ~25 €</td><td class="">14 → 79 €</td><td class="mm">38–91 € /user</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="warn">⚠ pré-compta</td><td class="ok">✓ (avec EC)</td><td class="ok">✓</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">⚠ add-on</td></tr><tr><td>Plateforme Agréée (e-invoicing)</td><td class="c-cosmo warn">⚠ via partenaire</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✕</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">⚠ add-on</td></tr><tr class="win"><td>Reconnaissance du revenu (Incoterms, PCA 487)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ via EC</td><td class="ok">✓</td></tr><tr class="win"><td>Contrôle au niveau des assertions + score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr><tr class="win"><td>Piste d'audit scellée (SHA-256) + verrou période</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ séparé</td></tr><tr class="win"><td>Couche conformité GRC (COSO)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="warn">⚠ produit à part</td></tr><tr class="win"><td>Lit le grand livre → déduit les obligations (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr><tr><td>Export FEC</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td><td class="warn">⚠ via cabinet</td><td class="ok">✓</td><td class="warn">⚠ localisation</td></tr><tr><td>Multi-pays (FR / IT / ES)</td><td class="c-cosmo ok">✓</td><td class="no">✕ FR</td><td class="no">✕ FR</td><td class="warn">⚠ FR</td><td class="ok">✓ mondial</td></tr></tbody></table></div>
-    <p class="cmp-note"><b>SAP n'est pas vraiment un concurrent.</b> SAP Business One est un ERP d'entreprise (38–91 €/user + implantation) — un autre univers. Vos vrais concurrents : Indy, Tiime, Pennylane.</p>
+    <h2>Ce que COSMO couvre — et ce qui manque souvent ailleurs.</h2><p class="lead" style="margin-bottom:16px">Un comparatif honnête avec les outils de comptabilité du marché, sans citer personne.</p>
+    <p class="cmp-legend"><b class="ok">✓</b> inclus · <b class="warn">⚠</b> partiel ou en option · <b class="no">✕</b> généralement absent · ★ exclusivité COSMO</p>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Autres outils</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 91 € selon l'outil</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois partielle</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr><td>Plateforme Agréée (e-invoicing)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ variable</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr class="win"><td>Reconnaissance du revenu (Incoterms, PCA 487)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Contrôle au niveau des assertions + score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Piste d'audit scellée (SHA-256) + verrou période</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Couche conformité GRC (COSO)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Lit le grand livre → déduit les obligations (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Export FEC</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois via cabinet</td></tr><tr><td>Multi-pays (FR / IT / ES)</td><td class="c-cosmo ok">✓</td><td class="no">✕ souvent FR uniquement</td></tr></tbody></table></div>
+    <p class="cmp-note">Comparatif fondé sur les offres standard publiées par les principaux outils de comptabilité du marché — vérifié en juillet 2026. Les fonctionnalités varient selon l'outil et la formule choisie.</p>
   </div>
 </section>
 
