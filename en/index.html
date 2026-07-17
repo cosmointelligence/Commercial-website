@@ -264,6 +264,11 @@ header{
 .plist{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:15px}
 .plist li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink);line-height:1.4}
 .plist .tick{color:var(--green);flex:0 0 auto;margin-top:2px;font-weight:700}
+.plist .ptxt{flex:1;min-width:0}
+.why-item.light{border-top-color:var(--line)}
+.why-item.light h3{color:var(--ink)}
+.why-item.light p{color:var(--ink-2)}
+.why-item.light .why-label{color:var(--indigo)}
 
 /* ---------- Final ---------- */
 .final{text-align:center}
@@ -481,7 +486,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <div class="hero-msg" data-hero="compta">
       <p class="eyebrow">Books. Compliance. Control.</p>
       <h1>Run your books like a founder runs their&nbsp;team.</h1>
-      <p class="lead">Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. You sign, you know, you're in control. <b>€14.99/month</b>.</p>
+      <p class="lead">Everything is prepared for you — entries, tax rules, a complete file. Nothing goes through without your approval. You sign, you know, you're in control. <b>€14.99/month</b>, e-invoicing included.</p>
     </div>
     <div class="hero-msg" data-hero="platform">
       <p class="eyebrow">Governance. Risk. Compliance.</p>
@@ -492,12 +497,12 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 7-day trial →</a>
       <a class="btn big ghost" href="#tarif">See pricing</a>
     </div>
-    <p class="cta-note only-compta"><b>7 days free</b>, then €14.99/month · no commitment · cancel in one click</p>
+    <p class="cta-note only-compta"><b>7 days free</b>, then €14.99/month · no commitment · cancel in one click · secure payment by Stripe — card, Apple Pay, Google Pay</p>
     <div class="cta-row only-plateforme">
       <a class="btn big" href="https://app.cosmointelligence.io/">Start your free 7-day trial →</a>
       <a class="btn big ghost" href="#cfg">Configure my price</a>
     </div>
-    <p class="cta-note only-plateforme"><b>7 days free</b> · price by your configuration · beyond 20 entities or 20 users, quote on request — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
+    <p class="cta-note only-plateforme"><b>7 days free</b> · secure payment by Stripe — card, Apple Pay, Google Pay · price by your configuration · beyond 20 entities or 20 users, quote on request — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -537,7 +542,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>From A to Z — accounting, plus the assurance layer.</h2>
     <p class="lead">The full platform unites your books and your compliance in one tool.</p>
     <div class="pkg">
-      <div class="pkg-col"><div class="pkg-h">Full platform</div><ul class="pkg-list"><li>Complete accounting — bookkeeping, VAT, balance sheet, filing, FEC</li><li>Factur-X e-invoicing (EN 16931)</li><li>Policies + full RACM</li><li>AI analysis across all modules</li><li>COSMO Deliverables & 3D risk mapping</li></ul></div>
+      <div class="pkg-col"><div class="pkg-h">Full platform</div><ul class="pkg-list"><li>Complete accounting — bookkeeping, VAT, balance sheet, filing, FEC</li><li>Factur-X e-invoicing (EN 16931)</li><li>Policies + full RACM</li><li>Lumi analysis across all modules</li><li>COSMO Deliverables & 3D risk mapping</li></ul></div>
       <div class="pkg-col pkg-grc"><div class="pkg-h">What the GRC layer adds</div><ul class="pkg-list"><li>Your policies imported, versioned and alive</li><li>Objectives, processes and risks — centralized and structured</li><li>Continuous alignment: policies ↔ risks ↔ processes</li><li>Controls generated, with every visual</li><li>Risk & Control Matrix (RACM) always current</li><li>Flowcharts & mapping — monitoring at all times</li><li>Risks re-assessed continuously</li><li>Risks materialized on your key deliverables — company, customers, investors</li><li>The best decision, made on trustworthy data</li><li>Every decision traceable to the source of truth that triggered it</li></ul></div>
     </div>
     <a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:340px;margin:22px auto 0">Start the 7-day trial →</a>
@@ -561,7 +566,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <p class="dp-eyebrow">From document to decision — the full cycle</p>
       <ul class="chain">
         <li><span class="node">📄</span><div class="step">Policies</div><div class="desc">Create and keep your policies alive — imported or written, versioned, tracked over time.</div></li>
-        <li><span class="node">🎯</span><div class="step">Objectives</div><div class="desc">AI identifies what each policy is meant to guarantee.</div></li>
+        <li><span class="node">🎯</span><div class="step">Objectives</div><div class="desc">Lumi identifies what each policy is meant to guarantee.</div></li>
         <li><span class="node">🔗</span><div class="step">Processes &amp; risks</div><div class="desc">The processes involved and the risks that threaten them, aligned on the COSO cube.</div></li>
         <li><span class="node">📡</span><div class="step">Continuous assessment</div><div class="desc">Risks re-assessed continuously — not once a year.</div></li>
         <li><span class="node">🛡️</span><div class="step">Controls</div><div class="desc">The controls holding each risk, structured and scored on 11 design factors.</div></li>
@@ -599,7 +604,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <p class="eyebrow">Compare</p>
     <h2>What COSMO covers — and what's often missing elsewhere.</h2><p class="lead" style="margin-bottom:16px">An honest comparison with mainstream accounting tools, without naming names.</p>
     <p class="cmp-legend"><b class="ok">✓</b> included · <b class="warn">⚠</b> partial or add-on · <b class="no">✕</b> generally absent · ★ COSMO exclusive</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Other tools</th></tr></thead><tbody><tr><td>Price / month</td><td class="c-cosmo">€14.99</td><td class="">€0 → €91 depending on the tool</td></tr><tr><td>Full accounting (PCG, balance sheet, tax filing)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes partial</td></tr><tr><td>Invoicing + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes an add-on</td></tr><tr><td>E-invoicing — ready for the 2026 mandate</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ varies</td></tr><tr><td>Bank sync</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Receipt scan → journal entry (AI)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes an add-on</td></tr><tr class="win"><td>Revenue booked in the right period (sales, deposits, deferrals)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Books checked continuously + reliability score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Sealed history, ready for a tax audit</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Policies, risks &amp; controls built in (GRC)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Your obligations derived from your books, automatically (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>FEC export ready for the tax authority</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes via your accountant</td></tr></tbody></table></div>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Other tools</th></tr></thead><tbody><tr><td>Price / month</td><td class="c-cosmo">€14.99</td><td class="">€0 → €91 depending on the tool</td></tr><tr><td>Full accounting (PCG, balance sheet, tax filing)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes partial</td></tr><tr><td>Invoicing + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes an add-on</td></tr><tr><td>E-invoicing — ready for the 2026 mandate</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ varies</td></tr><tr><td>Bank sync</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Receipt scan → journal entry by Lumi</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes an add-on</td></tr><tr class="win"><td>Revenue booked in the right period (sales, deposits, deferrals)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Books checked continuously + reliability score</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Sealed history, ready for a tax audit</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Policies, risks &amp; controls built in (GRC)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Your obligations derived from your books, automatically (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>FEC export ready for the tax authority</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ sometimes via your accountant</td></tr></tbody></table></div>
     <p class="cmp-note">Based on the standard plans published by mainstream accounting tools — verified July 2026. Features vary by tool and plan.</p>
   </div>
 </section>
@@ -639,7 +644,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2 5 5 .5-3.8 3.3L16.5 17 12 14l-4.5 3 1.3-5.2L5 8.5 10 8z" fill="#fff"/></svg></div>
       <h3>Lumi keeps your books</h3>
-      <p>Photograph a receipt: the AI categorizes it to the right account, checks the VAT and assesses deductibility — <span class="fine">an opinion to verify, never a guarantee.</span></p>
+      <p>Photograph a receipt: Lumi categorizes it to the right account, checks the VAT and assesses deductibility — <span class="fine">an opinion to verify, never a guarantee.</span></p>
     </div>
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.5 8-7 11-3.5-3-7-6-7-11V5z" fill="#fff"/><path d="M9 12l2 2 4-4" stroke="#5B3FD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -662,7 +667,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <p class="lead" style="margin-bottom:8px">Four steps, one ledger. Your data exports at any moment.</p>
     <div class="steps">
       <div class="step"><span class="num">01</span><div><h3>Connect or import</h3><p>Link your bank read-only, or import a statement — PDF, CSV or photo. Any bank, any country.</p></div></div>
-      <div class="step"><span class="num">02</span><div><h3>Lumi keeps &amp; checks</h3><p>The AI categorizes every transaction to the right account, checks VAT and shows an honest confidence level.</p></div></div>
+      <div class="step"><span class="num">02</span><div><h3>Lumi keeps &amp; checks</h3><p>Lumi categorizes every transaction to the right account, checks VAT and shows an honest confidence level.</p></div></div>
       <div class="step"><span class="num">03</span><div><h3>Reconcile</h3><p>Your transactions are matched to your entries. Discrepancies are flagged, not hidden.</p></div></div>
       <div class="step"><span class="num">04</span><div><h3>Certify &amp; export</h3><p>Trial balance, balance sheet, income statement, FEC file — ready for the tax authority or an audit.</p></div></div>
     </div>
@@ -677,7 +682,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <h2>Honest accounting.</h2>
       <p class="lead">Three reasons to trust us — with your eyes open.</p>
       <div class="why-item"><p class="why-label">01 · Proof</p><h3>The ledger is the record</h3><p>Every entry is categorized, checked and reconciled, with a visible confidence level — not a veneer of certainty.</p></div>
-      <div class="why-item"><p class="why-label">02 · Independence</p><h3>Without an accountant — or with one</h3><p>Keep your own books, with AI that categorizes and checks. Or invite your accountant. You choose, never locked in.</p></div>
+      <div class="why-item"><p class="why-label">02 · Independence</p><h3>Without an accountant — or with one</h3><p>Keep your own books, with Lumi categorizing and checking. Or invite your accountant. You choose, never locked in.</p></div>
       <div class="why-item"><p class="why-label">03 · Price</p><h3>€14.99 a month</h3><p>The rigor of an accounting firm — VAT, tax return, complete file — without the accounting-firm price.</p></div>
     </div>
   </div>
@@ -691,7 +696,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>France's 2026-2027 reform, in plain terms.</h2>
     <p class="lead">From 1 September 2026, France moves to mandatory electronic invoicing between businesses. Here is what changes, when, and for whom — and what COSMO handles for you.</p>
 
-    <div class="why-item"><p class="why-label">What it is</p><h3>A structured invoice, not a PDF by email</h3><p>An electronic invoice isn't a PDF emailed to your client. It's a <b>structured</b> file — Factur-X, UBL or CII, following the European <b>EN 16931</b> standard — routed through a state-<b>approved platform (PA)</b>, the mandatory intermediary between you and your customer. A plain PDF will no longer count as a valid business-to-business invoice.</p></div>
+    <div class="why-item light"><p class="why-label">What it is</p><h3>A structured invoice, not a PDF by email</h3><p>An electronic invoice isn't a PDF emailed to your client. It's a <b>structured</b> file — Factur-X, UBL or CII, following the European <b>EN 16931</b> standard — routed through a state-<b>approved platform (PA)</b>, the mandatory intermediary between you and your customer. A plain PDF will no longer count as a valid business-to-business invoice.</p></div>
 
     <h3 style="margin-top:28px">The official timeline</h3>
     <div class="steps">
@@ -700,19 +705,19 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <div class="step"><span class="num">2027</span><div><h3>Issuing — small businesses &amp; the self-employed</h3><p>On <b>1 September 2027</b>, the obligation to issue extends to <b>everyone else</b>: SMEs, micro-businesses and the self-employed. One extra year to issue — but not to receive.</p></div></div>
     </div>
 
-    <div class="why-item" style="margin-top:24px"><p class="why-label">Who's concerned</p><h3>Every VAT-registered business in France</h3><p>Whatever your size, revenue, legal form or tax regime. Even <b>micro-entrepreneurs under the VAT franchise</b> are in scope, for both receiving and issuing. The reform covers <b>domestic B2B</b> — between two French businesses. Sales to consumers (B2C) and cross-border trade fall under <b>e-reporting</b>; the public sector (B2G) stays on Chorus Pro.</p></div>
+    <div class="why-item light" style="margin-top:24px"><p class="why-label">Who's concerned</p><h3>Every VAT-registered business in France</h3><p>Whatever your size, revenue, legal form or tax regime. Even <b>micro-entrepreneurs under the VAT franchise</b> are in scope, for both receiving and issuing. The reform covers <b>domestic B2B</b> — between two French businesses. Sales to consumers (B2C) and cross-border trade fall under <b>e-reporting</b>; the public sector (B2G) stays on Chorus Pro.</p></div>
 
-    <div class="why-item"><p class="why-label">If you do nothing</p><h3>€15 per non-compliant invoice</h3><p>Failing to issue in electronic format exposes you to <b>€15 per invoice</b> (capped at €15,000/year), and €250 per missing e-reporting transmission (capped at €45,000/year). A grace period applies at launch — but the obligation is real.</p></div>
+    <div class="why-item light"><p class="why-label">If you do nothing</p><h3>€15 per non-compliant invoice</h3><p>Failing to issue in electronic format exposes you to <b>€15 per invoice</b> (capped at €15,000/year), and €250 per missing e-reporting transmission (capped at €45,000/year). A grace period applies at launch — but the obligation is real.</p></div>
 
     <h3 style="margin-top:28px">What COSMO does for you</h3>
     <ul class="plist" style="max-width:none">
-      <li><span class="tick">✓</span><b>Today already:</b> your invoices and quotes are generated in <b>Factur-X, EN 16931-compliant</b> format, with the 21 rules checked — included in your subscription.</li>
-      <li><span class="tick">✓</span><b>Receiving:</b> supplier invoices land in COSMO automatically and post to your books, with no re-keying.</li>
-      <li><span class="tick">✓</span><b>Transmission via an approved platform:</b> issuing and receiving run through our approved-platform partner — you're compliant without changing how you work.</li>
-      <li><span class="tick">✓</span><b>Nothing to reinstall:</b> an issued invoice feeds your ledger and your filings in a single step.</li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Today already:</b> your invoices and quotes are generated in <b>Factur-X, EN 16931-compliant</b> format, with the 21 rules checked — included in your subscription.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Receiving:</b> supplier invoices land in COSMO automatically and post to your books, with no re-keying.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Transmission via an approved platform:</b> issuing and receiving run through our approved-platform partner — you're compliant without changing how you work.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Nothing to reinstall:</b> an issued invoice feeds your ledger and your filings in a single step.</span></li>
     </ul>
 
-    <p class="lead" style="margin-top:24px">Factur-X generation (EN 16931) is <b>included</b> in your COSMO subscription. Issuing and receiving via our <b>approved-platform partner</b> make you compliant with the reform — without changing how you work. E-invoicing adds <b>€9.99/mo</b> on top of accounting (i.e. <b>€19.98/mo</b> in year one), or <b>€14.99/mo</b> as a standalone module — <b>100 invoices/month included</b>, then €0.20/invoice.</p>
+    <p class="lead" style="margin-top:24px">Factur-X generation (EN 16931) is <b>included</b> in your COSMO subscription. Issuing and receiving via our <b>approved-platform partner</b> make you compliant with the reform — without changing how you work. E-invoicing is <b>included in the €14.99/mo plan</b> — <b>100 invoices/month included</b>, then €0.20/invoice. Need e-invoicing without the accounting? <b>Standalone module at €9.99/mo</b>, same terms.</p>
     <p class="cta-note" style="margin-top:10px">Official timeline and terms: impots.gouv.fr and economie.gouv.fr. Provided for information only.</p>
   </div>
 </section>
@@ -724,7 +729,8 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">📱</div>
 <div style="font-weight:800;margin-bottom:6px">iPhone / iPad</div>
-<div style="font-size:13px;color:#64748B;line-height:1.6">Open <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> in Safari, tap <b>Share</b> then <b>“Add to Home Screen”</b>.</div>
+<!-- REPLACE APP_STORE_URL with the real App Store link before going live -->
+<div style="font-size:13px;color:#64748B;line-height:1.6">Download <a href="APP_STORE_URL" style="color:#4F46E5;font-weight:700">COSMO on the App Store</a>. Or without the App Store: open <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> in Safari, tap <b>Share</b> then <b>"Add to Home Screen"</b>.</div>
 </div>
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">🤖</div>
@@ -742,7 +748,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
 <section id="tarif" class="only-compta">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Pricing</p>
-    <h2 style="text-align:center">One price. Everything included.</h2>
+    <h2 style="text-align:center">One simple price. Everything included.</h2>
     <div class="price-card reveal">
       <div class="price-tag">
         <div class="n">€14.99</div>
@@ -750,13 +756,27 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       </div>
       <ul class="plist">
         <li><span class="tick">✓</span>Full bookkeeping — France (PCG), associations, Italy, Spain</li>
-        <li><span class="tick">✓</span>Compliant invoicing, quotes, e-invoices (Factur-X)</li>
-        <li><span class="tick">✓</span>Lumi AI: categorization, VAT checking, receipt scanning</li>
+        <li><span class="tick">✓</span>E-invoicing included (Factur-X) — 100 invoices/month, then €0.20</li>
+        <li><span class="tick">✓</span>Lumi, our digital intelligence: categorization, VAT checking, receipt scanning</li>
         <li><span class="tick">✓</span>VAT, trial balance, balance sheet, income statement, FEC export</li>
         <li><span class="tick">✓</span>Compliance checking against French tax law</li>
         <li><span class="tick">✓</span>Back up and export your data anytime</li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Start your free 7-day trial →</a>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · cancel anytime</p>
+    </div>
+    <div class="price-card reveal" style="margin-top:18px">
+      <p class="eyebrow" style="text-align:center;margin-bottom:4px">Only need e-invoicing?</p>
+      <div class="price-tag">
+        <div class="n">€9.99</div>
+        <div class="per">per month<br>e-invoicing only, without the accounting</div>
+      </div>
+      <ul class="plist">
+        <li><span class="tick">✓</span><span class="ptxt">Send and receive compliant invoices (Factur-X, EN 16931) via our approved-platform partner</span></li>
+        <li><span class="tick">✓</span><span class="ptxt">100 invoices/month included, then €0.20/invoice</span></li>
+        <li><span class="tick">✓</span><span class="ptxt">Upgrade to full accounting any time — €14.99/mo, e-invoicing included</span></li>
+      </ul>
+      <a class="btn big" href="https://app.cosmointelligence.io/?product=efact_solo">Start free 7-day trial →</a>
       <p class="cta-note" style="text-align:center;margin-top:14px"><b>Card required</b> · no charge for 7 days · cancel anytime</p>
     </div>
   </div>
@@ -819,7 +839,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>What the platform covers — vs. classic GRC tools.</h2>
     <p class="lead" style="margin-bottom:16px">Accounting and compliance together, operational from day one.</p>
     <p class="cmp-legend"><b class="ok">✓</b> included · <b class="warn">⚠</b> partial or add-on · <b class="no">✕</b> generally absent · ★ COSMO exclusive</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Classic GRC tools</th></tr></thead><tbody><tr><td>Price / month</td><td class="c-cosmo">from €109</td><td class="mm">quote-based — often thousands of €/yr</td></tr><tr><td>Up and running the same day, no consultants</td><td class="c-cosmo ok">✓</td><td class="no">✕ months-long setup</td></tr><tr><td>Policies imported, versioned and kept alive</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often mere storage</td></tr><tr class="win"><td>Objectives extracted from each policy (AI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Processes &amp; risks mapped to the COSO cube</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr class="win"><td>Continuous risk reassessment</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often annual</td></tr><tr class="win"><td>Controls scored on 11 design factors</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>RACM &amp; flowcharts generated automatically</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often manual</td></tr><tr class="win"><td>Risk materialized down to client deliverables</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Linked to your accounting (ledger → risks)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Multi-entity (up to 20)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ plan-dependent</td></tr><tr><td>No commitment</td><td class="c-cosmo ok">✓</td><td class="no">✕ annual contract</td></tr></tbody></table></div>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Classic GRC tools</th></tr></thead><tbody><tr><td>Price / month</td><td class="c-cosmo">from €109</td><td class="mm">quote-based — often thousands of €/yr</td></tr><tr><td>Up and running the same day, no consultants</td><td class="c-cosmo ok">✓</td><td class="no">✕ months-long setup</td></tr><tr><td>Policies imported, versioned and kept alive</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often mere storage</td></tr><tr class="win"><td>Objectives extracted from each policy by Lumi</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Processes &amp; risks mapped to the COSO cube</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr class="win"><td>Continuous risk reassessment</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often annual</td></tr><tr class="win"><td>Controls scored on 11 design factors</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>RACM &amp; flowcharts generated automatically</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ often manual</td></tr><tr class="win"><td>Risk materialized down to client deliverables</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Linked to your accounting (ledger → risks)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Multi-entity (up to 20)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ plan-dependent</td></tr><tr><td>No commitment</td><td class="c-cosmo ok">✓</td><td class="no">✕ annual contract</td></tr></tbody></table></div>
     <p class="cmp-note">Based on the standard plans published by mainstream GRC tools — verified July 2026. Features vary by tool and plan.</p>
   </div>
 </section>
@@ -828,13 +848,14 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   <div class="wrap">
     <p class="eyebrow">Estimate your platform</p>
     <h2>A price that follows your factors.</h2>
-    <p class="lead">Entities, users, risk volume, transactions, AI — the total adjusts live.</p>
+    <p class="lead">Entities, users, risk volume, transactions, Lumi analysis — the total adjusts live.</p>
     <div class="cfg" id="cfg">
       <div class="cfg-mods">
         <button class="cfg-mod" data-mod="pol">Policies<span>€10</span></button>
         <button class="cfg-mod" data-mod="prr">Policies + RACM<span>€100</span></button>
         <button class="cfg-mod cfg-on" data-mod="full">Full platform<span>€109</span></button>
       </div>
+      <p class="cfg-sub" style="margin:2px 0 10px">The full package includes <b>ARI COSMO accounting</b> and <b>e-invoicing</b>. Accounting alone: €14.99/mo — <b>Accounting</b> tab at the top of the page.</p>
       <label class="cfg-slab" for="cfg-ent">Companies / entities <b id="cfg-ent-n">1</b></label>
       <input type="range" id="cfg-ent" min="1" max="20" value="1" class="cfg-range" aria-label="Companies / entities">
       <label class="cfg-slab" for="cfg-usr">Users (licenses) <b id="cfg-usr-n">1</b></label>
@@ -844,10 +865,14 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <div class="cfg-opts"><button data-vol="b5" class="cfg-on">Up to 5</button><button data-vol="b25">6–25</button><button data-vol="b100">26–100</button><button data-vol="b100p">100+</button></div></div>
       <div class="cfg-grp" data-grp="tx"><div class="cfg-lab">Transactions / month</div>
         <div class="cfg-opts"><button data-tx="t0" class="cfg-on">Up to 100</button><button data-tx="t1">101–1000</button><button data-tx="t2">1000+</button></div></div>
-      <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">E-invoicing <span class="cfg-hint" id="cfg-efact-h" data-off="off">off</span></div>
-        <div class="cfg-opts"><button data-efact="0" class="cfg-on">No</button><button data-efact="1">Add it</button></div>
-        <p class="cfg-sub">Send &amp; receive compliant invoices. 100 included/mo, then €0.20 beyond.</p></div>
-      <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">AI analysis <span class="cfg-hint">automatic — by your usage</span></div>
+      <div class="cfg-grp" data-grp="acc"><div class="cfg-lab">ARI COSMO accounting <span class="cfg-hint" id="cfg-acc-h">off</span></div>
+        <div class="cfg-opts" id="cfg-acc-opts"><button data-acc="0" class="cfg-on">No</button><button data-acc="1">Add · €14.99</button></div>
+        <p class="cfg-sub">Bookkeeping, VAT, balance sheet, P&amp;L, FEC export — the full accounting module.</p></div>
+      <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">E-invoicing <span class="cfg-hint" id="cfg-efact-h" style="color:#7ED9C3">included</span></div>
+        <div class="cfg-opts" id="cfg-efact-opts"><button data-efact="0" class="cfg-on">No</button><button data-efact="1">Add · €9.99</button></div>
+        <p class="cfg-sub" id="cfg-efact-sub">Send &amp; receive compliant invoices. 100 included/mo, then €0.20 beyond.</p></div>
+      <p class="cfg-sub cfg-hidden" id="cfg-upsell" style="color:#8FE9F6">💡 At this level, the full package at €109 costs less — and includes everything.</p>
+      <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Lumi analysis <span class="cfg-hint">automatic — by your usage</span></div>
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Light</button><button data-ai="std">Standard</button><button data-ai="heavy">Heavy</button></div></div>
       <div class="cfg-total"><span>Total / month</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
       <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Start the 7-day trial</a>
@@ -1125,14 +1150,15 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   var MODS={pol:{vol:1,ai:1,tx:0,efact:0},prr:{vol:1,ai:1,tx:0,efact:0},full:{vol:1,ai:1,tx:1,efact:1}};
   var TIERS={entity:[20,15,10],user:[15,10,8]};
   function tierCost(x,r){var c=Math.min(x,4)*r[0];if(x>4)c+=Math.min(x-4,5)*r[1];if(x>9)c+=Math.min(x-9,10)*r[2];return c;}
-  var sel={module:'full',entities:1,users:1,vol:'b5',tx:'t0',efact:0,ai:'light'},aiTouched=false;
+  var sel={module:'full',entities:1,users:1,vol:'b5',tx:'t0',efact:0,acc:0,ai:'light'},aiTouched=false;
   function recAI(){var m=MODS[sel.module];if(!m.ai)return 'light';
     var vs=m.vol?({b5:1,b25:2,b100:4,b100p:8}[sel.vol]||0):0;var ts=m.tx?({t0:0,t1:4,t2:9}[sel.tx]||0):0;
     var load=vs*3+ts*2+sel.entities*1.5+sel.users*0.5;return load<10?'light':load<18?'std':'heavy';}
   function monthly(){var m=MODS[sel.module];var t=PR.modules[sel.module]||0;
     t+=tierCost(Math.max(0,sel.entities-1),TIERS.entity);t+=tierCost(Math.max(0,sel.users-1),TIERS.user);
     if(m.vol)t+=PR.volBands[sel.vol]||0;if(m.tx)t+=PR.txBands[sel.tx]||0;if(m.ai)t+=PR.aiTiers[sel.ai]||0;
-    if(m.efact&&sel.efact)t+=9.99;return Math.round(t*100)/100;}
+    if(!m.efact){if(sel.acc)t+=14.99;else if(sel.efact)t+=9.99;}
+    return Math.round(t*100)/100;}
   function eur(n){var s=(Math.round(n*100)/100);if(s%1===0)return '\u20ac'+s;return '\u20ac'+s.toFixed(2).replace('.',',');}
   function setOn(list,attr,val){Array.prototype.forEach.call(list,function(b){b.classList.toggle('cfg-on',b.getAttribute(attr)===String(val));});}
   function render(){
@@ -1140,7 +1166,18 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     setOn(root.querySelectorAll('.cfg-mod'),'data-mod',sel.module);
     // group visibility by module
     var gTx=root.querySelector('[data-grp="tx"]'); if(gTx) gTx.classList.toggle('cfg-hidden',!m.tx);
-    var gEf=root.querySelector('[data-grp="efact"]'); if(gEf) gEf.classList.toggle('cfg-hidden',!m.efact);
+    var isFull=!!m.efact,efIncluded=isFull||!!sel.acc;
+    var accOpts=document.getElementById('cfg-acc-opts'),ah=document.getElementById('cfg-acc-h');
+    if(accOpts)accOpts.classList.toggle('cfg-hidden',isFull);
+    if(ah)ah.textContent=isFull?'included':(sel.acc?'+\u20ac14.99/mo':'off');
+    var eh=document.getElementById('cfg-efact-h'),es=document.getElementById('cfg-efact-sub');
+    var efOpts=document.getElementById('cfg-efact-opts');
+    if(efOpts)efOpts.classList.toggle('cfg-hidden',efIncluded);
+    if(eh)eh.textContent=efIncluded?(isFull?'included':'included with accounting'):(sel.efact?'+\u20ac9.99/mo':'off');
+    if(es)es.textContent='Send and receive compliant invoices. 100 included/month, then \u20ac0.20 each.';
+    setOn(root.querySelectorAll('[data-acc]'),'data-acc',sel.acc);
+    var up=document.getElementById('cfg-upsell');
+    if(up)up.classList.toggle('cfg-hidden',!(!isFull&&monthly()>=109));
     if(!aiTouched){sel.ai=recAI();}
     setOn(root.querySelectorAll('[data-vol]'),'data-vol',sel.vol);
     setOn(root.querySelectorAll('[data-tx]'),'data-tx',sel.tx);
@@ -1148,7 +1185,6 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     setOn(root.querySelectorAll('[data-ai]'),'data-ai',sel.ai);
     var en=document.getElementById('cfg-ent-n'); if(en) en.textContent=sel.entities;
     var un=document.getElementById('cfg-usr-n'); if(un) un.textContent=sel.users;
-    var eh=document.getElementById('cfg-efact-h'); if(eh) eh.textContent=sel.efact?'+9,99 \u20ac/mois':(eh.getAttribute('data-off')||'d\u00e9sactiv\u00e9');
     document.getElementById('cfg-amt').textContent=eur(monthly());
   }
   root.addEventListener('click',function(e){
@@ -1157,6 +1193,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     else if(b.hasAttribute('data-vol')) sel.vol=b.getAttribute('data-vol');
     else if(b.hasAttribute('data-tx')) sel.tx=b.getAttribute('data-tx');
     else if(b.hasAttribute('data-efact')) sel.efact=+b.getAttribute('data-efact');
+    else if(b.hasAttribute('data-acc')) sel.acc=+b.getAttribute('data-acc');
     else if(b.hasAttribute('data-ai')){sel.ai=b.getAttribute('data-ai');aiTouched=true;}
     else return;
     render();
