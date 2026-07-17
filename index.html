@@ -264,6 +264,11 @@ header{
 .plist{list-style:none;margin:24px 0;padding:0;display:flex;flex-direction:column;gap:15px}
 .plist li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink);line-height:1.4}
 .plist .tick{color:var(--green);flex:0 0 auto;margin-top:2px;font-weight:700}
+.plist .ptxt{flex:1;min-width:0}
+.why-item.light{border-top-color:var(--line)}
+.why-item.light h3{color:var(--ink)}
+.why-item.light p{color:var(--ink-2)}
+.why-item.light .why-label{color:var(--indigo)}
 
 /* ---------- Final ---------- */
 .final{text-align:center}
@@ -481,7 +486,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <div class="hero-msg" data-hero="compta">
       <p class="eyebrow">Compta. Conformité. Contrôle.</p>
       <h1>Dirigez votre compta comme un patron dirige son&nbsp;équipe.</h1>
-      <p class="lead">Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. Vous signez, vous savez, vous maîtrisez. <b>14,99 €/mois</b>.</p>
+      <p class="lead">Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. Vous signez, vous savez, vous maîtrisez. <b>14,99 €/mois</b>, facture électronique incluse.</p>
     </div>
     <div class="hero-msg" data-hero="platform">
       <p class="eyebrow">Gouvernance. Risques. Conformité.</p>
@@ -492,12 +497,12 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Essai gratuit 7 jours →</a>
       <a class="btn big ghost" href="#tarif">Voir le tarif</a>
     </div>
-    <p class="cta-note only-compta"><b>7 jours gratuits</b>, puis 14,99 €/mois · sans engagement · résiliez en un clic</p>
+    <p class="cta-note only-compta"><b>7 jours gratuits</b>, puis 14,99 €/mois · sans engagement · résiliez en un clic · paiement sécurisé Stripe — CB, Apple Pay, Google Pay</p>
     <div class="cta-row only-plateforme">
       <a class="btn big" href="https://app.cosmointelligence.io/">Essai gratuit 7 jours →</a>
       <a class="btn big ghost" href="#cfg">Configurer mon tarif</a>
     </div>
-    <p class="cta-note only-plateforme"><b>7 jours gratuits</b> · tarif selon votre configuration · au-delà de 20 entités ou 20 utilisateurs, devis sur demande — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
+    <p class="cta-note only-plateforme"><b>7 jours gratuits</b> · paiement sécurisé Stripe — CB, Apple Pay, Google Pay · tarif selon votre configuration · au-delà de 20 entités ou 20 utilisateurs, devis sur demande — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -537,7 +542,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>De A à Z — la compta, plus la couche d'assurance.</h2>
     <p class="lead">L'offre complète réunit vos comptes et votre conformité dans un seul outil.</p>
     <div class="pkg">
-      <div class="pkg-col"><div class="pkg-h">L'offre complète</div><ul class="pkg-list"><li>Comptabilité complète — tenue, TVA, bilan, liasse, FEC</li><li>Facturation électronique Factur-X (EN 16931)</li><li>Politiques + RACM complet</li><li>Analyse IA sur tous les modules</li><li>COSMO Livrables & cartographie des risques en 3D</li></ul></div>
+      <div class="pkg-col"><div class="pkg-h">L'offre complète</div><ul class="pkg-list"><li>Comptabilité complète — tenue, TVA, bilan, liasse, FEC</li><li>Facturation électronique Factur-X (EN 16931)</li><li>Politiques + RACM complet</li><li>Analyse Lumi sur tous les modules</li><li>COSMO Livrables & cartographie des risques en 3D</li></ul></div>
       <div class="pkg-col pkg-grc"><div class="pkg-h">Ce que la couche GRC ajoute</div><ul class="pkg-list"><li>Vos politiques importées, versionnées et vivantes</li><li>Objectifs, processus et risques — centralisés et structurés</li><li>Alignement continu politiques ↔ risques ↔ processus</li><li>Génération des contrôles, avec tous les visuels</li><li>Matrice risques & contrôles (RACM) toujours à jour</li><li>Logigrammes & cartographie — un monitoring permanent</li><li>Réévaluation des risques en continu</li><li>Risques matérialisés sur vos livrables clés — entreprise, clients, investisseurs</li><li>La meilleure décision, prise sur des données fiables</li><li>Chaque décision traçable jusqu'à la source de vérité qui l'a déclenchée</li></ul></div>
     </div>
     <a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:340px;margin:22px auto 0">Commencer l'essai 7 jours →</a>
@@ -561,18 +566,18 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <p class="dp-eyebrow">Du document à la décision — le cycle complet</p>
       <ul class="chain">
         <li><span class="node">📄</span><div class="step">Politiques</div><div class="desc">Créez et faites vivre vos politiques — importées ou rédigées, versionnées, suivies dans le temps.</div></li>
-        <li><span class="node">🎯</span><div class="step">Objectifs</div><div class="desc">L'IA identifie ce que chaque politique cherche à garantir.</div></li>
+        <li><span class="node">🎯</span><div class="step">Objectifs</div><div class="desc">Lumi identifie ce que chaque politique cherche à garantir.</div></li>
         <li><span class="node">🔗</span><div class="step">Processus &amp; risques</div><div class="desc">Les processus concernés et les risques qui les menacent, alignés sur le cube COSO.</div></li>
         <li><span class="node">📡</span><div class="step">Évaluation continue</div><div class="desc">Les risques réévalués en permanence — pas une fois par an.</div></li>
         <li><span class="node">🛡️</span><div class="step">Contrôles</div><div class="desc">Les contrôles qui tiennent chaque risque, structurés et évalués sur 11 facteurs de conception.</div></li>
-        <li><span class="node">🗺️</span><div class="step">RACM &amp; logigrammes</div><div class="desc">Matrice risques/contrôles et logigrammes générés — la vue d'ensemble, toujours à jour.</div></li>
+        <li><span class="node">🗺️</span><div class="step">RACM &amp; flowcharts</div><div class="desc">Matrice risques/contrôles et flowcharts générés — la vue d'ensemble, toujours à jour.</div></li>
         <li><span class="node">📦</span><div class="step">Matérialisation</div><div class="desc">Le risque matérialisé sur vos livrables internes et externes — jusqu'aux biens livrés à vos clients.</div></li>
       </ul>
       <p class="dp-eyebrow" style="margin-top:24px">La méthode classique vs COSMO</p>
       <div class="vs">
         <div class="vs-row"><span class="vs-old">Politiques éparpillées dans des fichiers Word</span><span class="vs-new">Politiques vivantes, reliées à leurs risques</span></div>
         <div class="vs-row"><span class="vs-old">Risques évalués une fois l'an</span><span class="vs-new">Réévaluation continue</span></div>
-        <div class="vs-row"><span class="vs-old">RACM figée dans un Excel</span><span class="vs-new">RACM &amp; logigrammes générés, à jour</span></div>
+        <div class="vs-row"><span class="vs-old">RACM figée dans un Excel</span><span class="vs-new">RACM &amp; flowcharts générés, à jour</span></div>
         <div class="vs-row"><span class="vs-old">Un classeur sorti pour l'audit</span><span class="vs-new">Conformité matérialisée jusqu'au livrable client</span></div>
         <div class="vs-row"><span class="vs-old">Un consultant à 800 €/jour</span><span class="vs-new">Inclus dans COSMO</span></div>
       </div>
@@ -599,7 +604,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <p class="eyebrow">Comparez</p>
     <h2>Ce que COSMO couvre — et ce qui manque souvent ailleurs.</h2><p class="lead" style="margin-bottom:16px">Un comparatif honnête avec les outils de comptabilité du marché, sans citer personne.</p>
     <p class="cmp-legend"><b class="ok">✓</b> inclus · <b class="warn">⚠</b> partiel ou en option · <b class="no">✕</b> généralement absent · ★ exclusivité COSMO</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Autres outils</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 91 € selon l'outil</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois partielle</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr><td>Facture électronique — prêt pour la loi 2026</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ variable</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture (IA)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr class="win"><td>Revenu reconnu à la bonne période (ventes, acomptes, PCA)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Comptes contrôlés en continu + score de fiabilité</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Historique scellé, prêt en cas de contrôle fiscal</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Politiques, risques &amp; contrôles intégrés (GRC)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Vos obligations déduites de vos comptes, automatiquement (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Export FEC prêt pour l'administration</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois via cabinet</td></tr></tbody></table></div>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Autres outils</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">14,99 €</td><td class="">0 → 91 € selon l'outil</td></tr><tr><td>Compta complète (PCG, bilan, liasse)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois partielle</td></tr><tr><td>Facturation + Factur-X (EN 16931)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr><td>Facture électronique — prêt pour la loi 2026</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ variable</td></tr><tr><td>Synchro bancaire</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr><td>Scan reçu → écriture par Lumi</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois en option</td></tr><tr class="win"><td>Revenu reconnu à la bonne période (ventes, acomptes, PCA)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Comptes contrôlés en continu + score de fiabilité</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Historique scellé, prêt en cas de contrôle fiscal</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Politiques, risques &amp; contrôles intégrés (GRC)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Vos obligations déduites de vos comptes, automatiquement (ARI)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Export FEC prêt pour l'administration</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ parfois via cabinet</td></tr></tbody></table></div>
     <p class="cmp-note">Comparatif fondé sur les offres standard publiées par les principaux outils de comptabilité du marché — vérifié en juillet 2026. Les fonctionnalités varient selon l'outil et la formule choisie.</p>
   </div>
 </section>
@@ -639,7 +644,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2 5 5 .5-3.8 3.3L16.5 17 12 14l-4.5 3 1.3-5.2L5 8.5 10 8z" fill="#fff"/></svg></div>
       <h3>Lumi tient vos comptes</h3>
-      <p>Photographiez un reçu : l'IA classe au bon compte, vérifie la TVA et évalue la déductibilité — <span class="fine">avec un avis à vérifier, jamais une garantie.</span></p>
+      <p>Photographiez un reçu : Lumi classe au bon compte, vérifie la TVA et évalue la déductibilité — <span class="fine">avec un avis à vérifier, jamais une garantie.</span></p>
     </div>
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.5 8-7 11-3.5-3-7-6-7-11V5z" fill="#fff"/><path d="M9 12l2 2 4-4" stroke="#5B3FD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -662,7 +667,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <p class="lead" style="margin-bottom:8px">Quatre étapes, un même grand livre. À chaque instant, vos données s'exportent.</p>
     <div class="steps">
       <div class="step"><span class="num">01</span><div><h3>Connectez ou importez</h3><p>Reliez votre banque en lecture seule, ou importez un relevé — PDF, CSV ou photo. Toute banque, tout pays.</p></div></div>
-      <div class="step"><span class="num">02</span><div><h3>Lumi tient &amp; contrôle</h3><p>L'IA classe chaque opération au bon compte, vérifie la TVA et affiche un niveau de confiance honnête.</p></div></div>
+      <div class="step"><span class="num">02</span><div><h3>Lumi tient &amp; contrôle</h3><p>Lumi classe chaque opération au bon compte, vérifie la TVA et affiche un niveau de confiance honnête.</p></div></div>
       <div class="step"><span class="num">03</span><div><h3>Rapprochez</h3><p>Vos opérations se rapprochent de vos écritures. Les écarts sont signalés, pas masqués.</p></div></div>
       <div class="step"><span class="num">04</span><div><h3>Attestez &amp; exportez</h3><p>Balance, bilan, compte de résultat, dossier FEC — prêts pour l'administration ou l'audit.</p></div></div>
     </div>
@@ -677,7 +682,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <h2>Une comptabilité honnête.</h2>
       <p class="lead">Trois raisons de nous faire confiance — les yeux ouverts.</p>
       <div class="why-item"><p class="why-label">01 · Preuve</p><h3>Le grand livre fait foi</h3><p>Chaque écriture est classée, contrôlée et rapprochée, avec un niveau de confiance affiché — pas un vernis de certitude.</p></div>
-      <div class="why-item"><p class="why-label">02 · Autonomie</p><h3>Sans expert-comptable — ou avec</h3><p>Tenez vos comptes vous-même, avec l'IA qui classe et contrôle. Ou invitez votre comptable. Vous choisissez, sans être enfermé.</p></div>
+      <div class="why-item"><p class="why-label">02 · Autonomie</p><h3>Sans expert-comptable — ou avec</h3><p>Tenez vos comptes vous-même, avec Lumi qui classe et contrôle. Ou invitez votre comptable. Vous choisissez, sans être enfermé.</p></div>
       <div class="why-item"><p class="why-label">03 · Prix</p><h3>14,99 € par mois</h3><p>La rigueur d'un cabinet — TVA, liasse, dossier complet — sans le prix d'un cabinet.</p></div>
     </div>
   </div>
@@ -691,7 +696,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>La réforme 2026-2027, sans jargon.</h2>
     <p class="lead">À partir du 1ᵉʳ septembre 2026, la France bascule vers la facture électronique obligatoire entre entreprises. Voici ce que ça change, quand, et pour qui — et ce que COSMO fait à votre place.</p>
 
-    <div class="why-item"><p class="why-label">C'est quoi</p><h3>Une facture structurée, pas un PDF par mail</h3><p>Une facture électronique n'est pas un PDF envoyé par email. C'est un fichier <b>structuré</b> — Factur-X, UBL ou CII, à la norme européenne <b>EN 16931</b> — qui transite par une <b>Plateforme Agréée (PA)</b> par l'État, l'intermédiaire obligatoire entre vous et votre client. Un simple PDF ne sera plus reconnu comme facture valide entre entreprises.</p></div>
+    <div class="why-item light"><p class="why-label">C'est quoi</p><h3>Une facture structurée, pas un PDF par mail</h3><p>Une facture électronique n'est pas un PDF envoyé par email. C'est un fichier <b>structuré</b> — Factur-X, UBL ou CII, à la norme européenne <b>EN 16931</b> — qui transite par une <b>Plateforme Agréée (PA)</b> par l'État, l'intermédiaire obligatoire entre vous et votre client. Un simple PDF ne sera plus reconnu comme facture valide entre entreprises.</p></div>
 
     <h3 style="margin-top:28px">Le calendrier officiel</h3>
     <div class="steps">
@@ -700,19 +705,19 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <div class="step"><span class="num">2027</span><div><h3>Émettre — TPE, PME, micro</h3><p>Le <b>1ᵉʳ septembre 2027</b>, l'obligation d'émettre s'étend à <b>toutes</b> les autres : PME, TPE, micro-entreprises et indépendants. Un an de plus pour émettre — mais pas pour recevoir.</p></div></div>
     </div>
 
-    <div class="why-item" style="margin-top:24px"><p class="why-label">Pour qui</p><h3>Toutes les entreprises assujetties à la TVA en France</h3><p>Quels que soient votre taille, chiffre d'affaires, forme juridique ou régime. Même les <b>micro-entrepreneurs en franchise de base</b> sont concernés, en réception comme en émission. La réforme vise le <b>B2B domestique</b> — entre deux entreprises françaises. Les ventes aux particuliers (B2C) et l'international relèvent de l'<b>e-reporting</b> ; le secteur public (B2G) reste sur Chorus Pro.</p></div>
+    <div class="why-item light" style="margin-top:24px"><p class="why-label">Pour qui</p><h3>Toutes les entreprises assujetties à la TVA en France</h3><p>Quels que soient votre taille, chiffre d'affaires, forme juridique ou régime. Même les <b>micro-entrepreneurs en franchise de base</b> sont concernés, en réception comme en émission. La réforme vise le <b>B2B domestique</b> — entre deux entreprises françaises. Les ventes aux particuliers (B2C) et l'international relèvent de l'<b>e-reporting</b> ; le secteur public (B2G) reste sur Chorus Pro.</p></div>
 
-    <div class="why-item"><p class="why-label">Si vous ne faites rien</p><h3>15 € par facture non conforme</h3><p>Le défaut d'émission au format électronique expose à <b>15 € par facture</b> (plafond 15 000 €/an), et 250 € par transmission d'e-reporting manquante (plafond 45 000 €/an). Une période de tolérance est prévue au démarrage — mais l'obligation, elle, est bien là.</p></div>
+    <div class="why-item light"><p class="why-label">Si vous ne faites rien</p><h3>15 € par facture non conforme</h3><p>Le défaut d'émission au format électronique expose à <b>15 € par facture</b> (plafond 15 000 €/an), et 250 € par transmission d'e-reporting manquante (plafond 45 000 €/an). Une période de tolérance est prévue au démarrage — mais l'obligation, elle, est bien là.</p></div>
 
     <h3 style="margin-top:28px">Ce que COSMO fait pour vous</h3>
     <ul class="plist" style="max-width:none">
-      <li><span class="tick">✓</span><b>Dès aujourd'hui :</b> vos factures et devis sont générés au format <b>Factur-X conforme EN 16931</b>, avec contrôle des 21 règles — inclus dans votre abonnement.</li>
-      <li><span class="tick">✓</span><b>Réception :</b> vos factures fournisseurs arriveront automatiquement dans COSMO et se comptabiliseront, sans ressaisie.</li>
-      <li><span class="tick">✓</span><b>Transmission via Plateforme Agréée :</b> l'émission et la réception passent par notre Plateforme Agréée partenaire — vous êtes conforme sans changer votre façon de travailler.</li>
-      <li><span class="tick">✓</span><b>Rien à réinstaller :</b> une facture émise alimente votre grand livre et vos déclarations en une seule opération.</li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Dès aujourd'hui :</b> vos factures et devis sont générés au format <b>Factur-X conforme EN 16931</b>, avec contrôle des 21 règles — inclus dans votre abonnement.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Réception :</b> vos factures fournisseurs arriveront automatiquement dans COSMO et se comptabiliseront, sans ressaisie.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Transmission via Plateforme Agréée :</b> l'émission et la réception passent par notre Plateforme Agréée partenaire — vous êtes conforme sans changer votre façon de travailler.</span></li>
+      <li><span class="tick">✓</span><span class="ptxt"><b>Rien à réinstaller :</b> une facture émise alimente votre grand livre et vos déclarations en une seule opération.</span></li>
     </ul>
 
-    <p class="lead" style="margin-top:24px">La génération Factur-X (norme EN 16931) est <b>incluse</b> dans l'abonnement COSMO. L'émission et la réception via notre <b>Plateforme Agréée partenaire</b> vous rendent conforme à la réforme — sans changer votre façon de travailler. L'e-facturation s'ajoute pour <b>9,99 €/mois</b> en complément de la comptabilité (soit <b>19,98 €/mois</b> la 1ʳᵉ année), ou <b>14,99 €/mois</b> en module autonome — <b>100 factures incluses/mois</b>, puis 0,20 €/facture.</p>
+    <p class="lead" style="margin-top:24px">La génération Factur-X (norme EN 16931) est <b>incluse</b> dans l'abonnement COSMO. L'émission et la réception via notre <b>Plateforme Agréée partenaire</b> vous rendent conforme à la réforme — sans changer votre façon de travailler. L'e-facturation est <b>incluse dans l'abonnement à 14,99 €/mois</b> — <b>100 factures/mois incluses</b>, puis 0,20 €/facture. Besoin de l'e-facturation sans la compta ? <b>Module autonome à 9,99 €/mois</b>, mêmes conditions.</p>
     <p class="cta-note" style="margin-top:10px">Calendrier et modalités officiels : impots.gouv.fr et economie.gouv.fr. Informations données à titre indicatif.</p>
   </div>
 </section>
@@ -724,7 +729,8 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">📱</div>
 <div style="font-weight:800;margin-bottom:6px">iPhone / iPad</div>
-<div style="font-size:13px;color:#64748B;line-height:1.6">Ouvrez <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> dans Safari, touchez <b>Partager</b> puis <b>« Sur l'écran d'accueil »</b>.</div>
+<!-- REMPLACER APP_STORE_URL par le lien App Store réel avant mise en ligne -->
+<div style="font-size:13px;color:#64748B;line-height:1.6">Téléchargez <a href="APP_STORE_URL" style="color:#4F46E5;font-weight:700">COSMO sur l'App Store</a>. Ou sans App Store : ouvrez <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> dans Safari, touchez <b>Partager</b> puis <b>« Sur l'écran d'accueil »</b>.</div>
 </div>
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">🤖</div>
@@ -742,7 +748,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
 <section id="tarif" class="only-compta">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">Tarif</p>
-    <h2 style="text-align:center">Un seul prix. Tout compris.</h2>
+    <h2 style="text-align:center">Un prix simple. Tout compris.</h2>
     <div class="price-card reveal">
       <div class="price-tag">
         <div class="n">14,99 €</div>
@@ -750,13 +756,27 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       </div>
       <ul class="plist">
         <li><span class="tick">✓</span>Comptabilité complète — France (PCG), associations, Italie, Espagne</li>
-        <li><span class="tick">✓</span>Facturation conforme, devis, factures électroniques (Factur-X)</li>
-        <li><span class="tick">✓</span>IA Lumi : classement, contrôle TVA, scan de reçus</li>
+        <li><span class="tick">✓</span>Facture électronique incluse (Factur-X) — 100 factures/mois, puis 0,20 €</li>
+        <li><span class="tick">✓</span>Lumi, notre intelligence numérique : classement, contrôle TVA, scan de reçus</li>
         <li><span class="tick">✓</span>TVA, balance, bilan, compte de résultat, export FEC</li>
         <li><span class="tick">✓</span>Contrôle de conformité au regard du CGI</li>
         <li><span class="tick">✓</span>Sauvegarde et export de vos données à tout moment</li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Essai gratuit 7 jours →</a>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · annulable à tout moment</p>
+    </div>
+    <div class="price-card reveal" style="margin-top:18px">
+      <p class="eyebrow" style="text-align:center;margin-bottom:4px">Besoin uniquement de la facture électronique ?</p>
+      <div class="price-tag">
+        <div class="n">9,99 €</div>
+        <div class="per">par mois<br>e-facturation seule, sans la comptabilité</div>
+      </div>
+      <ul class="plist">
+        <li><span class="tick">✓</span><span class="ptxt">Émettez et recevez vos factures conformes (Factur-X, EN 16931) via notre Plateforme Agréée partenaire</span></li>
+        <li><span class="tick">✓</span><span class="ptxt">100 factures/mois incluses, puis 0,20 €/facture</span></li>
+        <li><span class="tick">✓</span><span class="ptxt">Passez à la compta complète quand vous voulez — 14,99 €/mois, e-facturation incluse</span></li>
+      </ul>
+      <a class="btn big" href="https://app.cosmointelligence.io/?product=efact_solo">Essai gratuit 7 jours →</a>
       <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · annulable à tout moment</p>
     </div>
   </div>
@@ -819,7 +839,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     <h2>Ce que la plateforme couvre — face aux outils GRC classiques.</h2>
     <p class="lead" style="margin-bottom:16px">Compta et conformité réunies, opérationnelles dès le premier jour.</p>
     <p class="cmp-legend"><b class="ok">✓</b> inclus · <b class="warn">⚠</b> partiel ou en option · <b class="no">✕</b> généralement absent · ★ exclusivité COSMO</p>
-    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Outils GRC classiques</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">à partir de 109 €</td><td class="mm">sur devis — souvent plusieurs milliers d'€/an</td></tr><tr><td>Opérationnel le jour même, sans consultant</td><td class="c-cosmo ok">✓</td><td class="no">✕ mise en place sur plusieurs mois</td></tr><tr><td>Politiques importées, versionnées et vivantes</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent simple stockage</td></tr><tr class="win"><td>Objectifs extraits de chaque politique (IA)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Processus &amp; risques alignés sur le cube COSO</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr class="win"><td>Réévaluation continue des risques</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent annuelle</td></tr><tr class="win"><td>Contrôles évalués sur 11 facteurs de conception</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>RACM &amp; logigrammes générés automatiquement</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent manuels</td></tr><tr class="win"><td>Risques matérialisés jusqu'aux livrables clients</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Relié à votre comptabilité (grand livre → risques)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Multi-entités (jusqu'à 20)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ selon la formule</td></tr><tr><td>Sans engagement</td><td class="c-cosmo ok">✓</td><td class="no">✕ contrat annuel</td></tr></tbody></table></div>
+    <div class="cmp"><table><thead><tr><th>&nbsp;</th><th class="c-cosmo">COSMO</th><th>Outils GRC classiques</th></tr></thead><tbody><tr><td>Prix / mois</td><td class="c-cosmo">à partir de 109 €</td><td class="mm">sur devis — souvent plusieurs milliers d'€/an</td></tr><tr><td>Opérationnel le jour même, sans consultant</td><td class="c-cosmo ok">✓</td><td class="no">✕ mise en place sur plusieurs mois</td></tr><tr><td>Politiques importées, versionnées et vivantes</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent simple stockage</td></tr><tr class="win"><td>Objectifs extraits de chaque politique par Lumi</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Processus &amp; risques alignés sur le cube COSO</td><td class="c-cosmo ok">✓</td><td class="ok">✓</td></tr><tr class="win"><td>Réévaluation continue des risques</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent annuelle</td></tr><tr class="win"><td>Contrôles évalués sur 11 facteurs de conception</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>RACM &amp; flowcharts générés automatiquement</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ souvent manuels</td></tr><tr class="win"><td>Risques matérialisés jusqu'aux livrables clients</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr class="win"><td>Relié à votre comptabilité (grand livre → risques)</td><td class="c-cosmo ok">✓</td><td class="no">✕</td></tr><tr><td>Multi-entités (jusqu'à 20)</td><td class="c-cosmo ok">✓</td><td class="warn">⚠ selon la formule</td></tr><tr><td>Sans engagement</td><td class="c-cosmo ok">✓</td><td class="no">✕ contrat annuel</td></tr></tbody></table></div>
     <p class="cmp-note">Comparatif fondé sur les offres standard publiées par les principaux outils GRC du marché — vérifié en juillet 2026. Les fonctionnalités varient selon l'outil et la formule choisie.</p>
   </div>
 </section>
@@ -828,13 +848,14 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   <div class="wrap">
     <p class="eyebrow">Estimez votre plateforme</p>
     <h2>Un prix qui suit vos facteurs.</h2>
-    <p class="lead">Entités, utilisateurs, volume de risques, transactions, IA — le total s'ajuste en direct.</p>
+    <p class="lead">Entités, utilisateurs, volume de risques, transactions, analyse Lumi — le total s'ajuste en direct.</p>
     <div class="cfg" id="cfg">
       <div class="cfg-mods">
         <button class="cfg-mod" data-mod="pol">Politiques<span>10 €</span></button>
         <button class="cfg-mod" data-mod="prr">Politiques + RACM<span>100 €</span></button>
         <button class="cfg-mod cfg-on" data-mod="full">L'offre complète<span>109 €</span></button>
       </div>
+      <p class="cfg-sub" style="margin:2px 0 10px">L'offre complète inclut la <b>comptabilité ARI COSMO</b> et la <b>facturation électronique</b>. Comptabilité seule : 14,99 €/mois — onglet <b>Compta</b> en haut de page.</p>
       <label class="cfg-slab" for="cfg-ent">Entreprises / entités <b id="cfg-ent-n">1</b></label>
       <input type="range" id="cfg-ent" min="1" max="20" value="1" class="cfg-range" aria-label="Entreprises / entités">
       <label class="cfg-slab" for="cfg-usr">Utilisateurs (licences) <b id="cfg-usr-n">1</b></label>
@@ -844,10 +865,14 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <div class="cfg-opts"><button data-vol="b5" class="cfg-on">Jusqu'à 5</button><button data-vol="b25">6–25</button><button data-vol="b100">26–100</button><button data-vol="b100p">100+</button></div></div>
       <div class="cfg-grp" data-grp="tx"><div class="cfg-lab">Transactions / mois</div>
         <div class="cfg-opts"><button data-tx="t0" class="cfg-on">Jusqu'à 100</button><button data-tx="t1">101–1000</button><button data-tx="t2">1000+</button></div></div>
-      <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">Facturation électronique <span class="cfg-hint" id="cfg-efact-h" data-off="désactivé">désactivé</span></div>
-        <div class="cfg-opts"><button data-efact="0" class="cfg-on">Non</button><button data-efact="1">Ajouter</button></div>
-        <p class="cfg-sub">Envoyez et recevez vos factures conformes. 100 incluses/mois, puis 0,20 € au-delà.</p></div>
-      <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Analyse IA <span class="cfg-hint">automatique — selon votre usage</span></div>
+      <div class="cfg-grp" data-grp="acc"><div class="cfg-lab">Comptabilité ARI COSMO <span class="cfg-hint" id="cfg-acc-h">désactivé</span></div>
+        <div class="cfg-opts" id="cfg-acc-opts"><button data-acc="0" class="cfg-on">Non</button><button data-acc="1">Ajouter · 14,99 €</button></div>
+        <p class="cfg-sub">Tenue, TVA, bilan, compte de résultat, export FEC — le module compta complet.</p></div>
+      <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">Facturation électronique <span class="cfg-hint" id="cfg-efact-h" style="color:#7ED9C3">incluse</span></div>
+        <div class="cfg-opts" id="cfg-efact-opts"><button data-efact="0" class="cfg-on">Non</button><button data-efact="1">Ajouter · 9,99 €</button></div>
+        <p class="cfg-sub" id="cfg-efact-sub">Envoyez et recevez vos factures conformes. 100 incluses/mois, puis 0,20 € au-delà.</p></div>
+      <p class="cfg-sub cfg-hidden" id="cfg-upsell" style="color:#8FE9F6">💡 À ce niveau, l'offre complète à 109 € coûte moins cher — et inclut tout.</p>
+      <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Analyse Lumi <span class="cfg-hint">automatique — selon votre usage</span></div>
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Léger</button><button data-ai="std">Standard</button><button data-ai="heavy">Intensif</button></div></div>
       <div class="cfg-total"><span>Total / mois</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
       <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Commencer l'essai 7 jours</a>
@@ -1125,14 +1150,15 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   var MODS={pol:{vol:1,ai:1,tx:0,efact:0},prr:{vol:1,ai:1,tx:0,efact:0},full:{vol:1,ai:1,tx:1,efact:1}};
   var TIERS={entity:[20,15,10],user:[15,10,8]};
   function tierCost(x,r){var c=Math.min(x,4)*r[0];if(x>4)c+=Math.min(x-4,5)*r[1];if(x>9)c+=Math.min(x-9,10)*r[2];return c;}
-  var sel={module:'full',entities:1,users:1,vol:'b5',tx:'t0',efact:0,ai:'light'},aiTouched=false;
+  var sel={module:'full',entities:1,users:1,vol:'b5',tx:'t0',efact:0,acc:0,ai:'light'},aiTouched=false;
   function recAI(){var m=MODS[sel.module];if(!m.ai)return 'light';
     var vs=m.vol?({b5:1,b25:2,b100:4,b100p:8}[sel.vol]||0):0;var ts=m.tx?({t0:0,t1:4,t2:9}[sel.tx]||0):0;
     var load=vs*3+ts*2+sel.entities*1.5+sel.users*0.5;return load<10?'light':load<18?'std':'heavy';}
   function monthly(){var m=MODS[sel.module];var t=PR.modules[sel.module]||0;
     t+=tierCost(Math.max(0,sel.entities-1),TIERS.entity);t+=tierCost(Math.max(0,sel.users-1),TIERS.user);
     if(m.vol)t+=PR.volBands[sel.vol]||0;if(m.tx)t+=PR.txBands[sel.tx]||0;if(m.ai)t+=PR.aiTiers[sel.ai]||0;
-    if(m.efact&&sel.efact)t+=9.99;return Math.round(t*100)/100;}
+    if(!m.efact){if(sel.acc)t+=14.99;else if(sel.efact)t+=9.99;}
+    return Math.round(t*100)/100;}
   function eur(n){var s=(Math.round(n*100)/100);if(s%1===0)return '\u20ac'+s;return '\u20ac'+s.toFixed(2).replace('.',',');}
   function setOn(list,attr,val){Array.prototype.forEach.call(list,function(b){b.classList.toggle('cfg-on',b.getAttribute(attr)===String(val));});}
   function render(){
@@ -1140,7 +1166,18 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     setOn(root.querySelectorAll('.cfg-mod'),'data-mod',sel.module);
     // group visibility by module
     var gTx=root.querySelector('[data-grp="tx"]'); if(gTx) gTx.classList.toggle('cfg-hidden',!m.tx);
-    var gEf=root.querySelector('[data-grp="efact"]'); if(gEf) gEf.classList.toggle('cfg-hidden',!m.efact);
+    var isFull=!!m.efact,efIncluded=isFull||!!sel.acc;
+    var accOpts=document.getElementById('cfg-acc-opts'),ah=document.getElementById('cfg-acc-h');
+    if(accOpts)accOpts.classList.toggle('cfg-hidden',isFull);
+    if(ah)ah.textContent=isFull?'incluse':(sel.acc?'+14,99 \u20ac/mois':'d\u00e9sactiv\u00e9');
+    var eh=document.getElementById('cfg-efact-h'),es=document.getElementById('cfg-efact-sub');
+    var efOpts=document.getElementById('cfg-efact-opts');
+    if(efOpts)efOpts.classList.toggle('cfg-hidden',efIncluded);
+    if(eh)eh.textContent=efIncluded?(isFull?'incluse':'incluse avec la compta'):(sel.efact?'+9,99 \u20ac/mois':'d\u00e9sactiv\u00e9');
+    if(es)es.textContent='Envoyez et recevez vos factures conformes. 100 incluses/mois, puis 0,20 \u20ac au-del\u00e0.';
+    setOn(root.querySelectorAll('[data-acc]'),'data-acc',sel.acc);
+    var up=document.getElementById('cfg-upsell');
+    if(up)up.classList.toggle('cfg-hidden',!(!isFull&&monthly()>=109));
     if(!aiTouched){sel.ai=recAI();}
     setOn(root.querySelectorAll('[data-vol]'),'data-vol',sel.vol);
     setOn(root.querySelectorAll('[data-tx]'),'data-tx',sel.tx);
@@ -1148,7 +1185,6 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     setOn(root.querySelectorAll('[data-ai]'),'data-ai',sel.ai);
     var en=document.getElementById('cfg-ent-n'); if(en) en.textContent=sel.entities;
     var un=document.getElementById('cfg-usr-n'); if(un) un.textContent=sel.users;
-    var eh=document.getElementById('cfg-efact-h'); if(eh) eh.textContent=sel.efact?'+9,99 \u20ac/mois':(eh.getAttribute('data-off')||'d\u00e9sactiv\u00e9');
     document.getElementById('cfg-amt').textContent=eur(monthly());
   }
   root.addEventListener('click',function(e){
@@ -1157,6 +1193,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     else if(b.hasAttribute('data-vol')) sel.vol=b.getAttribute('data-vol');
     else if(b.hasAttribute('data-tx')) sel.tx=b.getAttribute('data-tx');
     else if(b.hasAttribute('data-efact')) sel.efact=+b.getAttribute('data-efact');
+    else if(b.hasAttribute('data-acc')) sel.acc=+b.getAttribute('data-acc');
     else if(b.hasAttribute('data-ai')){sel.ai=b.getAttribute('data-ai');aiTouched=true;}
     else return;
     render();
