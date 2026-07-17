@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cosmointelligence.io/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://cosmointelligence.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cosmointelligence.io/en/"/>
@@ -11,13 +11,13 @@
   </url>
   <url>
     <loc>https://cosmointelligence.io/en/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://cosmointelligence.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cosmointelligence.io/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cosmointelligence.io/"/>
   </url>
-  <url><loc>https://cosmointelligence.io/mentions-legales.html</loc><lastmod>2026-07-06</lastmod><priority>0.3</priority></url>
-  <url><loc>https://cosmointelligence.io/cgv.html</loc><lastmod>2026-07-06</lastmod><priority>0.3</priority></url>
-  <url><loc>https://cosmointelligence.io/confidentialite.html</loc><lastmod>2026-07-06</lastmod><priority>0.3</priority></url>
+  <url><loc>https://cosmointelligence.io/mentions-legales.html</loc><lastmod>2026-07-17</lastmod><priority>0.3</priority></url>
+  <url><loc>https://cosmointelligence.io/cgv.html</loc><lastmod>2026-07-17</lastmod><priority>0.3</priority></url>
+  <url><loc>https://cosmointelligence.io/confidentialite.html</loc><lastmod>2026-07-17</lastmod><priority>0.3</priority></url>
 </urlset>
