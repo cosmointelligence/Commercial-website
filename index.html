@@ -502,7 +502,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
       <a class="btn big" href="https://app.cosmointelligence.io/">Essai gratuit 7 jours →</a>
       <a class="btn big ghost" href="#cfg">Configurer mon tarif</a>
     </div>
-    <p class="cta-note only-plateforme"><b>7 jours gratuits</b> · paiement sécurisé Stripe — CB, Apple Pay, Google Pay · tarif selon votre configuration · au-delà de 20 entités ou 20 utilisateurs, devis sur demande — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
+    <p class="cta-note only-plateforme"><b>7 jours gratuits</b> — toutes les fonctionnalités, compta complète · limité à 1 politique et 10 factures électroniques · paiement sécurisé Stripe — CB, Apple Pay, Google Pay · tarif selon votre configuration · au-delà de 20 entités ou 20 utilisateurs, devis sur demande — <a href="mailto:contact@cosmointelligence.io">contact@cosmointelligence.io</a></p>
 
     <!-- Signature: live balance sheet -->
     <div class="ledger" id="ledger">
@@ -763,7 +763,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <li><span class="tick">✓</span>Sauvegarde et export de vos données à tout moment</li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=acc">Essai gratuit 7 jours →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · annulable à tout moment</p>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · essai limité à 10 factures électroniques · annulable à tout moment</p>
     </div>
     <div class="price-card reveal" style="margin-top:18px">
       <p class="eyebrow" style="text-align:center;margin-bottom:4px">Besoin uniquement de la facture électronique ?</p>
@@ -777,7 +777,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <li><span class="tick">✓</span><span class="ptxt">Passez à la compta complète quand vous voulez — 14,99 €/mois, e-facturation incluse</span></li>
       </ul>
       <a class="btn big" href="https://app.cosmointelligence.io/?product=efact_solo">Essai gratuit 7 jours →</a>
-      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · annulable à tout moment</p>
+      <p class="cta-note" style="text-align:center;margin-top:14px"><b>Carte requise</b> · aucun prélèvement pendant 7 jours · essai limité à 10 factures électroniques · annulable à tout moment</p>
     </div>
   </div>
 </section>
@@ -876,6 +876,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Léger</button><button data-ai="std">Standard</button><button data-ai="heavy">Intensif</button></div></div>
       <div class="cfg-total"><span>Total / mois</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
       <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Commencer l'essai 7 jours</a>
+      <p class="cfg-quote" style="text-align:center;margin-top:10px">Essai 7 jours : toutes les fonctionnalités, compta complète — limité à 1 politique et 10 factures électroniques. Carte requise, aucun prélèvement pendant l'essai.</p>
     </div>
   </div>
 </section>
@@ -1202,5 +1203,8 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
   var ru=document.getElementById('cfg-usr'); if(ru) ru.addEventListener('input',function(){sel.users=+ru.value;render();});
   render();
 })();</script>
+<!-- Cloudflare Web Analytics — sans cookie. REMPLACER VOTRE_TOKEN par le token du dashboard Cloudflare (Analytics → Web Analytics), puis décommenter :
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "VOTRE_TOKEN"}'></script>
+-->
 </body>
 </html>
