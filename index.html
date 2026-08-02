@@ -816,6 +816,10 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <p>Oui, à tout moment. Sur le web, le changement est immédiat et le temps non consommé de votre ancien plan est crédité au prorata. Sur iPhone, le changement se fait via votre abonnement Apple : le passage vers la comptabilité complète (qui inclut l'e-facturation) prend effet immédiatement, Apple créditant les jours restants. Vos factures et documents existants sont conservés tels quels.</p>
       </details>
       <details>
+        <summary>Que se passe-t-il si je dépasse 100 factures/mois sur iPhone ?</summary>
+        <p>Sur le web, les factures au-delà des 100 incluses sont facturées automatiquement 0,25&nbsp;€ l'unité. Dans l'application iPhone, cette option à l'usage n'est pas encore disponible — le plafond de 100/mois s'y applique. Deux solutions gratuites dès aujourd'hui : connectez votre propre plateforme agréée (aucun frais COSMO, quel que soit le volume), ou gérez votre abonnement sur cosmointelligence.io depuis un navigateur, où le dépassement à l'usage fonctionne déjà. Un achat intégré pour des factures supplémentaires est prévu.</p>
+      </details>
+      <details>
         <summary>Pour qui est COSMO ?</summary>
         <p>Pour les indépendants et micro-entrepreneurs, mais aussi les <b>TPE et PME au réel</b> — SAS, SASU, SARL/EURL — et les associations, en France, en Italie et en Espagne, dans un seul outil. De la franchise en base jusqu'à l'IS avec liasse : si vous voulez des comptes tenus proprement, en règle avec l'administration, et facturer sans multiplier les logiciels, c'est fait pour vous.</p>
       </details>
@@ -873,7 +877,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <p class="cfg-sub">Tenue, TVA, bilan, compte de résultat, export FEC — le module compta complet.</p></div>
       <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">Facturation électronique <span class="cfg-hint" id="cfg-efact-h" style="color:#7ED9C3">incluse</span></div>
         <div class="cfg-opts" id="cfg-efact-opts"><button data-efact="0" class="cfg-on">Non</button><button data-efact="1">Ajouter · 9,99 €</button></div>
-        <p class="cfg-sub" id="cfg-efact-sub">Envoyez et recevez vos factures conformes. 10 incluses/mois, puis 0,25 € au-delà.</p></div>
+        <p class="cfg-sub" id="cfg-efact-sub">Envoyez et recevez vos factures conformes. 100 incluses/mois, puis 0,25 € l'unité sur le web — voir la FAQ pour l'app iPhone.</p></div>
       <p class="cfg-sub cfg-hidden" id="cfg-upsell" style="color:#8FE9F6">💡 À ce niveau, l'offre complète à 109 € coûte moins cher — et inclut tout.</p>
       <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Analyse Lumi <span class="cfg-hint">automatique — selon votre usage</span></div>
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Léger</button><button data-ai="std">Standard</button><button data-ai="heavy">Intensif</button></div></div>
@@ -1178,7 +1182,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     var efOpts=document.getElementById('cfg-efact-opts');
     if(efOpts)efOpts.classList.toggle('cfg-hidden',efIncluded);
     if(eh)eh.textContent=efIncluded?(isFull?'incluse':'incluse avec la compta'):(sel.efact?'+9,99 \u20ac/mois':'d\u00e9sactiv\u00e9');
-    if(es)es.textContent='Envoyez et recevez vos factures conformes. 10 incluses/mois, puis 0,25 \u20ac au-del\u00e0.';
+    if(es)es.textContent='Envoyez et recevez vos factures conformes. 100 incluses/mois, puis 0,25 \u20ac l\u2019unit\u00e9 sur le web \u2014 voir la FAQ pour l\u2019app iPhone.';
     setOn(root.querySelectorAll('[data-acc]'),'data-acc',sel.acc);
     var up=document.getElementById('cfg-upsell');
     if(up)up.classList.toggle('cfg-hidden',!(!isFull&&monthly()>=109));
