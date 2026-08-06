@@ -946,7 +946,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         Tenue, TVA, bilan, compte de résultat, export FEC — le module compta complet. C’est le même produit que la porte société : 59 € HT pour 1 utilisateur, 99 € jusqu’à 3, 149 € jusqu’à 10, devis au-delà. La facturation électronique est comprise.</p></div>
       <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">Facturation électronique <span class="cfg-hint" id="cfg-efact-h" style="color:#7ED9C3">incluse</span></div>
         <div class="cfg-opts cfg-hidden" id="cfg-efact-opts"><button data-efact="0" class="cfg-on">Non</button></div>
-        <p class="cfg-sub" id="cfg-efact-sub">Envoyez et recevez vos factures conformes. 100 factures émises incluses/mois — les reçues ne comptent jamais — puis 0,25 € l'unité sur le web ; voir la FAQ pour l'app iPhone.</p></div>
+        <p class="cfg-sub" id="cfg-efact-sub">Envoyez et recevez vos factures conformes. 300 factures émises incluses/mois — les reçues ne comptent jamais — puis 0,25 € l'unité sur le web ; voir la FAQ pour l'app iPhone.</p></div>
       <p class="cfg-sub cfg-hidden" id="cfg-upsell" style="color:#8FE9F6">💡 À ce niveau, l'offre complète à 109 € coûte moins cher — et inclut tout.</p>
       <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Analyse Lumi <span class="cfg-hint">automatique — selon votre usage</span></div>
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Léger</button><button data-ai="std">Standard</button><button data-ai="heavy">Intensif</button></div></div>
@@ -1258,7 +1258,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     var efOpts=document.getElementById('cfg-efact-opts');
     if(efOpts)efOpts.classList.toggle('cfg-hidden',efIncluded);
     if(eh)eh.textContent=efIncluded?(isFull?'incluse':'incluse avec la compta'):'incluse avec la comptabilit\u00e9';
-    if(es)es.textContent='Envoyez et recevez vos factures conformes. 100 factures \u00e9mises incluses/mois \u2014 les re\u00e7ues ne comptent jamais \u2014 puis 0,25 \u20ac l\u2019unit\u00e9 sur le web ; voir la FAQ pour l\u2019app iPhone.';
+    if(es)es.textContent='Envoyez et recevez vos factures conformes. 300 factures \u00e9mises incluses/mois \u2014 les re\u00e7ues ne comptent jamais \u2014 puis 0,25 \u20ac l\u2019unit\u00e9 sur le web ; voir la FAQ pour l\u2019app iPhone.';
     setOn(root.querySelectorAll('[data-acc]'),'data-acc',sel.acc);
     var up=document.getElementById('cfg-upsell');
     if(up)up.classList.toggle('cfg-hidden',!(!isFull&&monthly()>=109));
