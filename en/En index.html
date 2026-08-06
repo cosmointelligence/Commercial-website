@@ -946,7 +946,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
         <p class="cfg-sub">Bookkeeping, VAT, balance sheet, P&amp;L, FEC export — the full accounting module. It is the same product as the Company door: €59 excl. VAT for 1 user, €99 up to 3, €149 up to 10, quote beyond. E-invoicing is included.</p></div>
       <div class="cfg-grp" data-grp="efact"><div class="cfg-lab">E-invoicing <span class="cfg-hint" id="cfg-efact-h" style="color:#7ED9C3">included</span></div>
         <div class="cfg-opts cfg-hidden" id="cfg-efact-opts"><button data-efact="0" class="cfg-on">No</button></div>
-        <p class="cfg-sub" id="cfg-efact-sub">Send &amp; receive compliant invoices. 100 issued invoices included/mo — the ones you receive never count — then €0.25 each on the web; see FAQ for the iPhone app.</p></div>
+        <p class="cfg-sub" id="cfg-efact-sub">Send &amp; receive compliant invoices. 300 issued invoices included/mo — the ones you receive never count — then €0.25 each on the web; see FAQ for the iPhone app.</p></div>
       <p class="cfg-sub cfg-hidden" id="cfg-upsell" style="color:#8FE9F6">💡 At this level, the full package at €109 costs less — and includes everything.</p>
       <div class="cfg-grp" data-grp="ai"><div class="cfg-lab">Lumi analysis <span class="cfg-hint">automatic — by your usage</span></div>
         <div class="cfg-opts"><button data-ai="light" class="cfg-on">Light</button><button data-ai="std">Standard</button><button data-ai="heavy">Heavy</button></div></div>
@@ -1258,7 +1258,7 @@ body[data-view="platform"] .foot-links a{color:#AEB4E0}
     var efOpts=document.getElementById('cfg-efact-opts');
     if(efOpts)efOpts.classList.toggle('cfg-hidden',efIncluded);
     if(eh)eh.textContent=efIncluded?(isFull?'included':'included with accounting'):'included with accounting';
-    if(es)es.textContent='Send and receive compliant invoices. 100 issued invoices included/month \u2014 the ones you receive never count \u2014 then \u20ac0.25 each on the web; see FAQ for the iPhone app.';
+    if(es)es.textContent='Send and receive compliant invoices. 300 issued invoices included/month \u2014 the ones you receive never count \u2014 then \u20ac0.25 each on the web; see FAQ for the iPhone app.';
     setOn(root.querySelectorAll('[data-acc]'),'data-acc',sel.acc);
     var up=document.getElementById('cfg-upsell');
     if(up)up.classList.toggle('cfg-hidden',!(!isFull&&monthly()>=109));
