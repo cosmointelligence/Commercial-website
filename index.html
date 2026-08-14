@@ -1131,6 +1131,22 @@ body[data-view="compta"] .only-plateforme{
 }
 </style>
 
+
+<style id="cosmo-r6-mobile-hero-fix">
+/* R6: keep the premium hero but eliminate the oversized mobile void. */
+@media (max-width:720px){
+  .hero{min-height:0!important;padding:28px 0 44px!important;}
+  .hero .wrap{grid-template-columns:1fr!important;grid-template-areas:"toggle" "message" "cta" "note" "visual"!important;row-gap:16px!important;align-items:start!important;}
+  .hero .htog{margin:0 0 4px!important;}
+  .hero .hero-msg{align-self:start!important;}
+  .hero .hero-msg .eyebrow{margin:0 0 16px!important;}
+  .hero .hero-msg h1{margin:0 0 22px!important;}
+  .hero .hero-msg .lead{margin:0!important;}
+  .hero .cta-row{margin:8px 0 0!important;}
+  .hero .cta-note{margin:2px 0 0!important;}
+  .hero .ledger,.hero .platform-visual{margin-top:22px!important;}
+}
+</style>
 </head>
 <body data-cosmo-site-build="FINAL-2026-08-14-PLATFORM-R2" data-view="compta">
 <!-- ===== HEADER ===== -->
@@ -1159,7 +1175,7 @@ body[data-view="compta"] .only-plateforme{
 <div class="hero-msg" data-hero="compta">
 <p class="eyebrow">Compta. Conformité. Contrôle.</p>
 <h1>Dirigez votre compta.<br/>Gardez le contrôle.</h1>
-<p class="lead">COSMO prépare les écritures, vérifie la conformité et vous soumet chaque décision. Une comptabilité complète, justifiable et prête à exporter — sans devoir devenir expert. Facturation électronique incluse.</p>
+<p class="lead">COSMO prépare les écritures, contrôle leur cohérence et vous soumet les points à valider. Une comptabilité complète, justifiable et prête à exporter — sans devoir devenir expert. Facturation électronique incluse.</p>
 </div>
 <div class="hero-msg" data-hero="platform">
 <p class="eyebrow">PLATEFORME D’ASSURANCE DÉCISIONNELLE</p>
