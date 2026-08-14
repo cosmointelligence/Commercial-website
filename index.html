@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>COSMO — Dirigez votre compta. Gardez le contrôle.</title>
-<meta content="Quatre portes, un prix par régime — dès 59 € HT/mois pour une société, 24,99 € TTC pour un micro-entrepreneur. Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. France, associations, Italie, Espagne." name="description"/>
+<meta content="Quatre portes, un prix par régime — dès 59 € HT/mois pour une société, 24,99 € TTC pour un micro-entrepreneur. Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. France, associations." name="description"/>
 <!-- Canonical + social point to the real domain, never github.io -->
 <link href="https://cosmointelligence.io/" rel="canonical"/>
 <link href="https://cosmointelligence.io/" hreflang="fr" rel="alternate"/>
@@ -40,7 +40,7 @@
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "url": "https://cosmointelligence.io/",
-  "description": "Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. France, associations, Italie, Espagne.",
+  "description": "Tout est préparé pour vous — écritures, règles fiscales, dossier complet. Rien ne passe sans votre accord. France, associations.",
   "inLanguage": "fr-FR",
   "offers": {
     "@type": "Offer",
@@ -440,7 +440,8 @@ body[data-view="platform"] footer .lockup small,body[data-view="platform"] .disc
 body[data-view="platform"] .foot-links a{color:#AEB4E0}
 /* centered "everything it brings" */
 .pf-center .wrap{text-align:center}
-.pf-center .eyebrow,.pf-center h2,.pf-center .lead{text-align:center}
+.pf-center .lead{text-align:center}
+.pf-center .eyebrow,.pf-center h2{text-align:left}
 .pkg{display:grid;grid-template-columns:1fr;gap:14px;margin-top:22px;text-align:left}
 @media(min-width:640px){.pkg{grid-template-columns:1fr 1fr}}
 .pkg-col{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:18px}
@@ -925,10 +926,10 @@ section[id]{scroll-margin-top:74px}
 
 @media(max-width:720px){
   :root{--mobile-pad:16px}
-  html{scroll-padding-top:62px}
+  html{scroll-padding-top:72px}
   body{font-size:16px;overflow-x:hidden}
   .wrap{width:calc(100% - 32px)!important;padding:0!important}
-  section{padding:52px 0!important}
+  section{padding:72px 0 52px!important}
   header{position:sticky!important;top:0}
   header .nav{height:60px!important}
   .brand svg{width:26px!important;height:26px!important}
@@ -1197,7 +1198,7 @@ body[data-view="compta"] .only-plateforme{
 <a class="btn big" href="https://app.cosmointelligence.io/">Commencer l'essai gratuit →</a>
 <a class="btn big ghost" href="#cfg">Configurer mon tarif</a>
 </div>
-<p class="cta-note only-plateforme"><b>Gouvernance dès 10 €/mois · offre complète dès 109 €/mois.</b> Essai sans carte · configuration selon vos entités, utilisateurs, politiques et volume.</p>
+<p class="cta-note only-plateforme"><b>Politiques dès 10 €/mois · offre complète dès 109 €/mois.</b> Essai sans carte · configuration selon vos entités, utilisateurs, politiques et volume.</p>
 <!-- Signature: live balance sheet -->
 <div class="ledger" id="ledger">
 <div class="ledger-head">
@@ -1254,7 +1255,7 @@ body[data-view="compta"] .only-plateforme{
 <article><span>03</span><h3>Décider</h3><p>Le management voit l’exposition résiduelle, les options d’action et la trace qui justifie la décision.</p></article>
 </div>
 <div class="ari-bridge">
-<div><b>ARI COSMO — la capacité opérationnelle</b>
+<div><h3>ARI COSMO — la capacité opérationnelle</h3>
 <p>Dans l’offre complète, la comptabilité et la facturation électronique produisent des informations opérationnelles et des preuves qui alimentent le modèle d’assurance.</p></div>
 <a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:320px">Commencer l’essai gratuit →</a>
 </div>
@@ -1392,7 +1393,7 @@ body[data-view="compta"] .only-plateforme{
 </div>
 </section>
 <section class="only-compta" id="installer">
-<h2>Installez l'application</h2>
+<h2 style="text-align:left">Installez l'application</h2>
 <p style="max-width:640px;margin:0 auto 22px;text-align:center;color:#64748B;font-size:15px;line-height:1.6">COSMO s'installe comme une application — sur votre iPhone, votre Android ou votre ordinateur — sans App Store, toujours à jour automatiquement.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto">
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
@@ -1416,8 +1417,8 @@ body[data-view="compta"] .only-plateforme{
 </section>
 <section class="only-compta" id="tarif">
 <div class="wrap">
-<p class="eyebrow" style="text-align:center">Tarif</p>
-<h2 style="text-align:center">Quatre portes. Un prix par régime.</h2><p class="pricing-intro">Choisissez votre porte selon votre régime. Chaque offre inclut la comptabilité, la facturation électronique, Lumi, l’export FEC et 1 politique GRC — sans catalogue d’options.</p><details class="pricing-details"><summary>Quotas et modalités</summary><div class="pricing-details-body"><p style="text-align:center;max-width:640px;margin:14px auto 6px;color:var(--ink-2)">Le prix suit votre régime juridique — jamais une liste de fonctionnalités. À chaque porte, tout est inclus : comptabilité complète, facturation électronique (de 50 à 300 factures émises par mois selon la porte — les factures reçues ne comptent jamais), Lumi avec son quota mensuel d’analyses, export FEC — et <b>1 politique GRC offerte</b>, votre première règle interne reliée à vos comptes. Sur l’App Store, au-delà du quota d’analyses, une recharge à <b>3,99 € les 50 analyses</b> s’achète en un geste — jamais un changement de plan.</p></div></details>
+<p class="eyebrow">Tarif</p>
+<h2>Quatre portes. Un prix par régime.</h2><p class="pricing-intro">Choisissez votre porte selon votre régime. Chaque offre inclut la comptabilité, la facturation électronique, Lumi, l’export FEC et 1 politique GRC — sans catalogue d’options.</p><details class="pricing-details"><summary>Quotas et modalités</summary><div class="pricing-details-body"><p style="text-align:center;max-width:640px;margin:14px auto 6px;color:var(--ink-2)">Le prix suit votre régime juridique — jamais une liste de fonctionnalités. À chaque porte, tout est inclus : comptabilité complète, facturation électronique (de 50 à 300 factures émises par mois selon la porte — les factures reçues ne comptent jamais), Lumi avec son quota mensuel d’analyses, export FEC — et <b>1 politique GRC offerte</b>, votre première règle interne reliée à vos comptes. Sur l’App Store, au-delà du quota d’analyses, une recharge à <b>3,99 € les 50 analyses</b> s’achète en un geste — jamais un changement de plan.</p></div></details>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:22px">
 <div class="price-card reveal" data-app-href="https://app.cosmointelligence.io/?product=acc&amp;porte=micro" data-plan="micro" role="link" tabindex="0" aria-label="Ouvrir COSMO avec le forfait Micro-entrepreneur">
 <div class="price-tag">
@@ -1486,8 +1487,8 @@ body[data-view="compta"] .only-plateforme{
 <!-- ===== FAQ ===== -->
 <section class="only-compta" id="faq">
 <div class="wrap" style="max-width:760px">
-<p class="eyebrow" style="text-align:center">Questions fréquentes</p>
-<h2 style="text-align:center">Ce que vous vous demandez peut-être</h2>
+<p class="eyebrow">Questions fréquentes</p>
+<h2>Ce que vous vous demandez peut-être</h2>
 <div class="faq">
 <details>
 <summary>Est-ce vraiment conforme à la réglementation française ?</summary>
@@ -1531,7 +1532,7 @@ body[data-view="compta"] .only-plateforme{
 </details>
 <details>
 <summary>Pour qui est COSMO ?</summary>
-<p>Pour les indépendants et micro-entrepreneurs, mais aussi les <b>TPE et PME au réel</b> — SAS, SASU, SARL/EURL — et les associations, en France, en Italie et en Espagne, dans un seul outil. De la franchise en base jusqu'à l'IS avec liasse : si vous voulez des comptes tenus proprement, en règle avec l'administration, et facturer sans multiplier les logiciels, c'est fait pour vous.</p>
+<p>Pour les indépendants et micro-entrepreneurs, mais aussi les <b>TPE et PME au réel</b> — SAS, SASU, SARL/EURL — et les associations, en France, dans un seul outil. De la franchise en base jusqu'à l'IS avec liasse : si vous voulez des comptes tenus proprement, en règle avec l'administration, et facturer sans multiplier les logiciels, c'est fait pour vous.</p>
 </details>
 </div>
 </div>
@@ -1870,6 +1871,7 @@ body[data-view="compta"] .only-plateforme{
     if(!m.efact&&sel.acc){var a=accCost();if(a)t+=a;}
     return Math.round(t*100)/100;}
   function eur(n){var s=(Math.round(n*100)/100);if(s%1===0)return '\u20ac'+s;return '\u20ac'+s.toFixed(2).replace('.',',');}
+  function ctaUrl(){var m=MODS[sel.module];var p=['product=platform','module='+sel.module,'entities='+sel.entities,'users='+sel.users];if(m.vol)p.push('vol='+sel.vol);if(m.tx)p.push('tx='+sel.tx);if(m.ai)p.push('ai='+sel.ai);if(!m.efact)p.push('acc='+sel.acc);return 'https://app.cosmointelligence.io/?'+p.join('&');}
   function setOn(list,attr,val){Array.prototype.forEach.call(list,function(b){b.classList.toggle('cfg-on',b.getAttribute(attr)===String(val));});}
   function render(){
     var m=MODS[sel.module];
@@ -1898,6 +1900,7 @@ body[data-view="compta"] .only-plateforme{
     var en=document.getElementById('cfg-ent-n'); if(en) en.textContent=sel.entities;
     var un=document.getElementById('cfg-usr-n'); if(un) un.textContent=sel.users;
     document.getElementById('cfg-amt').textContent=eur(monthly())+(accQuote()?' + compta sur devis':'');
+    var cta=document.getElementById('cfg-cta'); if(cta) cta.href=ctaUrl();
   }
   root.addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
