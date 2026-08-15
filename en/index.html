@@ -1155,7 +1155,7 @@ body[data-view="compta"] .only-plateforme{
 }
 </style>
 </head>
-<body data-cosmo-site-build="FINAL-2026-08-14-PLATFORM-R2" data-view="compta">
+<body data-cosmo-site-build="FINAL-2026-08-14-PLATFORM-R7.2" data-view="compta">
 <!-- ===== HEADER ===== -->
 <header>
 <div class="wrap nav">
@@ -1167,8 +1167,8 @@ body[data-view="compta"] .only-plateforme{
 </a>
 <div class="nav-right">
 <div class="lang-switch"><a href="https://cosmointelligence.io/">FR</a><span class="lang-sep">·</span><a class="active" href="https://cosmointelligence.io/en/">EN</a></div>
-<a class="nav-login" href="https://app.cosmointelligence.io/?screen=accounting">Sign in</a>
-<a class="btn small" href="https://app.cosmointelligence.io/?product=acc">Free trial</a>
+<a class="nav-login" href="https://app.cosmointelligence.io/?screen=accounting" id="hdr-login">Sign in</a>
+<a class="btn small" href="https://app.cosmointelligence.io/?product=acc" id="hdr-trial">Free trial</a>
 </div>
 </div>
 </header>
@@ -1195,7 +1195,7 @@ body[data-view="compta"] .only-plateforme{
 </div>
 <p class="cta-note only-compta"><b>From €59 excl. VAT/month for a company · 1 month free trial</b> · no commitment · cancel in one click</p>
 <div class="cta-row only-plateforme">
-<a class="btn big" href="https://app.cosmointelligence.io/">Start your free trial →</a>
+<a class="btn big" href="https://app.cosmointelligence.io/?product=platform">Start your free trial →</a>
 <a class="btn big ghost" href="#cfg">Configure my price</a>
 </div>
 <p class="cta-note only-plateforme"><b>Policies from €10/month · full platform from €109/month.</b> Card-free trial · configuration follows your entities, users, policies and volume.</p>
@@ -1257,7 +1257,7 @@ body[data-view="compta"] .only-plateforme{
 <div class="ari-bridge">
 <div><h3>ARI COSMO — the operational capability</h3>
 <p>In the full platform, accounting and e-invoicing produce operational information and evidence that feed the assurance model.</p></div>
-<a class="btn big" href="https://app.cosmointelligence.io/" style="max-width:320px">Start your free trial →</a>
+<a class="btn big" href="https://app.cosmointelligence.io/?product=platform" style="max-width:320px">Start your free trial →</a>
 </div>
 </div>
 </section>
@@ -1399,8 +1399,7 @@ body[data-view="compta"] .only-plateforme{
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">📱</div>
 <div style="font-weight:800;margin-bottom:6px">iPhone / iPad</div>
-<!-- REPLACE APP_STORE_URL with the real App Store link before going live -->
-<div style="font-size:13px;color:#64748B;line-height:1.6">Download <a href="APP_STORE_URL" style="color:#4F46E5;font-weight:700">COSMO on the App Store</a>. Or without the App Store: open <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> in Safari, tap <b>Share</b> then <b>"Add to Home Screen"</b>.</div>
+<div style="font-size:13px;color:#64748B;line-height:1.6">Open <a href="https://app.cosmointelligence.io" style="color:#4F46E5;font-weight:700">app.cosmointelligence.io</a> in Safari, tap <b>Share</b> then <b>"Add to Home Screen"</b>.</div>
 </div>
 <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px">
 <div style="font-size:26px;margin-bottom:8px">🤖</div>
@@ -1418,13 +1417,13 @@ body[data-view="compta"] .only-plateforme{
 <section class="only-compta" id="tarif">
 <div class="wrap">
 <p class="eyebrow">Pricing</p>
-<h2>Four doors. One price per legal regime.</h2><p class="pricing-intro">Choose the door that matches your legal regime. Every plan includes bookkeeping, e-invoicing, Lumi, FEC export and 1 GRC policy — no feature maze.</p><details class="pricing-details"><summary>Quotas and plan details</summary><div class="pricing-details-body"><p style="text-align:center;max-width:640px;margin:14px auto 6px;color:var(--ink-2)">Your price follows your legal regime — never a feature list. Every door includes everything: full bookkeeping, e-invoicing (50 to 300 issued invoices a month depending on your door — invoices you receive never count), Lumi with its monthly analysis quota, FEC export — and <b>1 GRC policy included free</b>, your first internal policy linked to your books. On the App Store, past the analysis quota, a top-up at <b>€3.99 for 50 analyses</b> is one tap away — never a plan change.</p></div></details>
+<h2>Four doors. One price per legal regime.</h2><p class="pricing-intro">Choose the door that matches your legal regime. Every plan includes bookkeeping, e-invoicing, Lumi, FEC export and 1 GRC policy — no feature maze.</p><details class="pricing-details"><summary>Quotas and plan details</summary><div class="pricing-details-body"><p style="text-align:center;max-width:640px;margin:14px auto 6px;color:var(--ink-2)">Your price follows your legal regime — never a feature list. Every door includes everything: full bookkeeping, e-invoicing (50 to 300 issued invoices a month depending on your door — invoices you receive never count), Lumi with its monthly analysis quota, FEC export — and <b>1 GRC policy included free</b>, your first internal policy linked to your books.</p></div></details>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:22px">
 <div class="price-card reveal" data-app-href="https://app.cosmointelligence.io/?product=acc&amp;porte=micro" data-plan="micro" role="link" tabindex="0" aria-label="Open COSMO with the Micro plan">
 <div class="price-tag">
 <div style="font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase">👤 Micro-entrepreneur</div>
 <div class="n" style="font-size:44px">€24.99</div>
-<div class="per">incl. VAT /month · 3 months free · on the App Store</div>
+<div class="per">incl. VAT /month · 3 months free · web access now</div>
 </div>
 <ul class="plist">
 <li><span class="tick">✓</span>Full bookkeeping, bank connected</li>
@@ -1433,7 +1432,7 @@ body[data-view="compta"] .only-plateforme{
 <li><span class="tick">✓</span><b>300 Lumi analyses/month</b> — beyond that, €3.99 for 50</li>
 </ul><details class="price-more"><summary>See all plan details</summary><ul class="plist price-extra"><li><span class="tick">✓</span>1 GRC policy included free</li></ul></details>
 <a class="btn big" href="https://app.cosmointelligence.io/?product=acc&amp;porte=micro">Start with Micro →</a>
-<p class="cta-note" style="text-align:center;margin-top:12px">3-month free trial · immediate web access · App Store launch in progress</p>
+<p class="cta-note" style="text-align:center;margin-top:12px">3-month free trial · immediate web access · App Store coming soon</p>
 </div>
 <div class="price-card reveal" data-app-href="https://app.cosmointelligence.io/?product=acc&amp;porte=societe" data-plan="societe" role="link" tabindex="0" aria-label="Open COSMO with the Company plan">
 <div class="price-tag">
@@ -1454,14 +1453,14 @@ body[data-view="compta"] .only-plateforme{
 <div class="price-tag">
 <div style="font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase">🤝 Association</div>
 <div class="n" style="font-size:44px">€14.99</div>
-<div class="per">incl. VAT /month or €149/year · 3 months free · App Store <b>or online</b></div>
+<div class="per">incl. VAT /month or €149/year · 3 months free · online <b>(App Store coming soon)</b></div>
 </div>
 <ul class="plist">
 <li><span class="tick">✓</span>French non-profit chart of accounts (ANC 2018-06)</li>
 <li><span class="tick">✓</span>Grant tracking — well-kept books support every application</li>
 <li><span class="tick">✓</span>Volunteer-work valuation</li>
 <li><span class="tick">✓</span><b>50 issued invoices/month</b> — invoices you receive never count. Beyond fifty issued invoices a month a non-profit is trading, and belongs to another door</li>
-</ul><details class="price-more"><summary>See all plan details</summary><ul class="plist price-extra"><li><span class="tick">✓</span>Subscribe online and the plan is <b>in the association’s name</b>: invoice to the association, and access does not leave with the chair when the board changes</li><li><span class="tick">✓</span><b>Unlimited free readers</b> — other board members, an auditor, a funder: they can look without ever taking a seat</li><li><span class="tick">✓</span><b>3 users included</b> (chair, treasurer, secretary) · <b>100 Lumi analyses/month</b> — beyond that, €3.99 for 50 on the App Store; online, reading switches to a lighter model until the 1st</li><li><span class="tick">✓</span>1 GRC policy included free</li></ul></details>
+</ul><details class="price-more"><summary>See all plan details</summary><ul class="plist price-extra"><li><span class="tick">✓</span>Subscribe online and the plan is <b>in the association’s name</b>: invoice to the association, and access does not leave with the chair when the board changes</li><li><span class="tick">✓</span><b>Unlimited free readers</b> — other board members, an auditor, a funder: they can look without ever taking a seat</li><li><span class="tick">✓</span><b>3 users included</b> (chair, treasurer, secretary) · <b>100 Lumi analyses/month</b> — beyond that, reading switches to a lighter model until the 1st</li><li><span class="tick">✓</span>1 GRC policy included free</li></ul></details>
 <a class="btn big" href="https://app.cosmointelligence.io/?product=acc&amp;porte=asso">Start with Association →</a>
 <p class="cta-note" style="text-align:center;margin-top:12px">3-month free trial · web access · no commitment</p>
 </div>
@@ -1481,7 +1480,7 @@ body[data-view="compta"] .only-plateforme{
 <p class="cta-note" style="text-align:center;margin-top:12px">Pilot: 3 files free, 90 days, migration done with you</p>
 </div>
 </div>
-<p class="cta-note" style="text-align:center;margin-top:22px">Free trial: <b>3 months</b> on the micro-entrepreneur and association doors, App Store <b>or online</b> — the duration never depends on how you sign up · <b>1 month</b> on the Company door · accounting firms come in through a 90-day pilot on 3 client files. During the trial, every feature, limited to 1 policy and 10 e-invoices · no commitment · early-access founders keep their signed price for life</p>
+<p class="cta-note" style="text-align:center;margin-top:22px">Free trial: <b>3 months</b> on the micro-entrepreneur and association doors — online now, <b>App Store coming soon</b> · <b>1 month</b> on the Company door · accounting firms come in through a 90-day pilot on 3 client files. During the trial, every feature, limited to 1 policy and 10 e-invoices · no commitment · early-access founders keep their signed price for life</p>
 </div>
 </section>
 <!-- ===== FAQ ===== -->
@@ -1508,15 +1507,15 @@ body[data-view="compta"] .only-plateforme{
 </details>
 <details>
 <summary>How much does it actually cost?</summary>
-<p>Your price follows your legal regime, never an options list: micro-entrepreneur €24.99 incl. VAT/month on the App Store (3 months free), company on accrual accounting from €59 excl. VAT/month by number of users, association €14.99 incl. VAT/month or €149/year (this autumn), accounting firm per client file from €12 down to €10 excl. VAT. Every door includes everything — including 1 GRC policy free — with no hidden options and no setup fees. No commitment: cancel whenever you want, and early-access founders keep their signed price for life.</p>
+<p>Your price follows your legal regime, never an options list: micro-entrepreneur €24.99 incl. VAT/month (online now, App Store coming soon; 3 months free), company on accrual accounting from €59 excl. VAT/month by number of users, association €14.99 incl. VAT/month or €149/year, accounting firm per client file from €12 down to €10 excl. VAT. Every door includes everything — including 1 GRC policy free — with no hidden options and no setup fees. No commitment: cancel whenever you want, and early-access founders keep their signed price for life.</p>
 </details>
 <details>
 <summary>Can I cancel easily?</summary>
 <p>Yes. The subscription has no commitment: you cancel in one click, it takes effect at the end of the current billing period — month or year, depending on your plan, and your data stays exportable. No minimum term, no hidden fees.</p>
 </details>
 <details>
-<summary>How does the subscription work on iPhone (App Store)?</summary>
-<p>In the iOS app, the subscription runs through your Apple account: the <b>3 free months</b> start when you subscribe, then Apple bills the subscription automatically when the free period ends. Cancel anytime in Settings → Subscriptions — cancel during the trial and nothing is charged. The free trial is offered once per Apple account.</p>
+<summary>How will the subscription work on iPhone (App Store)?</summary>
+<p>The iOS app is coming soon to the App Store. Once available, the subscription will run through your Apple account: the <b>3 free months</b> will start when you subscribe, then Apple will bill the subscription automatically when the free period ends. Cancel anytime in Settings → Subscriptions — canceling during the trial charges nothing. The free trial will be offered once per Apple account.</p>
 </details>
 <details>
 <summary>Can I switch from e-invoicing only to full accounting?</summary>
@@ -1590,7 +1589,7 @@ body[data-view="compta"] .only-plateforme{
 <div class="cfg-opts"><button class="cfg-on" data-ai="light">Light</button><button data-ai="std">Standard</button><button data-ai="heavy">Heavy</button></div></div>
 <div class="cfg-total"><span>Total / month</span><span class="cfg-amt" id="cfg-amt">€109</span></div>
 <a class="btn big" href="https://app.cosmointelligence.io/" id="cfg-cta">Start your free trial</a>
-<p class="cfg-quote" style="text-align:center;margin-top:10px">Free trial, no card — the length follows your door: 3 months (micro, association), 1 month (company). Every feature, full accounting, limited to 1 policy and 10 e-invoices. Nothing is charged until you subscribe.</p>
+<p class="cfg-quote" style="text-align:center;margin-top:10px">Free trial, no card required — configure your platform; trial length and limits are shown at sign-up. Nothing is charged until you subscribe.</p>
 </div>
 </div>
 </section>
@@ -1617,7 +1616,7 @@ body[data-view="compta"] .only-plateforme{
 <a href="/cgv.html">Terms of sale</a><span class="sep">·</span>
 <a href="/confidentialite.html">Privacy</a><span class="sep">·</span>
 <a href="#" id="cookie-manage">Manage cookies</a><span class="sep">·</span>
-<a href="https://app.cosmointelligence.io/?screen=accounting">Sign in</a>
+<a href="https://app.cosmointelligence.io/?screen=accounting" id="ftr-login">Sign in</a>
 </div>
 <p class="disclaimer">COSMO is an assistance tool for bookkeeping and compliance. The information shown (obligations, deadlines, checks, deductibility) is indicative and should be verified; it does not constitute legal, accounting or tax advice. Published by Cosmo Intelligence · RCS Paris 106 884 430. Legal documents are maintained in French, which is the governing version.</p>
 </div>
@@ -1844,10 +1843,19 @@ body[data-view="compta"] .only-plateforme{
 </script>
 <script>(function(){
   "use strict";
+  // header CTAs follow the active view (R7.1)
+  function syncViewCta(view){
+    var loginIds=['hdr-login','ftr-login'],trial=document.getElementById('hdr-trial');
+    var loginHref=view==='platform'?'https://app.cosmointelligence.io/':'https://app.cosmointelligence.io/?screen=accounting';
+    loginIds.forEach(function(id){var el=document.getElementById(id);if(el)el.href=loginHref;});
+    if(trial) trial.href=view==='platform'?'https://app.cosmointelligence.io/?product=platform':'https://app.cosmointelligence.io/?product=acc';
+  }
+  syncViewCta(document.body.getAttribute('data-view')||'compta');
   // whole-page toggle
   var tog=document.querySelector('.htog');
   if(tog){tog.addEventListener('click',function(e){var b=e.target.closest('button[data-hero]');if(!b)return;
     var k=b.getAttribute('data-hero');document.body.setAttribute('data-view',k);
+    syncViewCta(k);
     Array.prototype.forEach.call(tog.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x.getAttribute('data-hero')===k?'true':'false');});
     window.scrollTo({top:0,behavior:'auto'});});}
   // configurator
